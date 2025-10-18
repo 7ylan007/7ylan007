@@ -9,6 +9,7 @@ from typing import Dict, List, Optional
 import re
 import subprocess
 import shutil
+import tempfile
 
 # --- Configuration via variables d'environnement (GitHub secrets) ---
 FOOTBALL_KEY = os.environ.get("FOOTBALL_KEY")
@@ -103,7 +104,7 @@ class FootballMatchAnalyzerWithAI:
         # Charger les données des équipes (base minimaliste fournie précédemment)
         self.teams_data = self._load_teams_data()
         
-        # Répertoire pour sauvegarder les analyses JSON
+        # Répertoire pour sauvegarder les analyses JSON (reste, mais on espace aussi le fichier racine)
         self.output_dir = "analyses"
         os.makedirs(self.output_dir, exist_ok=True)
     
@@ -123,8 +124,12 @@ class FootballMatchAnalyzerWithAI:
             # Ajouter les fichiers
             subprocess.run(["git", "add"] + file_paths, check=True)
             
-            # Commit
-            subprocess.run(["git", "commit", "-m", commit_message], check=True)
+            # Commit - si rien à committer, git commit renverra un code non nul ; attraper et continuer
+            try:
+                subprocess.run(["git", "commit", "-m", commit_message], check=True)
+            except subprocess.CalledProcessError:
+                # Nothing to commit
+                print("ℹ️ Aucun changement à committer pour les fichiers fournis.")
             
             # Push
             subprocess.run(["git", "push", GIT_REMOTE, "HEAD"], check=True)
@@ -764,6 +769,13 @@ IMPORTANT: Tu DOIS compléter TOUTES les sections avec des pourcentages précis 
         if not today_matches:
             return
         
+        # Préparer la structure principale de sortie qui contiendra toutes les analyses du jour
+        aggregated_output = {
+            "date": datetime.date.today().isoformat(),
+            "generated_at_utc": datetime.datetime.utcnow().isoformat() + "Z",
+            "matches": []
+        }
+        
         for i, match in enumerate(today_matches, 1):
             print(f"\n{'='*80}")
             print(f"MATCH {i}")
@@ -794,6 +806,8 @@ IMPORTANT: Tu DOIS compléter TOUTES les sections avec des pourcentages précis 
             home_stats = {}
             away_stats = {}
             standings = []
+            home_matches_list = []
+            away_matches_list = []
             
             # Équipe domicile
             print(f"\n🏠 ÉQUIPE DOMICILE: {home_team}")
@@ -846,6 +860,7 @@ IMPORTANT: Tu DOIS compléter TOUTES les sections avec des pourcentages précis 
             
             # Vérifier si on a assez de données (au moins quelques matchs pour chaque équipe)
             sufficient_data = (home_stats and home_stats.get("total_matches", 0) > 0) and (away_stats and away_stats.get("total_matches", 0) > 0)
+            ai_analysis = None
             if sufficient_data:
                 print("🔄 Génération de l'analyse IA en cours...")
                 ai_analysis = self.generate_ai_analysis(match, home_stats, away_stats, standings, logos)
@@ -854,65 +869,105 @@ IMPORTANT: Tu DOIS compléter TOUTES les sections avec des pourcentages précis 
                     print(f"\n🎯 PRÉDICTION IA:")
                     print("-" * 60)
                     print(ai_analysis)
-                    # Sauvegarder tout en JSON
-                    output = {
-                        "match": {
-                            "fixture_id": match["fixture"]["id"],
-                            "date": match["fixture"]["date"],
-                            "time_utc": match_time,
-                            "league": {
-                                "id": league_id,
-                                "name": league,
-                                "country": country
-                            },
-                            "teams": {
-                                "home": {
-                                    "name": home_team,
-                                    "id": match["teams"]["home"].get("id"),
-                                    "logo": logos.get("home")
-                                },
-                                "away": {
-                                    "name": away_team,
-                                    "id": match["teams"]["away"].get("id"),
-                                    "logo": logos.get("away")
-                                }
-                            },
-                            "status": status
-                        },
-                        "standings": standings,
-                        "home_team_stats": home_stats,
-                        "away_team_stats": away_stats,
-                        "home_recent_matches": home_matches_list if 'home_matches_list' in locals() else [],
-                        "away_recent_matches": away_matches_list if 'away_matches_list' in locals() else [],
-                        "ai_analysis_text": ai_analysis,
-                        "saved_at_utc": datetime.datetime.utcnow().isoformat() + "Z"
-                    }
-                    
-                    # Nom de fichier horodaté
-                    safe_home = re.sub(r'[^A-Za-z0-9]+', '_', home_team)[:30]
-                    safe_away = re.sub(r'[^A-Za-z0-9]+', '_', away_team)[:30]
-                    timestamp = datetime.datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
-                    filename = f"{self.output_dir}/analysis_{safe_home}_vs_{safe_away}_{timestamp}.json"
-                    
-                    try:
-                        with open(filename, "w", encoding="utf-8") as f:
-                            json.dump(output, f, ensure_ascii=False, indent=2)
-                        print(f"💾 Analyse sauvegardée dans {filename}")
-                        
-                        # Commit & push
-                        commit_msg = f"Add analysis {safe_home} vs {safe_away} at {timestamp}"
-                        push_ok = self._git_commit_and_push([filename], commit_msg)
-                        if not push_ok:
-                            print("⚠️ Echec du push git. Analyse sauvegardée localement.")
-                    except Exception as e:
-                        print(f"❌ Erreur lors de la sauvegarde du fichier JSON: {e}")
                 else:
                     print("❌ Impossible de générer l'analyse IA")
             else:
                 print("⚠️ Données insuffisantes pour l'analyse IA (besoin d'au moins 1 match analysé par équipe).")
             
+            # Construire l'objet match pour l'agrégat
+            match_output = {
+                "fixture": {
+                    "fixture_id": match["fixture"]["id"],
+                    "date": match["fixture"]["date"],
+                    "time_utc": match_time,
+                    "league": {
+                        "id": league_id,
+                        "name": league,
+                        "country": country
+                    },
+                    "teams": { 
+                        "home": {
+                            "name": home_team,
+                            "id": match["teams"]["home"].get("id"),
+                            "logo": logos.get("home")
+                        },
+                        "away": {
+                            "name": away_team,
+                            "id": match["teams"]["away"].get("id"),
+                            "logo": logos.get("away")
+                        }
+                    },
+                    "status": status
+                },
+                "standings": standings,
+                "home_team_stats": home_stats,
+                "away_team_stats": away_stats,
+                "home_recent_matches": home_matches_list,
+                "away_recent_matches": away_matches_list,
+                "ai_analysis_text": ai_analysis,
+            }
+            
+            aggregated_output["matches"].append(match_output)
+            
             # Pause entre les requêtes pour éviter d'être bloqué
             time_module.sleep(3)
+        
+        # --- Sauvegarde finale : écrire UN fichier JSON à la racine nommé analyse-YYYY-MM-DD.json ---
+        date_str = datetime.date.today().strftime("%Y-%m-%d")
+        root_filename = f"analyse-{date_str}.json"
+        try:
+            # Écriture atomique dans un fichier temporaire puis renommage
+            tmp_fd, tmp_path = tempfile.mkstemp(prefix="analyse_", suffix=".json", dir=".")
+            try:
+                with os.fdopen(tmp_fd, "w", encoding="utf-8") as tmp_file:
+                    json.dump(aggregated_output, tmp_file, ensure_ascii=False, indent=2)
+                # Remplacer le fichier final
+                if os.path.exists(root_filename):
+                    os.remove(root_filename)
+                os.replace(tmp_path, root_filename)
+            except Exception as e:
+                # Nettoyage si besoin
+                try:
+                    os.remove(tmp_path)
+                except Exception:
+                    pass
+                raise e
+            print(f"💾 Analyse journalière sauvegardée dans {root_filename}")
+        except Exception as e:
+            print(f"❌ Erreur lors de la sauvegarde du fichier racine JSON: {e}")
+            # Tenter sauvegarde dans le dossier analyses en fallback
+            try:
+                fallback_name = os.path.join(self.output_dir, f"analysis_fallback_{date_str}.json")
+                with open(fallback_name, "w", encoding="utf-8") as f:
+                    json.dump(aggregated_output, f, ensure_ascii=False, indent=2)
+                print(f"💾 Sauvegarde fallback effectuée: {fallback_name}")
+            except Exception as e2:
+                print(f"❌ Erreur lors de la sauvegarde fallback: {e2}")
+        
+        # Sauvegarder aussi dans le répertoire analyses avec timestamp (historique)
+        try:
+            timestamp = datetime.datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
+            history_filename = os.path.join(self.output_dir, f"analysis_{timestamp}.json")
+            with open(history_filename, "w", encoding="utf-8") as f:
+                json.dump(aggregated_output, f, ensure_ascii=False, indent=2)
+            print(f"💾 Historique sauvegardé dans {history_filename}")
+        except Exception as e:
+            print(f"⚠️ Impossible de sauvegarder l'historique: {e}")
+        
+        # Commit & push du fichier racine (et de l'historique si nécessaire)
+        try:
+            files_to_commit = []
+            if os.path.exists(root_filename):
+                files_to_commit.append(root_filename)
+            if os.path.exists(history_filename):
+                files_to_commit.append(history_filename)
+            if files_to_commit:
+                commit_msg = f"Add daily analysis {date_str}"
+                push_ok = self._git_commit_and_push(files_to_commit, commit_msg)
+                if not push_ok:
+                    print("⚠️ Echec du push git. Analyses sauvegardées localement.")
+        except Exception as e:
+            print(f"⚠️ Erreur lors du commit/push automatique: {e}")
         
         print(f"\n{'='*80}")
         print("🎯 ANALYSE INTELLIGENTE TERMINÉE")
