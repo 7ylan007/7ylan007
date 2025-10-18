@@ -1,0 +1,2479 @@
+{
+  "date": "2025-10-18",
+  "generated_at_utc": "2025-10-18T22:49:54.032179Z",
+  "matches": [
+    {
+      "fixture": {
+        "fixture_id": 1374245,
+        "date": "2025-10-18T00:15:00+00:00",
+        "time_utc": "00:15",
+        "league": {
+          "id": 128,
+          "name": "Argentine Liga Profesional",
+          "country": "Argentina"
+        },
+        "teams": {
+          "home": {
+            "name": "Argentinos JRS",
+            "id": 458,
+            "logo": "https://media.api-sports.io/football/teams/458.png"
+          },
+          "away": {
+            "name": "Newells Old Boys",
+            "id": 457,
+            "logo": "https://media.api-sports.io/football/teams/457.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1374256,
+        "date": "2025-10-18T00:15:00+00:00",
+        "time_utc": "00:15",
+        "league": {
+          "id": 128,
+          "name": "Argentine Liga Profesional",
+          "country": "Argentina"
+        },
+        "teams": {
+          "home": {
+            "name": "Lanus",
+            "id": 446,
+            "logo": "https://media.api-sports.io/football/teams/446.png"
+          },
+          "away": {
+            "name": "Godoy Cruz",
+            "id": 439,
+            "logo": "https://media.api-sports.io/football/teams/439.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1392501,
+        "date": "2025-10-18T01:30:00+00:00",
+        "time_utc": "01:30",
+        "league": {
+          "id": 239,
+          "name": "Colombian Primera A",
+          "country": "Colombia"
+        },
+        "teams": {
+          "home": {
+            "name": "Chico",
+            "id": 1132,
+            "logo": "https://media.api-sports.io/football/teams/1132.png"
+          },
+          "away": {
+            "name": "Santa Fe",
+            "id": 1139,
+            "logo": "https://media.api-sports.io/football/teams/1139.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1400123,
+        "date": "2025-10-18T10:00:00+00:00",
+        "time_utc": "10:00",
+        "league": {
+          "id": 235,
+          "name": "Russian Premier League",
+          "country": "Russia"
+        },
+        "teams": {
+          "home": {
+            "name": "Nizhny Novgorod",
+            "id": 2011,
+            "logo": "https://media.api-sports.io/football/teams/2011.png"
+          },
+          "away": {
+            "name": "Akron",
+            "id": 6786,
+            "logo": "https://media.api-sports.io/football/teams/6786.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1400288,
+        "date": "2025-10-18T10:00:00+00:00",
+        "time_utc": "10:00",
+        "league": {
+          "id": 235,
+          "name": "Russian Premier League",
+          "country": "Russia"
+        },
+        "teams": {
+          "home": {
+            "name": "Krylia Sovetov",
+            "id": 1079,
+            "logo": "https://media.api-sports.io/football/teams/1079.png"
+          },
+          "away": {
+            "name": "FC Orenburg",
+            "id": 1080,
+            "logo": "https://media.api-sports.io/football/teams/1080.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1386659,
+        "date": "2025-10-18T11:30:00+00:00",
+        "time_utc": "11:30",
+        "league": {
+          "id": 40,
+          "name": "English Championship",
+          "country": "England"
+        },
+        "teams": {
+          "home": {
+            "name": "Southampton",
+            "id": 41,
+            "logo": "https://media.api-sports.io/football/teams/41.png"
+          },
+          "away": {
+            "name": "Swansea",
+            "id": 76,
+            "logo": "https://media.api-sports.io/football/teams/76.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1386664,
+        "date": "2025-10-18T11:30:00+00:00",
+        "time_utc": "11:30",
+        "league": {
+          "id": 40,
+          "name": "English Championship",
+          "country": "England"
+        },
+        "teams": {
+          "home": {
+            "name": "QPR",
+            "id": 72,
+            "logo": "https://media.api-sports.io/football/teams/72.png"
+          },
+          "away": {
+            "name": "Millwall",
+            "id": 58,
+            "logo": "https://media.api-sports.io/football/teams/58.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1386668,
+        "date": "2025-10-18T11:30:00+00:00",
+        "time_utc": "11:30",
+        "league": {
+          "id": 40,
+          "name": "English Championship",
+          "country": "England"
+        },
+        "teams": {
+          "home": {
+            "name": "Oxford United",
+            "id": 1338,
+            "logo": "https://media.api-sports.io/football/teams/1338.png"
+          },
+          "away": {
+            "name": "Derby",
+            "id": 69,
+            "logo": "https://media.api-sports.io/football/teams/69.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1394512,
+        "date": "2025-10-18T11:30:00+00:00",
+        "time_utc": "11:30",
+        "league": {
+          "id": 203,
+          "name": "Turkish Super Lig",
+          "country": "Turkey"
+        },
+        "teams": {
+          "home": {
+            "name": "Konyaspor",
+            "id": 607,
+            "logo": "https://media.api-sports.io/football/teams/607.png"
+          },
+          "away": {
+            "name": "Kocaelispor",
+            "id": 7411,
+            "logo": "https://media.api-sports.io/football/teams/7411.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1389204,
+        "date": "2025-10-18T12:00:00+00:00",
+        "time_utc": "12:00",
+        "league": {
+          "id": 62,
+          "name": "French Ligue 2",
+          "country": "France"
+        },
+        "teams": {
+          "home": {
+            "name": "Dunkerque",
+            "id": 1304,
+            "logo": "https://media.api-sports.io/football/teams/1304.png"
+          },
+          "away": {
+            "name": "Montpellier",
+            "id": 82,
+            "logo": "https://media.api-sports.io/football/teams/82.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1389208,
+        "date": "2025-10-18T12:00:00+00:00",
+        "time_utc": "12:00",
+        "league": {
+          "id": 62,
+          "name": "French Ligue 2",
+          "country": "France"
+        },
+        "teams": {
+          "home": {
+            "name": "Laval",
+            "id": 433,
+            "logo": "https://media.api-sports.io/football/teams/433.png"
+          },
+          "away": {
+            "name": "RED Star FC 93",
+            "id": 104,
+            "logo": "https://media.api-sports.io/football/teams/104.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1390907,
+        "date": "2025-10-18T12:00:00+00:00",
+        "time_utc": "12:00",
+        "league": {
+          "id": 140,
+          "name": "Spanish LaLiga",
+          "country": "Spain"
+        },
+        "teams": {
+          "home": {
+            "name": "Sevilla",
+            "id": 536,
+            "logo": "https://media.api-sports.io/football/teams/536.png"
+          },
+          "away": {
+            "name": "Mallorca",
+            "id": 798,
+            "logo": "https://media.api-sports.io/football/teams/798.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1400126,
+        "date": "2025-10-18T12:15:00+00:00",
+        "time_utc": "12:15",
+        "league": {
+          "id": 235,
+          "name": "Russian Premier League",
+          "country": "Russia"
+        },
+        "teams": {
+          "home": {
+            "name": "Spartak Moscow",
+            "id": 558,
+            "logo": "https://media.api-sports.io/football/teams/558.png"
+          },
+          "away": {
+            "name": "FC Rostov",
+            "id": 779,
+            "logo": "https://media.api-sports.io/football/teams/779.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1377929,
+        "date": "2025-10-18T13:00:00+00:00",
+        "time_utc": "13:00",
+        "league": {
+          "id": 135,
+          "name": "Italian Serie A",
+          "country": "Italy"
+        },
+        "teams": {
+          "home": {
+            "name": "Lecce",
+            "id": 867,
+            "logo": "https://media.api-sports.io/football/teams/867.png"
+          },
+          "away": {
+            "name": "Sassuolo",
+            "id": 488,
+            "logo": "https://media.api-sports.io/football/teams/488.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1377931,
+        "date": "2025-10-18T13:00:00+00:00",
+        "time_utc": "13:00",
+        "league": {
+          "id": 135,
+          "name": "Italian Serie A",
+          "country": "Italy"
+        },
+        "teams": {
+          "home": {
+            "name": "Pisa",
+            "id": 801,
+            "logo": "https://media.api-sports.io/football/teams/801.png"
+          },
+          "away": {
+            "name": "Verona",
+            "id": 504,
+            "logo": "https://media.api-sports.io/football/teams/504.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1388363,
+        "date": "2025-10-18T13:30:00+00:00",
+        "time_utc": "13:30",
+        "league": {
+          "id": 78,
+          "name": "German Bundesliga",
+          "country": "Germany"
+        },
+        "teams": {
+          "home": {
+            "name": "1.FC Köln",
+            "id": 192,
+            "logo": "https://media.api-sports.io/football/teams/192.png"
+          },
+          "away": {
+            "name": "FC Augsburg",
+            "id": 170,
+            "logo": "https://media.api-sports.io/football/teams/170.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1388365,
+        "date": "2025-10-18T13:30:00+00:00",
+        "time_utc": "13:30",
+        "league": {
+          "id": 78,
+          "name": "German Bundesliga",
+          "country": "Germany"
+        },
+        "teams": {
+          "home": {
+            "name": "1. FC Heidenheim",
+            "id": 180,
+            "logo": "https://media.api-sports.io/football/teams/180.png"
+          },
+          "away": {
+            "name": "Werder Bremen",
+            "id": 162,
+            "logo": "https://media.api-sports.io/football/teams/162.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1388366,
+        "date": "2025-10-18T13:30:00+00:00",
+        "time_utc": "13:30",
+        "league": {
+          "id": 78,
+          "name": "German Bundesliga",
+          "country": "Germany"
+        },
+        "teams": {
+          "home": {
+            "name": "FSV Mainz 05",
+            "id": 164,
+            "logo": "https://media.api-sports.io/football/teams/164.png"
+          },
+          "away": {
+            "name": "Bayer Leverkusen",
+            "id": 168,
+            "logo": "https://media.api-sports.io/football/teams/168.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1388367,
+        "date": "2025-10-18T13:30:00+00:00",
+        "time_utc": "13:30",
+        "league": {
+          "id": 78,
+          "name": "German Bundesliga",
+          "country": "Germany"
+        },
+        "teams": {
+          "home": {
+            "name": "RB Leipzig",
+            "id": 173,
+            "logo": "https://media.api-sports.io/football/teams/173.png"
+          },
+          "away": {
+            "name": "Hamburger SV",
+            "id": 175,
+            "logo": "https://media.api-sports.io/football/teams/175.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1388370,
+        "date": "2025-10-18T13:30:00+00:00",
+        "time_utc": "13:30",
+        "league": {
+          "id": 78,
+          "name": "German Bundesliga",
+          "country": "Germany"
+        },
+        "teams": {
+          "home": {
+            "name": "VfL Wolfsburg",
+            "id": 161,
+            "logo": "https://media.api-sports.io/football/teams/161.png"
+          },
+          "away": {
+            "name": "VfB Stuttgart",
+            "id": 172,
+            "logo": "https://media.api-sports.io/football/teams/172.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1382510,
+        "date": "2025-10-18T14:00:00+00:00",
+        "time_utc": "14:00",
+        "league": {
+          "id": 144,
+          "name": "Belgian Pro League",
+          "country": "Belgium"
+        },
+        "teams": {
+          "home": {
+            "name": "RAAL La Louvière",
+            "id": 5902,
+            "logo": "https://media.api-sports.io/football/teams/5902.png"
+          },
+          "away": {
+            "name": "KVC Westerlo",
+            "id": 261,
+            "logo": "https://media.api-sports.io/football/teams/261.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1386660,
+        "date": "2025-10-18T14:00:00+00:00",
+        "time_utc": "14:00",
+        "league": {
+          "id": 40,
+          "name": "English Championship",
+          "country": "England"
+        },
+        "teams": {
+          "home": {
+            "name": "Charlton",
+            "id": 1335,
+            "logo": "https://media.api-sports.io/football/teams/1335.png"
+          },
+          "away": {
+            "name": "Sheffield Wednesday",
+            "id": 74,
+            "logo": "https://media.api-sports.io/football/teams/74.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1386661,
+        "date": "2025-10-18T14:00:00+00:00",
+        "time_utc": "14:00",
+        "league": {
+          "id": 40,
+          "name": "English Championship",
+          "country": "England"
+        },
+        "teams": {
+          "home": {
+            "name": "West Brom",
+            "id": 60,
+            "logo": "https://media.api-sports.io/football/teams/60.png"
+          },
+          "away": {
+            "name": "Preston",
+            "id": 59,
+            "logo": "https://media.api-sports.io/football/teams/59.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1386663,
+        "date": "2025-10-18T14:00:00+00:00",
+        "time_utc": "14:00",
+        "league": {
+          "id": 40,
+          "name": "English Championship",
+          "country": "England"
+        },
+        "teams": {
+          "home": {
+            "name": "Stoke City",
+            "id": 75,
+            "logo": "https://media.api-sports.io/football/teams/75.png"
+          },
+          "away": {
+            "name": "Wrexham",
+            "id": 1837,
+            "logo": "https://media.api-sports.io/football/teams/1837.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1386665,
+        "date": "2025-10-18T14:00:00+00:00",
+        "time_utc": "14:00",
+        "league": {
+          "id": 40,
+          "name": "English Championship",
+          "country": "England"
+        },
+        "teams": {
+          "home": {
+            "name": "Norwich",
+            "id": 71,
+            "logo": "https://media.api-sports.io/football/teams/71.png"
+          },
+          "away": {
+            "name": "Bristol City",
+            "id": 56,
+            "logo": "https://media.api-sports.io/football/teams/56.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1386666,
+        "date": "2025-10-18T14:00:00+00:00",
+        "time_utc": "14:00",
+        "league": {
+          "id": 40,
+          "name": "English Championship",
+          "country": "England"
+        },
+        "teams": {
+          "home": {
+            "name": "Birmingham",
+            "id": 54,
+            "logo": "https://media.api-sports.io/football/teams/54.png"
+          },
+          "away": {
+            "name": "Hull City",
+            "id": 64,
+            "logo": "https://media.api-sports.io/football/teams/64.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1386667,
+        "date": "2025-10-18T14:00:00+00:00",
+        "time_utc": "14:00",
+        "league": {
+          "id": 40,
+          "name": "English Championship",
+          "country": "England"
+        },
+        "teams": {
+          "home": {
+            "name": "Sheffield Utd",
+            "id": 62,
+            "logo": "https://media.api-sports.io/football/teams/62.png"
+          },
+          "away": {
+            "name": "Watford",
+            "id": 38,
+            "logo": "https://media.api-sports.io/football/teams/38.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1386670,
+        "date": "2025-10-18T14:00:00+00:00",
+        "time_utc": "14:00",
+        "league": {
+          "id": 40,
+          "name": "English Championship",
+          "country": "England"
+        },
+        "teams": {
+          "home": {
+            "name": "Coventry",
+            "id": 1346,
+            "logo": "https://media.api-sports.io/football/teams/1346.png"
+          },
+          "away": {
+            "name": "Blackburn",
+            "id": 67,
+            "logo": "https://media.api-sports.io/football/teams/67.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1394507,
+        "date": "2025-10-18T14:00:00+00:00",
+        "time_utc": "14:00",
+        "league": {
+          "id": 203,
+          "name": "Turkish Super Lig",
+          "country": "Turkey"
+        },
+        "teams": {
+          "home": {
+            "name": "Besiktas",
+            "id": 549,
+            "logo": "https://media.api-sports.io/football/teams/549.png"
+          },
+          "away": {
+            "name": "Genclerbirligi",
+            "id": 997,
+            "logo": "https://media.api-sports.io/football/teams/997.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1394513,
+        "date": "2025-10-18T14:00:00+00:00",
+        "time_utc": "14:00",
+        "league": {
+          "id": 203,
+          "name": "Turkish Super Lig",
+          "country": "Turkey"
+        },
+        "teams": {
+          "home": {
+            "name": "Rizespor",
+            "id": 1007,
+            "logo": "https://media.api-sports.io/football/teams/1007.png"
+          },
+          "away": {
+            "name": "Trabzonspor",
+            "id": 998,
+            "logo": "https://media.api-sports.io/football/teams/998.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1390901,
+        "date": "2025-10-18T14:15:00+00:00",
+        "time_utc": "14:15",
+        "league": {
+          "id": 140,
+          "name": "Spanish LaLiga",
+          "country": "Spain"
+        },
+        "teams": {
+          "home": {
+            "name": "Barcelona",
+            "id": 529,
+            "logo": "https://media.api-sports.io/football/teams/529.png"
+          },
+          "away": {
+            "name": "Girona",
+            "id": 547,
+            "logo": "https://media.api-sports.io/football/teams/547.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1391350,
+        "date": "2025-10-18T14:15:00+00:00",
+        "time_utc": "14:15",
+        "league": {
+          "id": 141,
+          "name": "Spanish LaLiga 2",
+          "country": "Spain"
+        },
+        "teams": {
+          "home": {
+            "name": "AD Ceuta FC",
+            "id": 10139,
+            "logo": "https://media.api-sports.io/football/teams/10139.png"
+          },
+          "away": {
+            "name": "Mirandes",
+            "id": 799,
+            "logo": "https://media.api-sports.io/football/teams/799.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1380947,
+        "date": "2025-10-18T14:30:00+00:00",
+        "time_utc": "14:30",
+        "league": {
+          "id": 88,
+          "name": "Dutch Eredivisie",
+          "country": "Netherlands"
+        },
+        "teams": {
+          "home": {
+            "name": "NEC Nijmegen",
+            "id": 413,
+            "logo": "https://media.api-sports.io/football/teams/413.png"
+          },
+          "away": {
+            "name": "Twente",
+            "id": 415,
+            "logo": "https://media.api-sports.io/football/teams/415.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1400119,
+        "date": "2025-10-18T14:30:00+00:00",
+        "time_utc": "14:30",
+        "league": {
+          "id": 235,
+          "name": "Russian Premier League",
+          "country": "Russia"
+        },
+        "teams": {
+          "home": {
+            "name": "Dinamo Makhachkala",
+            "id": 6813,
+            "logo": "https://media.api-sports.io/football/teams/6813.png"
+          },
+          "away": {
+            "name": "FC Krasnodar",
+            "id": 621,
+            "logo": "https://media.api-sports.io/football/teams/621.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1435951,
+        "date": "2025-10-18T14:45:00+00:00",
+        "time_utc": "14:45",
+        "league": {
+          "id": 307,
+          "name": "Saudi Pro League",
+          "country": "Saudi-Arabia"
+        },
+        "teams": {
+          "home": {
+            "name": "Al-Ettifaq",
+            "id": 2934,
+            "logo": "https://media.api-sports.io/football/teams/2934.png"
+          },
+          "away": {
+            "name": "Al-Hilal Saudi FC",
+            "id": 2932,
+            "logo": "https://media.api-sports.io/football/teams/2932.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1387766,
+        "date": "2025-10-18T15:00:00+00:00",
+        "time_utc": "15:00",
+        "league": {
+          "id": 61,
+          "name": "French Ligue 1",
+          "country": "France"
+        },
+        "teams": {
+          "home": {
+            "name": "Nice",
+            "id": 84,
+            "logo": "https://media.api-sports.io/football/teams/84.png"
+          },
+          "away": {
+            "name": "Lyon",
+            "id": 80,
+            "logo": "https://media.api-sports.io/football/teams/80.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1435953,
+        "date": "2025-10-18T15:15:00+00:00",
+        "time_utc": "15:15",
+        "league": {
+          "id": 307,
+          "name": "Saudi Pro League",
+          "country": "Saudi-Arabia"
+        },
+        "teams": {
+          "home": {
+            "name": "Al Akhdoud",
+            "id": 2977,
+            "logo": "https://media.api-sports.io/football/teams/2977.png"
+          },
+          "away": {
+            "name": "Al-Hazm",
+            "id": 2945,
+            "logo": "https://media.api-sports.io/football/teams/2945.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1377933,
+        "date": "2025-10-18T16:00:00+00:00",
+        "time_utc": "16:00",
+        "league": {
+          "id": 135,
+          "name": "Italian Serie A",
+          "country": "Italy"
+        },
+        "teams": {
+          "home": {
+            "name": "Torino",
+            "id": 503,
+            "logo": "https://media.api-sports.io/football/teams/503.png"
+          },
+          "away": {
+            "name": "Napoli",
+            "id": 492,
+            "logo": "https://media.api-sports.io/football/teams/492.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1382513,
+        "date": "2025-10-18T16:15:00+00:00",
+        "time_utc": "16:15",
+        "league": {
+          "id": 144,
+          "name": "Belgian Pro League",
+          "country": "Belgium"
+        },
+        "teams": {
+          "home": {
+            "name": "OH Leuven",
+            "id": 260,
+            "logo": "https://media.api-sports.io/football/teams/260.png"
+          },
+          "away": {
+            "name": "Club Brugge KV",
+            "id": 569,
+            "logo": "https://media.api-sports.io/football/teams/569.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1388362,
+        "date": "2025-10-18T16:30:00+00:00",
+        "time_utc": "16:30",
+        "league": {
+          "id": 78,
+          "name": "German Bundesliga",
+          "country": "Germany"
+        },
+        "teams": {
+          "home": {
+            "name": "Bayern München",
+            "id": 157,
+            "logo": "https://media.api-sports.io/football/teams/157.png"
+          },
+          "away": {
+            "name": "Borussia Dortmund",
+            "id": 165,
+            "logo": "https://media.api-sports.io/football/teams/165.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1390908,
+        "date": "2025-10-18T16:30:00+00:00",
+        "time_utc": "16:30",
+        "league": {
+          "id": 140,
+          "name": "Spanish LaLiga",
+          "country": "Spain"
+        },
+        "teams": {
+          "home": {
+            "name": "Villarreal",
+            "id": 533,
+            "logo": "https://media.api-sports.io/football/teams/533.png"
+          },
+          "away": {
+            "name": "Real Betis",
+            "id": 543,
+            "logo": "https://media.api-sports.io/football/teams/543.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1391344,
+        "date": "2025-10-18T16:30:00+00:00",
+        "time_utc": "16:30",
+        "league": {
+          "id": 141,
+          "name": "Spanish LaLiga 2",
+          "country": "Spain"
+        },
+        "teams": {
+          "home": {
+            "name": "Zaragoza",
+            "id": 732,
+            "logo": "https://media.api-sports.io/football/teams/732.png"
+          },
+          "away": {
+            "name": "Cultural Leonesa",
+            "id": 725,
+            "logo": "https://media.api-sports.io/football/teams/725.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1380940,
+        "date": "2025-10-18T16:45:00+00:00",
+        "time_utc": "16:45",
+        "league": {
+          "id": 88,
+          "name": "Dutch Eredivisie",
+          "country": "Netherlands"
+        },
+        "teams": {
+          "home": {
+            "name": "PSV Eindhoven",
+            "id": 197,
+            "logo": "https://media.api-sports.io/football/teams/197.png"
+          },
+          "away": {
+            "name": "GO Ahead Eagles",
+            "id": 410,
+            "logo": "https://media.api-sports.io/football/teams/410.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1380941,
+        "date": "2025-10-18T16:45:00+00:00",
+        "time_utc": "16:45",
+        "league": {
+          "id": 88,
+          "name": "Dutch Eredivisie",
+          "country": "Netherlands"
+        },
+        "teams": {
+          "home": {
+            "name": "Utrecht",
+            "id": 207,
+            "logo": "https://media.api-sports.io/football/teams/207.png"
+          },
+          "away": {
+            "name": "FC Volendam",
+            "id": 416,
+            "logo": "https://media.api-sports.io/football/teams/416.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1400122,
+        "date": "2025-10-18T16:45:00+00:00",
+        "time_utc": "16:45",
+        "league": {
+          "id": 235,
+          "name": "Russian Premier League",
+          "country": "Russia"
+        },
+        "teams": {
+          "home": {
+            "name": "Lokomotiv",
+            "id": 597,
+            "logo": "https://media.api-sports.io/football/teams/597.png"
+          },
+          "away": {
+            "name": "CSKA Moscow",
+            "id": 555,
+            "logo": "https://media.api-sports.io/football/teams/555.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1387761,
+        "date": "2025-10-18T17:00:00+00:00",
+        "time_utc": "17:00",
+        "league": {
+          "id": 61,
+          "name": "French Ligue 1",
+          "country": "France"
+        },
+        "teams": {
+          "home": {
+            "name": "Angers",
+            "id": 77,
+            "logo": "https://media.api-sports.io/football/teams/77.png"
+          },
+          "away": {
+            "name": "Monaco",
+            "id": 91,
+            "logo": "https://media.api-sports.io/football/teams/91.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1394506,
+        "date": "2025-10-18T17:00:00+00:00",
+        "time_utc": "17:00",
+        "league": {
+          "id": 203,
+          "name": "Turkish Super Lig",
+          "country": "Turkey"
+        },
+        "teams": {
+          "home": {
+            "name": "Istanbul Basaksehir",
+            "id": 564,
+            "logo": "https://media.api-sports.io/football/teams/564.png"
+          },
+          "away": {
+            "name": "Galatasaray",
+            "id": 645,
+            "logo": "https://media.api-sports.io/football/teams/645.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1389206,
+        "date": "2025-10-18T18:00:00+00:00",
+        "time_utc": "18:00",
+        "league": {
+          "id": 62,
+          "name": "French Ligue 2",
+          "country": "France"
+        },
+        "teams": {
+          "home": {
+            "name": "Saint Etienne",
+            "id": 1063,
+            "logo": "https://media.api-sports.io/football/teams/1063.png"
+          },
+          "away": {
+            "name": "Le Mans",
+            "id": 1298,
+            "logo": "https://media.api-sports.io/football/teams/1298.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1435954,
+        "date": "2025-10-18T18:00:00+00:00",
+        "time_utc": "18:00",
+        "league": {
+          "id": 307,
+          "name": "Saudi Pro League",
+          "country": "Saudi-Arabia"
+        },
+        "teams": {
+          "home": {
+            "name": "Al-Nassr",
+            "id": 2939,
+            "logo": "https://media.api-sports.io/football/teams/2939.png"
+          },
+          "away": {
+            "name": "Al-Fateh",
+            "id": 2931,
+            "logo": "https://media.api-sports.io/football/teams/2931.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1374249,
+        "date": "2025-10-18T18:45:00+00:00",
+        "time_utc": "18:45",
+        "league": {
+          "id": 128,
+          "name": "Argentine Liga Profesional",
+          "country": "Argentina"
+        },
+        "teams": {
+          "home": {
+            "name": "Independ. Rivadavia",
+            "id": 473,
+            "logo": "https://media.api-sports.io/football/teams/473.png"
+          },
+          "away": {
+            "name": "Banfield",
+            "id": 449,
+            "logo": "https://media.api-sports.io/football/teams/449.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1377932,
+        "date": "2025-10-18T18:45:00+00:00",
+        "time_utc": "18:45",
+        "league": {
+          "id": 135,
+          "name": "Italian Serie A",
+          "country": "Italy"
+        },
+        "teams": {
+          "home": {
+            "name": "AS Roma",
+            "id": 497,
+            "logo": "https://media.api-sports.io/football/teams/497.png"
+          },
+          "away": {
+            "name": "Inter",
+            "id": 505,
+            "logo": "https://media.api-sports.io/football/teams/505.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1382508,
+        "date": "2025-10-18T18:45:00+00:00",
+        "time_utc": "18:45",
+        "league": {
+          "id": 144,
+          "name": "Belgian Pro League",
+          "country": "Belgium"
+        },
+        "teams": {
+          "home": {
+            "name": "Union St. Gilloise",
+            "id": 1393,
+            "logo": "https://media.api-sports.io/football/teams/1393.png"
+          },
+          "away": {
+            "name": "Charleroi",
+            "id": 736,
+            "logo": "https://media.api-sports.io/football/teams/736.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1386669,
+        "date": "2025-10-18T18:45:00+00:00",
+        "time_utc": "18:45",
+        "league": {
+          "id": 40,
+          "name": "English Championship",
+          "country": "England"
+        },
+        "teams": {
+          "home": {
+            "name": "Leicester",
+            "id": 46,
+            "logo": "https://media.api-sports.io/football/teams/46.png"
+          },
+          "away": {
+            "name": "Portsmouth",
+            "id": 1355,
+            "logo": "https://media.api-sports.io/football/teams/1355.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1380942,
+        "date": "2025-10-18T19:00:00+00:00",
+        "time_utc": "19:00",
+        "league": {
+          "id": 88,
+          "name": "Dutch Eredivisie",
+          "country": "Netherlands"
+        },
+        "teams": {
+          "home": {
+            "name": "Ajax",
+            "id": 194,
+            "logo": "https://media.api-sports.io/football/teams/194.png"
+          },
+          "away": {
+            "name": "AZ Alkmaar",
+            "id": 201,
+            "logo": "https://media.api-sports.io/football/teams/201.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1380943,
+        "date": "2025-10-18T19:00:00+00:00",
+        "time_utc": "19:00",
+        "league": {
+          "id": 88,
+          "name": "Dutch Eredivisie",
+          "country": "Netherlands"
+        },
+        "teams": {
+          "home": {
+            "name": "NAC Breda",
+            "id": 203,
+            "logo": "https://media.api-sports.io/football/teams/203.png"
+          },
+          "away": {
+            "name": "PEC Zwolle",
+            "id": 193,
+            "logo": "https://media.api-sports.io/football/teams/193.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1390900,
+        "date": "2025-10-18T19:00:00+00:00",
+        "time_utc": "19:00",
+        "league": {
+          "id": 140,
+          "name": "Spanish LaLiga",
+          "country": "Spain"
+        },
+        "teams": {
+          "home": {
+            "name": "Atletico Madrid",
+            "id": 530,
+            "logo": "https://media.api-sports.io/football/teams/530.png"
+          },
+          "away": {
+            "name": "Osasuna",
+            "id": 727,
+            "logo": "https://media.api-sports.io/football/teams/727.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1391348,
+        "date": "2025-10-18T19:00:00+00:00",
+        "time_utc": "19:00",
+        "league": {
+          "id": 141,
+          "name": "Spanish LaLiga 2",
+          "country": "Spain"
+        },
+        "teams": {
+          "home": {
+            "name": "Real Sociedad II",
+            "id": 9585,
+            "logo": "https://media.api-sports.io/football/teams/9585.png"
+          },
+          "away": {
+            "name": "Huesca",
+            "id": 726,
+            "logo": "https://media.api-sports.io/football/teams/726.png"
+          }
+        },
+        "status": "PST"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1392498,
+        "date": "2025-10-18T19:00:00+00:00",
+        "time_utc": "19:00",
+        "league": {
+          "id": 239,
+          "name": "Colombian Primera A",
+          "country": "Colombia"
+        },
+        "teams": {
+          "home": {
+            "name": "Deportivo Pasto",
+            "id": 1126,
+            "logo": "https://media.api-sports.io/football/teams/1126.png"
+          },
+          "away": {
+            "name": "Atletico Nacional",
+            "id": 1137,
+            "logo": "https://media.api-sports.io/football/teams/1137.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1387764,
+        "date": "2025-10-18T19:05:00+00:00",
+        "time_utc": "19:05",
+        "league": {
+          "id": 61,
+          "name": "French Ligue 1",
+          "country": "France"
+        },
+        "teams": {
+          "home": {
+            "name": "Marseille",
+            "id": 81,
+            "logo": "https://media.api-sports.io/football/teams/81.png"
+          },
+          "away": {
+            "name": "Le Havre",
+            "id": 111,
+            "logo": "https://media.api-sports.io/football/teams/111.png"
+          }
+        },
+        "status": "FT"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1374243,
+        "date": "2025-10-18T21:00:00+00:00",
+        "time_utc": "21:00",
+        "league": {
+          "id": 128,
+          "name": "Argentine Liga Profesional",
+          "country": "Argentina"
+        },
+        "teams": {
+          "home": {
+            "name": "Boca Juniors",
+            "id": 451,
+            "logo": "https://media.api-sports.io/football/teams/451.png"
+          },
+          "away": {
+            "name": "Belgrano Cordoba",
+            "id": 440,
+            "logo": "https://media.api-sports.io/football/teams/440.png"
+          }
+        },
+        "status": "2H"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1392499,
+        "date": "2025-10-18T21:10:00+00:00",
+        "time_utc": "21:10",
+        "league": {
+          "id": 239,
+          "name": "Colombian Primera A",
+          "country": "Colombia"
+        },
+        "teams": {
+          "home": {
+            "name": "Rionegro Aguilas",
+            "id": 1144,
+            "logo": "https://media.api-sports.io/football/teams/1144.png"
+          },
+          "away": {
+            "name": "Alianza Petrolera",
+            "id": 1141,
+            "logo": "https://media.api-sports.io/football/teams/1141.png"
+          }
+        },
+        "status": "2H"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1351325,
+        "date": "2025-10-18T21:30:00+00:00",
+        "time_utc": "21:30",
+        "league": {
+          "id": 71,
+          "name": "Brazilian Serie A",
+          "country": "Brazil"
+        },
+        "teams": {
+          "home": {
+            "name": "Corinthians",
+            "id": 131,
+            "logo": "https://media.api-sports.io/football/teams/131.png"
+          },
+          "away": {
+            "name": "Atletico-MG",
+            "id": 1062,
+            "logo": "https://media.api-sports.io/football/teams/1062.png"
+          }
+        },
+        "status": "2H"
+      },
+      "standings": [
+        {
+          "position": "1",
+          "team": "Botafogo",
+          "gp": "33",
+          "w": "24",
+          "d": "6",
+          "l": "3",
+          "f": "64",
+          "a": "29",
+          "gd": "+35",
+          "p": "78"
+        },
+        {
+          "position": "2",
+          "team": "Palmeiras",
+          "gp": "33",
+          "w": "22",
+          "d": "8",
+          "l": "3",
+          "f": "60",
+          "a": "26",
+          "gd": "+34",
+          "p": "74"
+        },
+        {
+          "position": "3",
+          "team": "Cruzeiro",
+          "gp": "33",
+          "w": "20",
+          "d": "8",
+          "l": "5",
+          "f": "53",
+          "a": "32",
+          "gd": "+21",
+          "p": "68"
+        },
+        {
+          "position": "4",
+          "team": "Flamengo",
+          "gp": "33",
+          "w": "19",
+          "d": "7",
+          "l": "7",
+          "f": "55",
+          "a": "35",
+          "gd": "+20",
+          "p": "64"
+        },
+        {
+          "position": "5",
+          "team": "Fortaleza",
+          "gp": "33",
+          "w": "18",
+          "d": "8",
+          "l": "7",
+          "f": "50",
+          "a": "39",
+          "gd": "+11",
+          "p": "62"
+        },
+        {
+          "position": "6",
+          "team": "Internacional",
+          "gp": "33",
+          "w": "17",
+          "d": "10",
+          "l": "6",
+          "f": "50",
+          "a": "35",
+          "gd": "+15",
+          "p": "61"
+        },
+        {
+          "position": "7",
+          "team": "Bahia",
+          "gp": "33",
+          "w": "16",
+          "d": "9",
+          "l": "8",
+          "f": "46",
+          "a": "35",
+          "gd": "+11",
+          "p": "57"
+        },
+        {
+          "position": "8",
+          "team": "São Paulo",
+          "gp": "33",
+          "w": "14",
+          "d": "11",
+          "l": "8",
+          "f": "52",
+          "a": "44",
+          "gd": "+8",
+          "p": "53"
+        },
+        {
+          "position": "9",
+          "team": "Vasco da Gama",
+          "gp": "33",
+          "w": "14",
+          "d": "8",
+          "l": "11",
+          "f": "46",
+          "a": "45",
+          "gd": "+1",
+          "p": "50"
+        },
+        {
+          "position": "10",
+          "team": "Red Bull Bragantino",
+          "gp": "33",
+          "w": "13",
+          "d": "10",
+          "l": "10",
+          "f": "50",
+          "a": "49",
+          "gd": "+1",
+          "p": "49"
+        },
+        {
+          "position": "11",
+          "team": "Athletico Paranaense",
+          "gp": "33",
+          "w": "12",
+          "d": "11",
+          "l": "10",
+          "f": "42",
+          "a": "43",
+          "gd": "-1",
+          "p": "47"
+        },
+        {
+          "position": "12",
+          "team": "Corinthians",
+          "gp": "33",
+          "w": "11",
+          "d": "8",
+          "l": "14",
+          "f": "41",
+          "a": "45",
+          "gd": "-4",
+          "p": "41"
+        },
+        {
+          "position": "13",
+          "team": "Grêmio",
+          "gp": "33",
+          "w": "10",
+          "d": "10",
+          "l": "13",
+          "f": "38",
+          "a": "42",
+          "gd": "-4",
+          "p": "40"
+        },
+        {
+          "position": "14",
+          "team": "Atlético-MG",
+          "gp": "33",
+          "w": "10",
+          "d": "9",
+          "l": "14",
+          "f": "42",
+          "a": "50",
+          "gd": "-8",
+          "p": "39"
+        },
+        {
+          "position": "15",
+          "team": "Juventude",
+          "gp": "33",
+          "w": "10",
+          "d": "8",
+          "l": "15",
+          "f": "35",
+          "a": "44",
+          "gd": "-9",
+          "p": "38"
+        },
+        {
+          "position": "16",
+          "team": "Santos",
+          "gp": "33",
+          "w": "9",
+          "d": "8",
+          "l": "16",
+          "f": "35",
+          "a": "48",
+          "gd": "-13",
+          "p": "35"
+        },
+        {
+          "position": "17",
+          "team": "Vitória",
+          "gp": "33",
+          "w": "9",
+          "d": "7",
+          "l": "17",
+          "f": "36",
+          "a": "55",
+          "gd": "-19",
+          "p": "34"
+        },
+        {
+          "position": "18",
+          "team": "Sport",
+          "gp": "33",
+          "w": "8",
+          "d": "8",
+          "l": "17",
+          "f": "35",
+          "a": "50",
+          "gd": "-15",
+          "p": "32"
+        },
+        {
+          "position": "19",
+          "team": "CRB",
+          "gp": "33",
+          "w": "6",
+          "d": "8",
+          "l": "19",
+          "f": "33",
+          "a": "57",
+          "gd": "-24",
+          "p": "26"
+        },
+        {
+          "position": "20",
+          "team": "Ceará",
+          "gp": "33",
+          "w": "4",
+          "d": "7",
+          "l": "22",
+          "f": "27",
+          "a": "63",
+          "gd": "-36",
+          "p": "19"
+        }
+      ],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1326695,
+        "date": "2025-10-18T22:00:00+00:00",
+        "time_utc": "22:00",
+        "league": {
+          "id": 253,
+          "name": "MLS",
+          "country": "USA"
+        },
+        "teams": {
+          "home": {
+            "name": "Atlanta United FC",
+            "id": 1608,
+            "logo": "https://media.api-sports.io/football/teams/1608.png"
+          },
+          "away": {
+            "name": "DC United",
+            "id": 1615,
+            "logo": "https://media.api-sports.io/football/teams/1615.png"
+          }
+        },
+        "status": "1H"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1326696,
+        "date": "2025-10-18T22:00:00+00:00",
+        "time_utc": "22:00",
+        "league": {
+          "id": 253,
+          "name": "MLS",
+          "country": "USA"
+        },
+        "teams": {
+          "home": {
+            "name": "Charlotte",
+            "id": 18310,
+            "logo": "https://media.api-sports.io/football/teams/18310.png"
+          },
+          "away": {
+            "name": "Philadelphia Union",
+            "id": 1599,
+            "logo": "https://media.api-sports.io/football/teams/1599.png"
+          }
+        },
+        "status": "1H"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1326697,
+        "date": "2025-10-18T22:00:00+00:00",
+        "time_utc": "22:00",
+        "league": {
+          "id": 253,
+          "name": "MLS",
+          "country": "USA"
+        },
+        "teams": {
+          "home": {
+            "name": "FC Cincinnati",
+            "id": 2242,
+            "logo": "https://media.api-sports.io/football/teams/2242.png"
+          },
+          "away": {
+            "name": "CF Montreal",
+            "id": 1614,
+            "logo": "https://media.api-sports.io/football/teams/1614.png"
+          }
+        },
+        "status": "1H"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1326698,
+        "date": "2025-10-18T22:00:00+00:00",
+        "time_utc": "22:00",
+        "league": {
+          "id": 253,
+          "name": "MLS",
+          "country": "USA"
+        },
+        "teams": {
+          "home": {
+            "name": "Columbus Crew",
+            "id": 1613,
+            "logo": "https://media.api-sports.io/football/teams/1613.png"
+          },
+          "away": {
+            "name": "New York Red Bulls",
+            "id": 1602,
+            "logo": "https://media.api-sports.io/football/teams/1602.png"
+          }
+        },
+        "status": "1H"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1326699,
+        "date": "2025-10-18T22:00:00+00:00",
+        "time_utc": "22:00",
+        "league": {
+          "id": 253,
+          "name": "MLS",
+          "country": "USA"
+        },
+        "teams": {
+          "home": {
+            "name": "Nashville SC",
+            "id": 9569,
+            "logo": "https://media.api-sports.io/football/teams/9569.png"
+          },
+          "away": {
+            "name": "Inter Miami",
+            "id": 9568,
+            "logo": "https://media.api-sports.io/football/teams/9568.png"
+          }
+        },
+        "status": "1H"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1326700,
+        "date": "2025-10-18T22:00:00+00:00",
+        "time_utc": "22:00",
+        "league": {
+          "id": 253,
+          "name": "MLS",
+          "country": "USA"
+        },
+        "teams": {
+          "home": {
+            "name": "New England Revolution",
+            "id": 1609,
+            "logo": "https://media.api-sports.io/football/teams/1609.png"
+          },
+          "away": {
+            "name": "Chicago Fire",
+            "id": 1607,
+            "logo": "https://media.api-sports.io/football/teams/1607.png"
+          }
+        },
+        "status": "1H"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1326701,
+        "date": "2025-10-18T22:00:00+00:00",
+        "time_utc": "22:00",
+        "league": {
+          "id": 253,
+          "name": "MLS",
+          "country": "USA"
+        },
+        "teams": {
+          "home": {
+            "name": "New York City FC",
+            "id": 1604,
+            "logo": "https://media.api-sports.io/football/teams/1604.png"
+          },
+          "away": {
+            "name": "Seattle Sounders",
+            "id": 1595,
+            "logo": "https://media.api-sports.io/football/teams/1595.png"
+          }
+        },
+        "status": "1H"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1326702,
+        "date": "2025-10-18T22:00:00+00:00",
+        "time_utc": "22:00",
+        "league": {
+          "id": 253,
+          "name": "MLS",
+          "country": "USA"
+        },
+        "teams": {
+          "home": {
+            "name": "Toronto FC",
+            "id": 1601,
+            "logo": "https://media.api-sports.io/football/teams/1601.png"
+          },
+          "away": {
+            "name": "Orlando City SC",
+            "id": 1598,
+            "logo": "https://media.api-sports.io/football/teams/1598.png"
+          }
+        },
+        "status": "1H"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1392500,
+        "date": "2025-10-18T23:20:00+00:00",
+        "time_utc": "23:20",
+        "league": {
+          "id": 239,
+          "name": "Colombian Primera A",
+          "country": "Colombia"
+        },
+        "teams": {
+          "home": {
+            "name": "Junior",
+            "id": 1135,
+            "logo": "https://media.api-sports.io/football/teams/1135.png"
+          },
+          "away": {
+            "name": "Deportivo Pereira",
+            "id": 1462,
+            "logo": "https://media.api-sports.io/football/teams/1462.png"
+          }
+        },
+        "status": "NS"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    },
+    {
+      "fixture": {
+        "fixture_id": 1374250,
+        "date": "2025-10-18T23:30:00+00:00",
+        "time_utc": "23:30",
+        "league": {
+          "id": 128,
+          "name": "Argentine Liga Profesional",
+          "country": "Argentina"
+        },
+        "teams": {
+          "home": {
+            "name": "Talleres Cordoba",
+            "id": 456,
+            "logo": "https://media.api-sports.io/football/teams/456.png"
+          },
+          "away": {
+            "name": "River Plate",
+            "id": 435,
+            "logo": "https://media.api-sports.io/football/teams/435.png"
+          }
+        },
+        "status": "NS"
+      },
+      "standings": [],
+      "home_team_stats": {},
+      "away_team_stats": {},
+      "home_recent_matches": [],
+      "away_recent_matches": [],
+      "ai_analysis_text": null
+    }
+  ]
+}
