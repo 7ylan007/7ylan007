@@ -1,0 +1,178 @@
+{
+  "generated_at": "2025-10-19T15:08:37.652229Z",
+  "standings_urls": {
+    "2": "https://www.espn.com/football/standings/_/league/UEFA.CHAMPIONS",
+    "253": "https://www.espn.com/football/standings/_/league/USA.1",
+    "3": "https://www.espn.com/football/standings/_/league/UEFA.EUROPA",
+    "88": "https://www.espn.com/football/standings/_/league/NED.1",
+    "94": "https://www.espn.com/football/standings/_/league/POR.1",
+    "143": "https://www.espn.com/football/standings/_/league/ESP.COPA_DEL_REY",
+    "81": "https://www.espn.com/football/standings/_/league/GER.DFB_POKAL",
+    "66": "https://www.espn.com/football/standings/_/league/FRA.COUPE_DE_FRANCE",
+    "307": "https://www.espn.com/football/standings/_/league/KSA.1",
+    "144": "https://www.espn.com/football/standings/_/league/BEL.1",
+    "235": "https://www.espn.com/football/standings/_/league/RUS.1",
+    "141": "https://www.espn.com/football/standings/_/league/ESP.2",
+    "203": "https://www.espn.com/football/standings/_/league/TUR.1",
+    "62": "https://www.espn.com/football/standings/_/league/FRA.2",
+    "128": "https://www.espn.com/football/standings/_/league/ARG.1",
+    "239": "https://www.espn.com/football/standings/_/league/COL.1",
+    "71": "https://www.espn.com/football/standings/_/league/BRA.1",
+    "61": "https://www.espn.com/football/standings/_/league/FRA.1",
+    "78": "https://www.espn.com/football/standings/_/league/GER.1",
+    "135": "https://www.espn.com/football/standings/_/league/ITA.1",
+    "40": "https://www.espn.com/football/standings/_/league/ENG.2",
+    "140": "https://www.espn.com/football/standings/_/league/ESP.1"
+  },
+  "leagues": {
+    "Argentine (ARG.1)": {
+      "league_name": "Argentine (ARG.1)",
+      "teams": [
+        {
+          "team": "Argentinos JRS",
+          "results_url": "https://www.espn.com/football/team/results/_/id/458/argentinos-juniors",
+          "results_page_fetched": true,
+          "results_page_fetch_error": "parse_error: name 're' is not defined",
+          "past_matches": [],
+          "stats": {},
+          "ai_analysis_text": null
+        },
+        {
+          "team": "Newells Old Boys",
+          "results_url": "https://www.espn.com/football/team/results/_/id/457/newells-old-boys",
+          "results_page_fetched": true,
+          "results_page_fetch_error": "parse_error: name 're' is not defined",
+          "past_matches": [],
+          "stats": {},
+          "ai_analysis_text": null
+        },
+        {
+          "team": "Lanus",
+          "results_url": "https://www.espn.com/football/team/results/_/id/446/lanus",
+          "results_page_fetched": true,
+          "results_page_fetch_error": "parse_error: name 're' is not defined",
+          "past_matches": [],
+          "stats": {},
+          "ai_analysis_text": null
+        },
+        {
+          "team": "Godoy Cruz",
+          "results_url": "https://www.espn.com/football/team/results/_/id/439/godoy-cruz",
+          "results_page_fetched": false,
+          "results_page_fetch_error": "fetch_failed",
+          "past_matches": [],
+          "stats": {},
+          "ai_analysis_text": null
+        },
+        {
+          "team": "Boca Juniors",
+          "results_url": "https://www.espn.com/football/team/results/_/id/451/boca-juniors",
+          "results_page_fetched": true,
+          "results_page_fetch_error": "parse_error: name 're' is not defined",
+          "past_matches": [],
+          "stats": {},
+          "ai_analysis_text": null
+        },
+        {
+          "team": "River Plate",
+          "results_url": "https://www.espn.com/football/team/results/_/id/435/river-plate",
+          "results_page_fetched": true,
+          "results_page_fetch_error": "parse_error: name 're' is not defined",
+          "past_matches": [],
+          "stats": {},
+          "ai_analysis_text": null
+        },
+        {
+          "team": "Talleres Cordoba",
+          "results_url": "https://www.espn.com/football/team/results/_/id/456/talleres",
+          "results_page_fetched": true,
+          "results_page_fetch_error": "parse_error: name 're' is not defined",
+          "past_matches": [],
+          "stats": {},
+          "ai_analysis_text": null
+        }
+      ]
+    },
+    "Colombia (COL.1)": {
+      "league_name": "Colombia (COL.1)",
+      "teams": [
+        {
+          "team": "Santa Fe",
+          "results_url": "https://www.espn.com/football/team/results/_/id/1139/independiente-santa-fe",
+          "results_page_fetched": false,
+          "results_page_fetch_error": "fetch_failed",
+          "past_matches": [],
+          "stats": {},
+          "ai_analysis_text": null
+        },
+        {
+          "team": "Junior",
+          "results_url": "https://www.espn.com/football/team/results/_/id/1135/junior-barranquilla",
+          "results_page_fetched": false,
+          "results_page_fetch_error": "fetch_failed",
+          "past_matches": [],
+          "stats": {},
+          "ai_analysis_text": null
+        },
+        {
+          "team": "Deportivo Pereira",
+          "results_url": "https://www.espn.com/football/team/results/_/id/1462/deportivo-pereira",
+          "results_page_fetched": false,
+          "results_page_fetch_error": "fetch_failed",
+          "past_matches": [],
+          "stats": {},
+          "ai_analysis_text": null
+        }
+      ]
+    },
+    "Russia (RUS.1)": {
+      "league_name": "Russia (RUS.1)",
+      "teams": [
+        {
+          "team": "FC Orenburg",
+          "results_url": "https://www.espn.com/football/team/results/_/id/1080/fc-orenburg",
+          "results_page_fetched": false,
+          "results_page_fetch_error": "fetch_failed",
+          "past_matches": [],
+          "stats": {},
+          "ai_analysis_text": null
+        },
+        {
+          "team": "Nizhny Novgorod",
+          "results_url": "https://www.espn.com/football/team/results/_/id/2011/nizhny-novgorod",
+          "results_page_fetched": false,
+          "results_page_fetch_error": "fetch_failed",
+          "past_matches": [],
+          "stats": {},
+          "ai_analysis_text": null
+        }
+      ]
+    },
+    "MLS (USA.1)": {
+      "league_name": "MLS (USA.1)",
+      "teams": [
+        {
+          "team": "Atlanta United FC",
+          "results_url": "https://www.espn.com/football/team/results/_/id/1608/atlanta-united",
+          "results_page_fetched": false,
+          "results_page_fetch_error": "fetch_failed",
+          "past_matches": [],
+          "stats": {},
+          "ai_analysis_text": null
+        },
+        {
+          "team": "DC United",
+          "results_url": "https://www.espn.com/football/team/results/_/id/1615/dc-united",
+          "results_page_fetched": false,
+          "results_page_fetch_error": "fetch_failed",
+          "past_matches": [],
+          "stats": {},
+          "ai_analysis_text": null
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "note": "standings not fetched; standings_urls preserved under standings_urls key."
+  }
+}
