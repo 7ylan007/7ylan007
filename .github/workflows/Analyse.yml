@@ -2,155 +2,37 @@ name: Daily Football Analysis
 
 on:
   schedule:
-    # Runs every day at 00:00 UTC
-    - cron: '0 0 * * *'
-  workflow_dispatch: # Permet le déclenchement manuel depuis l'UI
+    - cron: '0 1 * * *'   # Exécution chaque jour à 01h UTC
+  workflow_dispatch:       # Permet de lancer manuellement
 
 jobs:
   run-analysis:
     runs-on: ubuntu-latest
     env:
-      FOOTBALL_KEY: ${{ secrets.FOOTBALL_KEY }}
-      GRQ_KEY: ${{ secrets.GRQ_KEY }}
-      GIT_REMOTE: origin
-      GIT_AUTHOR_NAME: ${{ secrets.GIT_AUTHOR_NAME || 'github-actions[bot]' }}
-      GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL || '41898282+github-actions[bot]@users.noreply.github.com' }}
-
+      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+      ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      GROQ_API_KEY1: ${{ secrets.GROQ_API_KEY1 }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # nécessaire pour push et historique complet
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install requests beautifulsoup4
+          pip install requests beautifulsoup4 numpy
 
-      - name: Ensure script filename (handle analysemmyyy.py)
+      - name: Run daily football script
+        run: python c12(Copy).py
+
+      - name: Commit and push results
         run: |
-          # Priorité : analyser analysemmyyy.py si présent, sinon tenter d'adapter les autres noms existants.
-          if [ -f "analysemmyyy.py" ]; then
-            mv analysemmyyy.py Analyse.py
-            chmod +x Analyse.py
-            git add Analyse.py || true
-          elif [ -f "Analyse.py" ]; then
-            chmod +x Analyse.py
-          elif [ -f "ylanyyy.py" ]; then
-            mv ylanyyy.py Analyse.py
-            chmod +x Analyse.py
-            git add Analyse.py || true
-          elif [ -f "yyred.py" ]; then
-            mv yyred.py Analyse.py
-            chmod +x Analyse.py
-            git add Analyse.py || true
-          else
-            echo "No source script found in repo root. Ensure analysemmyyy.py or Analyse.py exists."
-          fi
-
-      - name: Show Python and repo status
-        run: |
-          python --version
-          pip --version
-          echo "Repository root files:"
-          ls -la
-
-      - name: Run analysis script
-        id: run_analysis
-        env:
-          FOOTBALL_KEY: ${{ secrets.FOOTBALL_KEY }}
-          GRQ_KEY: ${{ secrets.GRQ_KEY }}
-        run: |
-          if [ ! -f "Analyse.py" ]; then
-            echo "Analyse.py not found, exiting."
-            exit 1
-          fi
-
-          # Vérifier que les variables d'environnement requises sont définies
-          if [ -z "${FOOTBALL_KEY}" ]; then
-            echo "FOOTBALL_KEY is not set; exiting."
-            exit 1
-          fi
-          if [ -z "${GRQ_KEY}" ]; then
-            echo "GRQ_KEY is not set; exiting."
-            exit 1
-          fi
-
-          echo "Running analysis..."
-          python Analyse.py
-
-      - name: Collect generated analysis files
-        if: ${{ always() }}
-        run: |
-          echo "Looking for generated analysis files..."
-          # Le script crée analyse-YYYY-MM-DD.json à la racine et un historique dans ./analyses/
-          ROOT_JSON=$(ls analyse-*.json 2>/dev/null || true)
-          HISTORY_FILES=$(ls analyses/analysis_*.json 2>/dev/null || true)
-
-          echo "Root JSON: $ROOT_JSON"
-          echo "History files (first 10):"
-          ls -la analyses/analysis_*.json 2>/dev/null | head -n 10 || true
-
-      - name: Commit and push results (if any)
-        if: ${{ always() }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIT_REMOTE: ${{ env.GIT_REMOTE }}
-          GIT_AUTHOR_NAME: ${{ env.GIT_AUTHOR_NAME }}
-          GIT_AUTHOR_EMAIL: ${{ env.GIT_AUTHOR_EMAIL }}
-        run: |
-          set -e
-
-          git config user.name "${GIT_AUTHOR_NAME}"
-          git config user.email "${GIT_AUTHOR_EMAIL}"
-
-          # Rafraîchir l'état du repo
-          git fetch "${GIT_REMOTE}" || true
-          git status --porcelain
-
-          # Nettoyage potentiellement utile pour éviter d'ajouter des fichiers temporaires
-          # Ignorer les fichiers temporaires de l'OS
-          git clean -fdn || true
-
-          if [ -n "$(git status --porcelain)" ]; then
-            # Ajouter explicitement les fichiers d'analyse générés (si présents), sinon tout
-            ADDED=0
-            if ls analyse-*.json 1> /dev/null 2>&1; then
-              git add analyse-*.json || true
-              ADDED=1
-            fi
-            if ls analyses/analysis_*.json 1> /dev/null 2>&1; then
-              git add analyses/analysis_*.json || true
-              ADDED=1
-            fi
-
-            if [ "$ADDED" -eq 0 ]; then
-              # Aucun fichier d'analyse spécifique trouvé : ajouter tous les changements détectés
-              git add -A
-            fi
-
-            # Commit (si rien à committer, git commit retournera une erreur mais on ignore)
-            if git diff --staged --quiet; then
-              echo "✅ Nothing new to commit after staging."
-            else
-              git commit -m "chore: add daily analysis results $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || echo "Commit failed or nothing to commit"
-              # Push en essayant plusieurs fois en cas de race condition
-              for i in 1 2 3; do
-                if git push "${GIT_REMOTE}" HEAD; then
-                  echo "✅ Push successful."
-                  break
-                else
-                  echo "⚠️ Push attempt $i failed, retrying..."
-                  sleep 2
-                fi
-              done
-            fi
-          else
-            echo "✅ No changes to commit."
-          fi
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Daily update $(date)"
+          git push
