@@ -27,7 +27,7 @@ jobs:
           pip install requests beautifulsoup4 numpy
 
       - name: Run daily football script
-        run: python c12(Copy).py
+        run: python Analyse.py
 
       - name: Commit and push results
         run: |
