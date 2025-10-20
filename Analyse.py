@@ -2172,7 +2172,6 @@ teams_urls = {
         }
     # Ajoutez d'autres équipes si besoin
 }
-
 headers = {'User-Agent': 'Mozilla/5.0'}
 
 PREDICTIONS = []
@@ -2372,7 +2371,7 @@ def simulation_match_montecarlo(stats_home, stats_away, h2h_data=None, n=20000):
 
     # --- Scores exacts les plus probables ---
     unique_scores, counts = np.unique(list(zip(buts_home, buts_away)), axis=0, return_counts=True)
-    top_scores_idx = np.argsort(counts)[-10:][[::-1]] if len(counts) > 0 else np.array([], dtype=int)
+    top_scores_idx = np.argsort(counts)[-10:][::-1] if len(counts) > 0 else np.array([], dtype=int)
     # (Remarque: la ligne ci‑dessous utilise une variante robuste)
     top_scores_idx = np.argsort(counts)[-10:][::-1] if len(counts) > 0 else np.array([], dtype=int)
     scores_probables = {}
@@ -3629,70 +3628,16 @@ def git_commit_and_push(filepath):
         subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
         subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=True)
         subprocess.run(["git", "add", filepath], check=True)
-        subprocess.run(["git", "commit", "-m", f"📊 Statistiques brutes complètes du {datetime.now().strftime('%Y-%m-%d')} - Version 8.3 MODIFIÉE : STATS BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES ESPN + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (HORS PROMPT IA) + NOM FICHIER SIMPLIFIÉ"], check=True)
+        subprocess.run(["git", "commit", "-m", f"Update predictions {datetime.now().strftime('%Y-%m-%d')}"], check=True)
         subprocess.run(["git", "push"], check=True)
-        print("✅ Statistiques brutes complètes avec cotes et analyse IA enrichie + stats détaillées ESPN + H2H enrichi + nouvelles fonctionnalités + extraction améliorée 2 formats + PROBABILITÉS MONTE-CARLO (hors prompt IA) + nom fichier simplifié poussées avec succès sur GitHub.")
+        print("✅ Fichier poussé avec succès sur GitHub.")
     except subprocess.CalledProcessError as e:
         print(f"❌ Erreur Git : {e}")
 
 def main():
-    print("📊 Bienvenue dans l'analyse v8.3 MODIFIÉE : STATISTIQUES BRUTES COMPLÈTES + ANALYSE IA DEEPSEEK ENRICHIE + RETRY + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (HORS PROMPT IA) + NOM FICHIER SIMPLIFIÉ !")
-    print("🧹 Toutes les fonctionnalités d'analyse avancée ont été supprimées")
-    print("📈 Collecte complète des statistiques brutes :")
-    print("   - Moyennes buts marqués/encaissés")
-    print("   - Forme récente (6 derniers matchs)")
-    print("   - Forme longue (10 derniers matchs)")
-    print("   - Séries domicile/extérieur")
-    print("   - Classements des équipes avec points")
-    print("   - Points de forme (6 et 10 matchs)")
-    print("   💰 - Cotes des bookmakers (1xBet prioritaire, puis Betclic)")
-    print("   🧠 - Analyse IA DeepSeek ENRICHIE avec alternance automatique des clés Groq")
-    print("   🔄 - Retry automatique (5 tentatives) si l'IA échoue")
-    print("   📋 - 10 vrais matchs complets avec structure objet (game_id, date, home_team, away_team, score, status, competition)")
-    print("   📊 - ✨ Statistiques détaillées ESPN pour chaque match passé (possession, tirs, corners, etc.)")
-    print("   🏆 - Classement complet de la ligue")
-    print("   🆚 - ✨ Confrontations directes H2H élargies AVEC STATISTIQUES DÉTAILLÉES via gameId")
-    print("   📊 - ✨ Pourcentage de confiance EXTRAIT AUTOMATIQUEMENT dans un champ dédié")
-    print("   ⚽ - ✨ Les 2 scores les plus probables")
-    print("   ❌ - ✨ Suppression de 'match nul' des prédictions (remplacé par double chance)")
-    print("   🔧 - ✨ v8.2 : EXTRACTION AMÉLIORÉE support des 2 formats d'analyse IA")
-    print("   🎲 - ✨ NOUVEAU v8.3 : MODULE PROBABILITÉS MONTE-CARLO INTÉGRÉ (HORS PROMPT IA) :")
-    print("      ▫️ 20 000 simulations par match")
-    print("      ▫️ Calibrage avec moyennes internationales FIFA/UEFA")
-    print("      ▫️ Ajustement automatique selon les confrontations H2H")
-    print("      ▫️ Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS")
-    print("      ▫️ Scores exacts les plus probables calculés statistiquement")
-    print("      ❌ MODIFICATION : Probabilités Monte-Carlo NON incluses dans le prompt IA")
-    print("   ❌ MODIFICATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)")
-    print("   📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json")
-    print("   ✨ - Prompt IA enrichi avec toutes ces données détaillées + statistiques ESPN des matchs + H2H avec stats (SANS Monte-Carlo)")
-    print("🚫 Aucun ajustement, bonus, malus")
-    print("🔮 Prédictions basées sur l'analyse IA DeepSeek enrichie avec retry automatique + stats détaillées + H2H enrichi + nouvelles fonctionnalités + extraction améliorée 2 formats (SANS Monte-Carlo dans le prompt)")
-    print("🔄 Mapping automatique des noms d'équipes conservé")
-    print("🛑 Filtrage automatique des équipes avec forme nulle conservé")
-    print("📊 Analyse pure et complète des statistiques brutes + IA enrichie + retry + H2H enrichi avec stats + extraction améliorée 2 formats + PROBABILITÉS MONTE-CARLO calculées (hors prompt IA) des matchs du jour...\n")
+    print("📊 Lancement de l'analyse des matchs du jour...")
     get_today_matches_filtered()
-    print(f"\n📋 Résumé de la session:")
-    print(f"   📊 {len(PREDICTIONS)} analyses complètes de statistiques brutes avec cotes et IA enrichie + stats détaillées ESPN + H2H enrichi + nouvelles fonctionnalités + extraction améliorée 2 formats + PROBABILITÉS MONTE-CARLO (hors prompt IA) générées")
-    print(f"   🧠 Analyse IA DeepSeek ENRICHIE avec retry automatique intégrée (SANS Monte-Carlo dans le prompt)")
-    print(f"   🔑 {len(groq_keys)} clés Groq disponibles")
-    print(f"   📋 Matchs complets avec nouvelle structure objet et classements complets intégrés dans le prompt IA")
-    print(f"   📊 ✨ Statistiques détaillées ESPN récupérées pour chaque match passé")
-    print(f"   🆚 ✨ Confrontations H2H élargies avec STATISTIQUES DÉTAILLÉES via gameId disponibles dans le prompt IA")
-    print(f"   📊 ✨ Pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables")
-    print(f"   ❌ ✨ Suppression de 'match nul' des prédictions possibles")
-    print(f"   📁 ✨ Fichier sauvegardé avec nom SIMPLIFIÉ prédiction-YYYY-MM-DD-analyse-ia.json")
-    print(f"   🔄 Système de retry automatique (5 tentatives) pour garantir les analyses IA")
-    print(f"   ✅ Structure objet des matchs passés avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES")
-    print(f"   🔧 ✨ v8.2 : Support robuste des 2 formats d'analyse IA (**FORMAT** et FORMAT simple)")
-    print(f"   🎯 ✨ v8.2 : Extraction automatique de prediction_principale, scores_probables")
-    print(f"   🎲 ✨ NOUVEAU v8.3 : PROBABILITÉS MONTE-CARLO intégrées avec 20 000 simulations par match (CALCULÉES MAIS HORS PROMPT IA)")
-    print(f"   🔢 ✨ NOUVEAU v8.3 : Calibrage avec moyennes internationales + ajustement H2H automatique")
-    print(f"   ❌ ✨ MODIFICATION v8.3 : IA utilise uniquement stats + cotes + H2H (SANS probabilités Monte-Carlo)")
-    print(f"   ❌ ✨ MODIFICATION v8.3 : IA ne prédit plus corners et tirs cadrés (champs conservés dans structure)")
-    if IGNORED_ZERO_FORM_TEAMS:
-        print(f"   🚫 {len(set(IGNORED_ZERO_FORM_TEAMS))} équipes ignorées pour forme nulle")
-    print("\n✨ Merci d'avoir utilisé le script v8.3 MODIFIÉ - Statistiques brutes complètes avec cotes et IA DeepSeek enrichie + retry + H2H enrichi avec stats + confiance extraite + scores + extraction améliorée 2 formats + PROBABILITÉS MONTE-CARLO (CALCULÉES MAIS HORS PROMPT IA) + NOM FICHIER SIMPLIFIÉ !")
+    print(f"\n✅ Analyse terminée !")
 
 if __name__ == "__main__":
     main()
