@@ -1,0 +1,1179 @@
+{
+  "metadata": {
+    "date_generation": "2025-10-21 03:31:01",
+    "date_matchs": "2025-10-21",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 1,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICIATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Millonarios",
+        "AwayTeam": "Bucaramanga",
+        "date": "21 octobre 2025 à 23:00:00 UTC",
+        "league": "Colombia - Primera A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 1.3,
+          "form_6": [
+            "L",
+            "W",
+            "L",
+            "W",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "L",
+            "W",
+            "D",
+            "L"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 14,
+          "total_points": 7,
+          "serie_domicile": [
+            "W",
+            "W",
+            "D",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 10,
+          "total_marques": 10,
+          "total_encaisses": 13
+        },
+        "stats_away": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 0.6,
+          "form_6": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "D",
+            "W",
+            "D",
+            "W",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 20,
+          "total_points": 13,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "D",
+            "W",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 5,
+          "total_marques": 13,
+          "total_encaisses": 6
+        },
+        "last_matches_home": [
+          {
+            "game_id": "750727",
+            "date": "Wed, Oct 15",
+            "home_team": "Deportivo Pereira",
+            "away_team": "Millonarios",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.5%",
+                "56.5%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "8"
+              ],
+              "Shot Attempts": [
+                "13",
+                "15"
+              ],
+              "Yellow Cards": [
+                "3",
+                "5"
+              ],
+              "Corner Kicks": [
+                "4",
+                "8"
+              ],
+              "Saves": [
+                "6",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750727"
+          },
+          {
+            "game_id": "750717",
+            "date": "Tue, Oct 7",
+            "home_team": "Millonarios",
+            "away_team": "América de Cali",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55%",
+                "45%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "2"
+              ],
+              "Shot Attempts": [
+                "18",
+                "4"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750717"
+          },
+          {
+            "game_id": "750703",
+            "date": "Sat, Sep 27",
+            "home_team": "Atlético Nacional",
+            "away_team": "Millonarios",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58%",
+                "42%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "21",
+                "15"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "6",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750703"
+          },
+          {
+            "game_id": "750694",
+            "date": "Sun, Sep 21",
+            "home_team": "Millonarios",
+            "away_team": "Fortaleza CEIF",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "41%",
+                "59%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "5"
+              ],
+              "Shot Attempts": [
+                "19",
+                "8"
+              ],
+              "Yellow Cards": [
+                "5",
+                "1"
+              ],
+              "Corner Kicks": [
+                "1",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750694"
+          },
+          {
+            "game_id": "757626",
+            "date": "Tue, Sep 16",
+            "home_team": "Millonarios",
+            "away_team": "Envigado",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/757626"
+          },
+          {
+            "game_id": "750681",
+            "date": "Sat, Sep 13",
+            "home_team": "Alianza FC",
+            "away_team": "Millonarios",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.3%",
+                "47.7%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "14",
+                "11"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "8",
+                "8"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750681"
+          },
+          {
+            "game_id": "750595",
+            "date": "Wed, Sep 10",
+            "home_team": "Millonarios",
+            "away_team": "Deportivo Pasto",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.1%",
+                "52.9%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "6"
+              ],
+              "Shot Attempts": [
+                "12",
+                "14"
+              ],
+              "Yellow Cards": [
+                "6",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "6",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750595"
+          },
+          {
+            "game_id": "750673",
+            "date": "Sat, Sep 6",
+            "home_team": "Millonarios",
+            "away_team": "Independiente Santa Fe",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.4%",
+                "47.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "18",
+                "8"
+              ],
+              "Yellow Cards": [
+                "5",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750673"
+          },
+          {
+            "game_id": "757624",
+            "date": "Wed, Sep 3",
+            "home_team": "Envigado",
+            "away_team": "Millonarios",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/757624"
+          },
+          {
+            "game_id": "750659",
+            "date": "Fri, Aug 29",
+            "home_team": "Águilas Doradas",
+            "away_team": "Millonarios",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45.4%",
+                "54.6%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "13",
+                "16"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750659"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "750722",
+            "date": "Sun, Oct 12",
+            "home_team": "Bucaramanga",
+            "away_team": "Unión Magdalena",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.7%",
+                "43.3%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "10",
+                "9"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750722"
+          },
+          {
+            "game_id": "750709",
+            "date": "Sat, Oct 4",
+            "home_team": "Envigado",
+            "away_team": "Bucaramanga",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.4%",
+                "51.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "11",
+                "13"
+              ],
+              "Yellow Cards": [
+                "6",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750709"
+          },
+          {
+            "game_id": "750699",
+            "date": "Fri, Sep 26",
+            "home_team": "Fortaleza CEIF",
+            "away_team": "Bucaramanga",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.7%",
+                "50.3%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "9",
+                "14"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "9"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750699"
+          },
+          {
+            "game_id": "750688",
+            "date": "Fri, Sep 19",
+            "home_team": "Bucaramanga",
+            "away_team": "Deportes Tolima",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.3%",
+                "56.7%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "1"
+              ],
+              "Shot Attempts": [
+                "11",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750688"
+          },
+          {
+            "game_id": "750586",
+            "date": "Tue, Sep 16",
+            "home_team": "América de Cali",
+            "away_team": "Bucaramanga",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "63.5%",
+                "36.5%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "3"
+              ],
+              "Shot Attempts": [
+                "20",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750586"
+          },
+          {
+            "game_id": "750683",
+            "date": "Sat, Sep 13",
+            "home_team": "Atlético Nacional",
+            "away_team": "Bucaramanga",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "67.2%",
+                "32.8%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "5"
+              ],
+              "Shot Attempts": [
+                "26",
+                "6"
+              ],
+              "Yellow Cards": [
+                "6",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750683"
+          },
+          {
+            "game_id": "750597",
+            "date": "Tue, Sep 9",
+            "home_team": "Bucaramanga",
+            "away_team": "Once Caldas",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.6%",
+                "44.4%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "1"
+              ],
+              "Shot Attempts": [
+                "18",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "5"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750597"
+          },
+          {
+            "game_id": "750670",
+            "date": "Sat, Sep 6",
+            "home_team": "Bucaramanga",
+            "away_team": "Alianza FC",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "69.6%",
+                "30.4%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "20",
+                "7"
+              ],
+              "Yellow Cards": [
+                "4",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750670"
+          },
+          {
+            "game_id": "757620",
+            "date": "Wed, Sep 3",
+            "home_team": "América de Cali",
+            "away_team": "Bucaramanga",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/757620"
+          },
+          {
+            "game_id": "750662",
+            "date": "Sat, Aug 30",
+            "home_team": "Deportivo Pereira",
+            "away_team": "Bucaramanga",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.1%",
+                "52.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "8",
+                "15"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750662"
+          }
+        ],
+        "classement": {
+          "Millonarios": {
+            "position": 16,
+            "points": 17
+          },
+          "Bucaramanga": {
+            "position": 3,
+            "points": 30
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Independiente Medellín",
+            "points": 31
+          },
+          {
+            "position": 2,
+            "team": "Atlético Junior",
+            "points": 31
+          },
+          {
+            "position": 3,
+            "team": "Bucaramanga",
+            "points": 30
+          },
+          {
+            "position": 4,
+            "team": "Atlético Nacional",
+            "points": 28
+          },
+          {
+            "position": 5,
+            "team": "Fortaleza CEIF",
+            "points": 28
+          },
+          {
+            "position": 6,
+            "team": "Deportes Tolima",
+            "points": 26
+          },
+          {
+            "position": 7,
+            "team": "Llaneros",
+            "points": 25
+          },
+          {
+            "position": 8,
+            "team": "Independiente Santa Fe",
+            "points": 22
+          },
+          {
+            "position": 9,
+            "team": "Águilas Doradas",
+            "points": 21
+          },
+          {
+            "position": 10,
+            "team": "América de Cali",
+            "points": 20
+          },
+          {
+            "position": 11,
+            "team": "Alianza FC",
+            "points": 20
+          },
+          {
+            "position": 12,
+            "team": "Deportivo Cali",
+            "points": 20
+          },
+          {
+            "position": 13,
+            "team": "Once Caldas",
+            "points": 19
+          },
+          {
+            "position": 14,
+            "team": "Deportivo Pereira",
+            "points": 18
+          },
+          {
+            "position": 15,
+            "team": "Unión Magdalena",
+            "points": 18
+          },
+          {
+            "position": 16,
+            "team": "Millonarios",
+            "points": 17
+          },
+          {
+            "position": 17,
+            "team": "Envigado",
+            "points": 16
+          },
+          {
+            "position": 18,
+            "team": "Deportivo Pasto",
+            "points": 13
+          },
+          {
+            "position": 19,
+            "team": "Boyacá Chicó",
+            "points": 13
+          },
+          {
+            "position": 20,
+            "team": "La Equidad",
+            "points": 11
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "693601",
+            "date": "Sunday, January 28, 2024",
+            "team1": "Bucaramanga",
+            "score": "0 - 0",
+            "team2": "Millonarios",
+            "title": "Bucaramanga VS Millonarios",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/693601/millonarios-bucaramanga",
+            "source": "Primera A",
+            "stats": {
+              "Possession": [
+                "57.2%",
+                "42.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "9",
+                "12"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "5"
+              ]
+            }
+          },
+          {
+            "gameId": "702325",
+            "date": "Sunday, May 19, 2024",
+            "team1": "Millonarios",
+            "score": "0 - 1",
+            "team2": "Bucaramanga",
+            "title": "Millonarios VS Bucaramanga",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/702325/bucaramanga-millonarios",
+            "source": "Primera A",
+            "stats": {
+              "Possession": [
+                "61.8%",
+                "38.2%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "1"
+              ],
+              "Shot Attempts": [
+                "15",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "6"
+              ],
+              "Corner Kicks": [
+                "7",
+                "6"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            }
+          },
+          {
+            "gameId": "702636",
+            "date": "Wednesday, May 22, 2024",
+            "team1": "Bucaramanga",
+            "score": "0 - 0",
+            "team2": "Millonarios",
+            "title": "Bucaramanga VS Millonarios",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/702636/millonarios-bucaramanga",
+            "source": "Primera A",
+            "stats": {
+              "Possession": [
+                "46.8%",
+                "53.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "11",
+                "8"
+              ],
+              "Yellow Cards": [
+                "4",
+                "6"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "5",
+                "4"
+              ]
+            }
+          },
+          {
+            "gameId": "714419",
+            "date": "Sunday, July 21, 2024",
+            "team1": "Millonarios",
+            "score": "1 - 0",
+            "team2": "Bucaramanga",
+            "title": "Millonarios VS Bucaramanga",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/714419/bucaramanga-millonarios",
+            "source": "Primera A",
+            "stats": {
+              "Possession": [
+                "52.6%",
+                "47.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "17",
+                "4"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "0"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            }
+          },
+          {
+            "gameId": "730470",
+            "date": "Sunday, April 27, 2025",
+            "team1": "Bucaramanga",
+            "score": "0 - 2",
+            "team2": "Millonarios",
+            "title": "Bucaramanga VS Millonarios",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/730470/millonarios-bucaramanga",
+            "source": "Primera A",
+            "stats": {
+              "Possession": [
+                "60.8%",
+                "39.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "15",
+                "7"
+              ],
+              "Yellow Cards": [
+                "6",
+                "5"
+              ],
+              "Corner Kicks": [
+                "5",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/1125.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1131.png",
+        "classement_home": 16,
+        "classement_away": 3,
+        "points_classement_home": 17,
+        "points_classement_away": 30,
+        "nom_classement_home": "Millonarios",
+        "nom_classement_away": "Bucaramanga",
+        "country_fr": "Colombia - Primera A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.016,
+            "lambda_away": 1.144,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 32.3,
+            "X": 28.88,
+            "V2": 38.82
+          },
+          "double_chance": {
+            "1X": 61.18,
+            "12": 71.12,
+            "X2": 67.7
+          },
+          "over_under": {
+            "plus_de_0.5": 88.75,
+            "moins_de_0.5": 11.25,
+            "plus_de_1.5": 64.14,
+            "moins_de_1.5": 35.85,
+            "plus_de_2.5": 36.65,
+            "moins_de_2.5": 63.36,
+            "plus_de_3.5": 17.39,
+            "moins_de_3.5": 82.62,
+            "plus_de_4.5": 6.95,
+            "moins_de_4.5": 93.05,
+            "plus_de_5.5": 2.27,
+            "moins_de_5.5": 97.73
+          },
+          "btts": {
+            "oui": 43.51,
+            "non": 56.49
+          },
+          "resultat_total": {
+            "V1et+0.5": 32.3,
+            "1Xet+0.5": 49.92,
+            "V2et+0.5": 38.82,
+            "V1et+1.5": 20.77,
+            "1Xet+1.5": 38.4,
+            "V2et+1.5": 25.75,
+            "V1et+2.5": 14.7,
+            "1Xet+2.5": 18.9,
+            "V2et+2.5": 17.74,
+            "V1et+3.5": 5.72,
+            "1Xet+3.5": 9.93,
+            "V2et+3.5": 7.46,
+            "V1et+4.5": 2.86,
+            "1Xet+4.5": 3.35,
+            "V2et+4.5": 3.6,
+            "V1et+5.5": 0.76,
+            "1Xet+5.5": 1.26,
+            "V2et+5.5": 1.01
+          },
+          "scores_probables": {
+            "1-1": 13.42,
+            "0-1": 13.08,
+            "1-0": 11.53,
+            "0-0": 11.25,
+            "0-2": 8.01,
+            "1-2": 7.61,
+            "2-1": 6.84,
+            "2-0": 6.08,
+            "2-2": 3.72,
+            "1-3": 3.04
+          },
+          "buts_moyens_simules": {
+            "home": 1.02,
+            "away": 1.15,
+            "total": 2.17
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Double chance X2 (nul ou victoire extérieure)  \n**CONFIANCE** : 68 %  \n**SCORES PROBABLES** : 0‑1 ou 1‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Millonarios** (16ᵉ, 17 pts) : moyenne 1,00 but marqué et 1,30 encaissé. À domicile, ils n’ont inscrit que **6 buts** et n’en ont concédé que **3** sur leurs derniers matchs, ce qui montre une défense raisonnable mais une attaque peu prolifique. Leur série à domicile (W‑W‑D‑W‑D) indique une capacité à gagner, mais les victoires sont souvent à un seul but d’écart.  \n- **Bucaramanga** (3ᵉ, 30 pts) : moyenne 1,30 but marqué et 0,60 encaissé, soit la meilleure défense du championnat. À l’extérieur, ils n’ont laissé passer que **5 buts** (≈0,8 b/p) tout en marquant **7** (≈1,2 b/p). Leur forme à l’extérieur (W‑L‑D‑W‑L‑W) reste solide, avec trois victoires et deux nuls sur les six derniers déplacements.\n\n**2. Impact du facteur domicile/extérieur**  \n- Millonarios bénéficie du facteur domicile (meilleure possession à domicile : 52‑55 % en moyenne) mais leur attaque reste limitée (ex. 0‑0, 0‑0, 1‑0, 3‑2, 2‑1).  \n- Bucaramanga, même en déplacement, garde un taux de possession supérieur à 48 % et domine les tirs (ex. 4‑1 contre Deportes Tolima, 7‑3 contre Alianza FC). Leur capacité à marquer à l’extérieur tout en restant très compact défensivement les rend dangereux.\n\n**3. Forme récente et tendances (statistiques détaillées)**  \n- **Millonarios** : dans les 5 derniers matchs à domicile, ils n’ont concédé que **3 buts** (0,6 b/p) mais n’ont marqué que **6** (1,2 b/p). Leurs tirs cadrés sont généralement faibles (2‑4 t.c. par match) et les occasions créées restent limitées.  \n- **Bucaramanga** : lors de leurs 6 derniers déplacements, ils ont inscrit **7 buts** (1,17 b/p) et n’en ont encaissé que **5** (0,83 b/p). Leurs tirs cadrés sont supérieurs (3‑5 t.c. par match) et ils dominent les duels aériens (plus de corners).  \n\n**4. Contexte du championnat**  \n- Bucaramanga lutte pour la place en tête (3ᵉ, 30 pts) et ne peut se permettre de perdre contre une équipe du bas du tableau.  \n- Millonarios, à 16ᵉ place, cherche à sortir de la zone de relégation ; cependant, leur différence de points (13 pts) rend difficile de les surprendre à domicile contre une équipe en forme.\n\n**5. Confrontations directes**  \n- 5 dernières rencontres : **Bucaramanga** 3 victoires, **Millonarios** 1 victoire, 2 nuls.  \n- Les deux derniers matchs (2025) se sont soldés par des victoires de Bucaramanga (0‑2 à domicile) et un nul (0‑0 à l’extérieur).  \n- Statistiquement, Bucaramanga a marqué **3 buts** contre **1** de Millonarios, tout en concédant **2** contre **0** de Millonarios, ce qui confirme une supériorité nette.\n\n**6. Analyse des statistiques détaillées (possession, tirs, corners, etc.)**  \n- **Possession** : Millonarios domine souvent le ballon à domicile (≈55 %) mais ne le convertit pas en tirs cadrés (ex. 2‑2 contre América de Cali).  \n- **Tirs** : Bucaramanga réalise plus de tirs totaux et de tirs cadrés à l’extérieur (ex. 10‑9 tirs, 4‑3 t.c. contre Unión Magdalena).  \n- **Corners** : Bucaramanga crée davantage de corners (ex. 6‑5, 7‑2) indiquant une pression offensive plus soutenue.  \n- **Cartons** : Aucun impact majeur sur le résultat, mais Millonarios montre une discipline légèrement inférieure (plus de cartons jaunes) qui peut entraîner des suspensions.\n\n**7. Synthèse**  \n- L’attaque de Millonarios est trop peu efficace pour battre une défense solide comme celle de Bucaramanga.  \n- Bucaramanga a les moyens de marquer au moins un but à l’extérieur tout en gardant la cage fermée.  \n- Le match devrait donc se situer sous les 2,5 buts, avec une forte probabilité d’un résultat nul ou d’une victoire de l’équipe visiteuse.\n\n**Conclusion** : La meilleure option de pari, compte tenu de la supériorité globale de Bucaramanga et du faible potentiel offensif de Millonarios, est le **double chance X2** (nul ou victoire extérieure). Les scores les plus probables sont **0‑1** (victoire de Bucaramanga) ou **1‑1** (match nul).",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Double chance X2 (nul ou victoire extérieure)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑1 ou 1‑1"
+      }
+    ]
+  }
+}
