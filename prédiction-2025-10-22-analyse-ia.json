@@ -1,0 +1,2073 @@
+{
+  "metadata": {
+    "date_generation": "2025-10-22 03:37:36",
+    "date_matchs": "2025-10-22",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 2,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICIATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 2,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Konyaspor",
+        "AwayTeam": "Besiktas",
+        "date": "22 octobre 2025 à 17:00:00 UTC",
+        "league": "Turkey - Süper Lig",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.875,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "L",
+            "D",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "L",
+            "D"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 11,
+          "total_points": 5,
+          "serie_domicile": [
+            "L",
+            "W",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 6,
+          "total_marques": 15,
+          "total_encaisses": 12
+        },
+        "stats_away": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 1.3,
+          "form_6": [
+            "L",
+            "D",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W",
+            "W",
+            "L",
+            "W",
+            "L",
+            "L",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 14,
+          "total_points": 10,
+          "serie_exterieur": [
+            "D",
+            "W",
+            "L",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 7,
+          "total_marques": 14,
+          "total_encaisses": 13
+        },
+        "last_matches_home": [
+          {
+            "game_id": "749998",
+            "date": "Sat, Oct 18",
+            "home_team": "Konyaspor",
+            "away_team": "Kocaelispor",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.4%",
+                "43.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "12",
+                "7"
+              ],
+              "Yellow Cards": [
+                "4",
+                "5"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "0",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749998"
+          },
+          {
+            "game_id": "749988",
+            "date": "Sun, Oct 5",
+            "home_team": "Kasimpasa",
+            "away_team": "Konyaspor",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.2%",
+                "49.8%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "6"
+              ],
+              "Shot Attempts": [
+                "10",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749988"
+          },
+          {
+            "game_id": "749979",
+            "date": "Sun, Sep 28",
+            "home_team": "Konyaspor",
+            "away_team": "Istanbul Basaksehir",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "30.2%",
+                "69.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "13",
+                "17"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "2",
+                "11"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749979"
+          },
+          {
+            "game_id": "749964",
+            "date": "Mon, Sep 22",
+            "home_team": "Galatasaray",
+            "away_team": "Konyaspor",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.2%",
+                "47.8%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "13",
+                "14"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "4",
+                "6"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749964"
+          },
+          {
+            "game_id": "749961",
+            "date": "Sat, Sep 13",
+            "home_team": "Konyaspor",
+            "away_team": "Alanyaspor",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "66.3%",
+                "33.7%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "13",
+                "7"
+              ],
+              "Yellow Cards": [
+                "5",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749961"
+          },
+          {
+            "game_id": "749949",
+            "date": "Fri, Aug 29",
+            "home_team": "Goztepe",
+            "away_team": "Konyaspor",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "33.8%",
+                "66.2%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "2"
+              ],
+              "Shot Attempts": [
+                "18",
+                "10"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "6"
+              ],
+              "Saves": [
+                "1",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749949"
+          },
+          {
+            "game_id": "749935",
+            "date": "Sun, Aug 17",
+            "home_team": "Konyaspor",
+            "away_team": "Gaziantep FK",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.1%",
+                "49.9%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "1"
+              ],
+              "Shot Attempts": [
+                "15",
+                "17"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749935"
+          },
+          {
+            "game_id": "749920",
+            "date": "Sun, Aug 10",
+            "home_team": "Eyupspor",
+            "away_team": "Konyaspor",
+            "score": "1 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "63.2%",
+                "36.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "16",
+                "16"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "8",
+                "7"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749920"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "749991",
+            "date": "Sat, Oct 18",
+            "home_team": "Besiktas",
+            "away_team": "Genclerbirligi",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.4%",
+                "37.6%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "11",
+                "5"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749991"
+          },
+          {
+            "game_id": "749981",
+            "date": "Sat, Oct 4",
+            "home_team": "Galatasaray",
+            "away_team": "Besiktas",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.6%",
+                "46.4%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "5"
+              ],
+              "Shot Attempts": [
+                "14",
+                "11"
+              ],
+              "Yellow Cards": [
+                "1",
+                "6"
+              ],
+              "Corner Kicks": [
+                "4",
+                "8"
+              ],
+              "Saves": [
+                "4",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749981"
+          },
+          {
+            "game_id": "749973",
+            "date": "Mon, Sep 29",
+            "home_team": "Besiktas",
+            "away_team": "Kocaelispor",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "42%",
+                "58%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "1"
+              ],
+              "Shot Attempts": [
+                "13",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "3",
+                "7"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749973"
+          },
+          {
+            "game_id": "749924",
+            "date": "Wed, Sep 24",
+            "home_team": "Kayserispor",
+            "away_team": "Besiktas",
+            "score": "0 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.5%",
+                "49.5%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "9"
+              ],
+              "Shot Attempts": [
+                "6",
+                "13"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749924"
+          },
+          {
+            "game_id": "749966",
+            "date": "Fri, Sep 19",
+            "home_team": "Goztepe",
+            "away_team": "Besiktas",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "30.4%",
+                "69.6%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "2"
+              ],
+              "Shot Attempts": [
+                "13",
+                "13"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749966"
+          },
+          {
+            "game_id": "749954",
+            "date": "Sat, Sep 13",
+            "home_team": "Besiktas",
+            "away_team": "Istanbul Basaksehir",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.8%",
+                "47.2%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "21",
+                "11"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "10",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749954"
+          },
+          {
+            "game_id": "749945",
+            "date": "Sun, Aug 31",
+            "home_team": "Alanyaspor",
+            "away_team": "Besiktas",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "36.8%",
+                "63.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "9",
+                "15"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "6"
+              ],
+              "Saves": [
+                "4",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749945"
+          },
+          {
+            "game_id": "756308",
+            "date": "Thu, Aug 28",
+            "home_team": "Besiktas",
+            "away_team": "Lausanne Sports",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/756308"
+          },
+          {
+            "game_id": "756307",
+            "date": "Thu, Aug 21",
+            "home_team": "Lausanne Sports",
+            "away_team": "Besiktas",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/756307"
+          },
+          {
+            "game_id": "749928",
+            "date": "Sun, Aug 17",
+            "home_team": "Besiktas",
+            "away_team": "Eyupspor",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.7%",
+                "46.3%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "4"
+              ],
+              "Shot Attempts": [
+                "18",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "10",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749928"
+          }
+        ],
+        "classement": {
+          "Konyaspor": {
+            "position": 9,
+            "points": 11
+          },
+          "Besiktas": {
+            "position": 7,
+            "points": 13
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Galatasaray",
+            "points": 25
+          },
+          {
+            "position": 2,
+            "team": "Trabzonspor",
+            "points": 20
+          },
+          {
+            "position": 3,
+            "team": "Fenerbahce",
+            "points": 19
+          },
+          {
+            "position": 4,
+            "team": "Gaziantep FK",
+            "points": 17
+          },
+          {
+            "position": 5,
+            "team": "Goztepe",
+            "points": 16
+          },
+          {
+            "position": 6,
+            "team": "Samsunspor",
+            "points": 16
+          },
+          {
+            "position": 7,
+            "team": "Besiktas",
+            "points": 13
+          },
+          {
+            "position": 8,
+            "team": "Alanyaspor",
+            "points": 13
+          },
+          {
+            "position": 9,
+            "team": "Konyaspor",
+            "points": 11
+          },
+          {
+            "position": 10,
+            "team": "Antalyaspor",
+            "points": 10
+          },
+          {
+            "position": 11,
+            "team": "Kasimpasa",
+            "points": 9
+          },
+          {
+            "position": 12,
+            "team": "Caykur Rizespor",
+            "points": 8
+          },
+          {
+            "position": 13,
+            "team": "Genclerbirligi",
+            "points": 8
+          },
+          {
+            "position": 14,
+            "team": "Eyupspor",
+            "points": 8
+          },
+          {
+            "position": 15,
+            "team": "Kocaelispor",
+            "points": 8
+          },
+          {
+            "position": 16,
+            "team": "Istanbul Basaksehir",
+            "points": 6
+          },
+          {
+            "position": 17,
+            "team": "Kayserispor",
+            "points": 5
+          },
+          {
+            "position": 18,
+            "team": "Fatih Karagümrük",
+            "points": 3
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "713969",
+            "date": "Sunday, October 20, 2024",
+            "team1": "Besiktas",
+            "score": "2 - 0",
+            "team2": "Konyaspor",
+            "title": "Besiktas VS Konyaspor",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713969/konyaspor-besiktas",
+            "source": "Süper Lig",
+            "stats": {
+              "Possession": [
+                "56.3%",
+                "43.7%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "18",
+                "14"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "9",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            }
+          },
+          {
+            "gameId": "714140",
+            "date": "Saturday, March 15, 2025",
+            "team1": "Konyaspor",
+            "score": "1 - 0",
+            "team2": "Besiktas",
+            "title": "Konyaspor VS Besiktas",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/714140/besiktas-konyaspor",
+            "source": "Süper Lig",
+            "stats": {
+              "Possession": [
+                "34.2%",
+                "65.8%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "5"
+              ],
+              "Shot Attempts": [
+                "7",
+                "26"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "12"
+              ],
+              "Saves": [
+                "5",
+                "0"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/607.png",
+        "logo_away": "https://media.api-sports.io/football/teams/549.png",
+        "classement_home": 9,
+        "classement_away": 7,
+        "points_classement_home": 11,
+        "points_classement_away": 13,
+        "nom_classement_home": "Konyaspor",
+        "nom_classement_away": "Besiktas",
+        "country_fr": "Turkey - Süper Lig",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.546,
+            "lambda_away": 1.118,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 46.58,
+            "X": 25.7,
+            "V2": 27.72
+          },
+          "double_chance": {
+            "1X": 72.28,
+            "12": 74.3,
+            "X2": 53.42
+          },
+          "over_under": {
+            "plus_de_0.5": 93.08,
+            "moins_de_0.5": 6.93,
+            "plus_de_1.5": 74.36,
+            "moins_de_1.5": 25.64,
+            "plus_de_2.5": 49.86,
+            "moins_de_2.5": 50.14,
+            "plus_de_3.5": 27.84,
+            "moins_de_3.5": 72.16,
+            "plus_de_4.5": 13.28,
+            "moins_de_4.5": 86.72,
+            "plus_de_5.5": 5.35,
+            "moins_de_5.5": 94.65
+          },
+          "btts": {
+            "oui": 53.34,
+            "non": 46.66
+          },
+          "resultat_total": {
+            "V1et+0.5": 46.58,
+            "1Xet+0.5": 65.35,
+            "V2et+0.5": 27.72,
+            "V1et+1.5": 35.73,
+            "1Xet+1.5": 54.5,
+            "V2et+1.5": 19.86,
+            "V1et+2.5": 27.86,
+            "1Xet+2.5": 34.41,
+            "V2et+2.5": 15.44,
+            "V1et+3.5": 14.28,
+            "1Xet+3.5": 20.84,
+            "V2et+3.5": 7.01,
+            "V1et+4.5": 7.89,
+            "1Xet+4.5": 9.1,
+            "V2et+4.5": 4.18,
+            "V1et+5.5": 2.86,
+            "1Xet+5.5": 4.06,
+            "V2et+5.5": 1.28
+          },
+          "scores_probables": {
+            "1-1": 12.22,
+            "1-0": 10.85,
+            "2-1": 9.41,
+            "2-0": 7.88,
+            "0-1": 7.86,
+            "0-0": 6.93,
+            "1-2": 6.83,
+            "2-2": 5.34,
+            "3-1": 4.62,
+            "0-2": 4.41
+          },
+          "buts_moyens_simules": {
+            "home": 1.54,
+            "away": 1.13,
+            "total": 2.67
+          }
+        },
+        "analyse_ia": "- **PRÉDICTION PRINCIPALE** : Plus de 2.5 buts  \n- **CONFIANCE** : 66%  \n- **SCORES PROBABLES** : 2‑1 ou 1‑2  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative (forces / faiblesses)**  \n- **Konyaspor (domicile)** : moyenne 1,88 buts marqués et 1,50 buts encaissés. À domicile, ils ont inscrit 8 buts et n’en ont concédé que 6 en 5 matchs (1,6 / 1,2 bpm). Leur attaque est efficace, mais la défense montre des failles (ex. 2‑3 contre Kocaelispor).  \n- **Besiktas (extérieur)** : moyenne 1,40 buts marqués et 1,30 buts encaissés. En déplacement, ils marquent 9 buts et en encaissent 9 en 6 matchs (1,5 / 1,5 bpm). Leur défense à l’extérieur est plus perméable que leur attaque ne le compense.\n\n**2. Impact du facteur domicile / extérieur**  \n- Konyaspor bénéficie d’un léger avantage à domicile (meilleure moyenne de buts marqués et moins de buts encaissés que Besiktas à l’extérieur).  \n- Besiktas a connu une série mitigée à l’extérieur (D‑W‑L‑L‑D) avec trois défaites où ils n’ont pas marqué.\n\n**3. Forme récente et tendances (statistiques détaillées)**  \n- **Konyaspor** : 4 derniers matchs à domicile → 3 BTTS (2‑3, 2‑1, 4‑1) et 1 clean‑sheet (3‑0). Leur capacité à marquer contre des équipes de niveau similaire est élevée.  \n- **Besiktas** : 6 derniers déplacements → BTTS dans 3 matchs (1‑2, 2‑1, 2‑1). Les deux défaites les plus lourdes (0‑3, 0‑2) montrent qu’ils peuvent être à zéro, mais ils ont aussi produit un 4‑0, prouvant la volatilité de leurs performances à l’extérieur.\n\n**4. Contexte du championnat**  \n- Classement : Besiktas (7ᵉ, 13 pts) légèrement devant Konyaspor (9ᵉ, 11 pts). La différence de points est minime, les deux équipes se battent pour les places européennes. Elles sont donc incitées à jouer offensivement.\n\n**5. Confrontations directes**  \n- Saison précédente : Besiktas 2‑0 à domicile.  \n- Saison en cours : Konyaspor 1‑0 à domicile.  \n- Les deux rencontres ont été décidées par un seul but, mais le match le plus récent a montré que Konyaspor peut garder sa cage inviolée à domicile.  \n\n**6. Synthèse des indicateurs de buts**  \n- Moyenne combinée de buts attendus :  \n  - Konyaspor (attaque) ≈ 1,6 buts contre la défense de Besiktas (concede 1,5) → ≈ 1,5 buts.  \n  - Besiktas (attaque) ≈ 1,5 buts contre la défense de Konyaspor (concede 1,2) → ≈ 1,3 buts.  \n- Total attendu ≈ 2,8 buts par match, bien au‑dessus du seuil de 2,5.\n\n**7. Choix de la prédiction**  \n- Le total de buts prévu (≈ 2,8) et les tendances BTTS (75 % à domicile pour Konyaspor, 50 % à l’extérieur pour Besiktas) indiquent une forte probabilité que le match dépasse 2,5 buts.  \n- Aucun indice ne montre une domination claire d’une équipe, ce qui rend les scores 2‑1 ou 1‑2 les plus plausibles (3 buts au total).  \n\n**Conclusion** : La meilleure mise, compte tenu des données, est **“Plus de 2.5 buts”** avec une confiance de **66 %**, les scores les plus probables étant **2‑1** ou **1‑2**.",
+        "confiance_pourcentage": 66,
+        "prediction_principale": "Plus de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑1 ou 1‑2"
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Bahia",
+        "AwayTeam": "Internacional",
+        "date": "22 octobre 2025 à 22:00:00 UTC",
+        "league": "Brazil - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Bahia": 1.89,
+            "Internacional": 4.32,
+            "Draw": 3.54
+          },
+          "totals": {
+            "Over": 2.12,
+            "Under": 1.75
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.6,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "W",
+            "L",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "W",
+            "L",
+            "W",
+            "L",
+            "D",
+            "L",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 13,
+          "total_points": 9,
+          "serie_domicile": [
+            "W",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 12,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 10,
+          "total_marques": 16,
+          "total_encaisses": 12
+        },
+        "stats_away": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 1.7,
+          "form_6": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "D",
+            "L",
+            "L",
+            "W",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "D",
+            "L"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 11,
+          "total_points": 8,
+          "serie_exterieur": [
+            "L",
+            "D",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 9,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 10,
+          "total_marques": 13,
+          "total_encaisses": 17
+        },
+        "last_matches_home": [
+          {
+            "game_id": "732878",
+            "date": "Sun, Oct 19",
+            "home_team": "Bahia",
+            "away_team": "Grêmio",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.2%",
+                "40.8%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "1"
+              ],
+              "Shot Attempts": [
+                "23",
+                "13"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "11",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732878"
+          },
+          {
+            "game_id": "732864",
+            "date": "Thu, Oct 16",
+            "home_team": "Vitória",
+            "away_team": "Bahia",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "34.3%",
+                "65.7%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "6"
+              ],
+              "Shot Attempts": [
+                "9",
+                "11"
+              ],
+              "Yellow Cards": [
+                "5",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732864"
+          },
+          {
+            "game_id": "732853",
+            "date": "Sun, Oct 5",
+            "home_team": "Bahia",
+            "away_team": "Flamengo",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.7%",
+                "48.3%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "11",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732853"
+          },
+          {
+            "game_id": "732842",
+            "date": "Wed, Oct 1",
+            "home_team": "Botafogo",
+            "away_team": "Bahia",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.8%",
+                "49.2%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "15",
+                "10"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "6",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732842"
+          },
+          {
+            "game_id": "732831",
+            "date": "Sun, Sep 28",
+            "home_team": "Bahia",
+            "away_team": "Palmeiras",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.1%",
+                "46.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "12",
+                "11"
+              ],
+              "Yellow Cards": [
+                "5",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732831"
+          },
+          {
+            "game_id": "732743",
+            "date": "Wed, Sep 24",
+            "home_team": "Vasco da Gama",
+            "away_team": "Bahia",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "67%",
+                "33%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732743"
+          },
+          {
+            "game_id": "732822",
+            "date": "Sat, Sep 20",
+            "home_team": "Ceará",
+            "away_team": "Bahia",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "32.4%",
+                "67.6%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "5"
+              ],
+              "Shot Attempts": [
+                "15",
+                "14"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "6"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732822"
+          },
+          {
+            "game_id": "732812",
+            "date": "Mon, Sep 15",
+            "home_team": "Bahia",
+            "away_team": "Cruzeiro",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.1%",
+                "37.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732812"
+          },
+          {
+            "game_id": "755898",
+            "date": "Wed, Sep 10",
+            "home_team": "Fluminense",
+            "away_team": "Bahia",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "63%",
+                "37%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "1"
+              ],
+              "Shot Attempts": [
+                "10",
+                "2"
+              ],
+              "Yellow Cards": [
+                "2",
+                "5"
+              ],
+              "Corner Kicks": [
+                "2",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755898"
+          },
+          {
+            "game_id": "757074",
+            "date": "Sat, Sep 6",
+            "home_team": "Bahia",
+            "away_team": "Confiança",
+            "score": "5 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/757074"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "732873",
+            "date": "Sun, Oct 19",
+            "home_team": "Internacional",
+            "away_team": "Sport",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "34.6%",
+                "65.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "2"
+              ],
+              "Shot Attempts": [
+                "13",
+                "13"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732873"
+          },
+          {
+            "game_id": "732867",
+            "date": "Wed, Oct 15",
+            "home_team": "Mirassol",
+            "away_team": "Internacional",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.1%",
+                "43.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "17",
+                "6"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "9",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732867"
+          },
+          {
+            "game_id": "732859",
+            "date": "Sat, Oct 4",
+            "home_team": "Internacional",
+            "away_team": "Botafogo",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.6%",
+                "59.4%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "15",
+                "13"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732859"
+          },
+          {
+            "game_id": "732849",
+            "date": "Wed, Oct 1",
+            "home_team": "Internacional",
+            "away_team": "Corinthians",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.1%",
+                "43.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "10",
+                "5"
+              ],
+              "Yellow Cards": [
+                "4",
+                "5"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732849"
+          },
+          {
+            "game_id": "732836",
+            "date": "Sat, Sep 27",
+            "home_team": "Juventude",
+            "away_team": "Internacional",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.9%",
+                "44.1%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "14",
+                "5"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732836"
+          },
+          {
+            "game_id": "732824",
+            "date": "Sun, Sep 21",
+            "home_team": "Internacional",
+            "away_team": "Grêmio",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57%",
+                "43%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "6"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732824"
+          },
+          {
+            "game_id": "732816",
+            "date": "Sat, Sep 13",
+            "home_team": "Palmeiras",
+            "away_team": "Internacional",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.4%",
+                "38.6%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "3"
+              ],
+              "Shot Attempts": [
+                "20",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732816"
+          },
+          {
+            "game_id": "732807",
+            "date": "Sun, Aug 31",
+            "home_team": "Internacional",
+            "away_team": "Fortaleza",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.8%",
+                "48.2%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "14",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732807"
+          },
+          {
+            "game_id": "732792",
+            "date": "Sat, Aug 23",
+            "home_team": "Cruzeiro",
+            "away_team": "Internacional",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.8%",
+                "55.2%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "15",
+                "4"
+              ],
+              "Yellow Cards": [
+                "1",
+                "5"
+              ],
+              "Corner Kicks": [
+                "5",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732792"
+          },
+          {
+            "game_id": "736530",
+            "date": "Wed, Aug 20",
+            "home_team": "Internacional",
+            "away_team": "Flamengo",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/736530"
+          }
+        ],
+        "classement": {
+          "Bahia": {
+            "position": 6,
+            "points": 46
+          },
+          "Internacional": {
+            "position": 14,
+            "points": 35
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Palmeiras",
+            "points": 61
+          },
+          {
+            "position": 2,
+            "team": "Flamengo",
+            "points": 61
+          },
+          {
+            "position": 3,
+            "team": "Cruzeiro",
+            "points": 56
+          },
+          {
+            "position": 4,
+            "team": "Mirassol",
+            "points": 52
+          },
+          {
+            "position": 5,
+            "team": "Botafogo",
+            "points": 46
+          },
+          {
+            "position": 6,
+            "team": "Bahia",
+            "points": 46
+          },
+          {
+            "position": 7,
+            "team": "Fluminense",
+            "points": 41
+          },
+          {
+            "position": 8,
+            "team": "Vasco da Gama",
+            "points": 39
+          },
+          {
+            "position": 9,
+            "team": "São Paulo",
+            "points": 38
+          },
+          {
+            "position": 10,
+            "team": "Red Bull Bragantino",
+            "points": 36
+          },
+          {
+            "position": 11,
+            "team": "Corinthians",
+            "points": 36
+          },
+          {
+            "position": 12,
+            "team": "Grêmio",
+            "points": 36
+          },
+          {
+            "position": 13,
+            "team": "Ceará",
+            "points": 35
+          },
+          {
+            "position": 14,
+            "team": "Internacional",
+            "points": 35
+          },
+          {
+            "position": 15,
+            "team": "Atlético-MG",
+            "points": 33
+          },
+          {
+            "position": 16,
+            "team": "Santos",
+            "points": 31
+          },
+          {
+            "position": 17,
+            "team": "Vitória",
+            "points": 31
+          },
+          {
+            "position": 18,
+            "team": "Juventude",
+            "points": 26
+          },
+          {
+            "position": 19,
+            "team": "Fortaleza",
+            "points": 24
+          },
+          {
+            "position": 20,
+            "team": "Sport",
+            "points": 17
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "699356",
+            "date": "Saturday, April 13, 2024",
+            "team1": "Internacional",
+            "score": "2 - 1",
+            "team2": "Bahia",
+            "title": "Internacional VS Bahia",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/699356/bahia-internacional",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "52.6%",
+                "47.4%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "4"
+              ],
+              "Shot Attempts": [
+                "17",
+                "9"
+              ],
+              "Yellow Cards": [
+                "5",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "7"
+              ]
+            }
+          },
+          {
+            "gameId": "699541",
+            "date": "Saturday, July 27, 2024",
+            "team1": "Bahia",
+            "score": "1 - 1",
+            "team2": "Internacional",
+            "title": "Bahia VS Internacional",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/699541/internacional-bahia",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "51.4%",
+                "48.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "9",
+                "12"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/118.png",
+        "logo_away": "https://media.api-sports.io/football/teams/119.png",
+        "classement_home": 6,
+        "classement_away": 14,
+        "points_classement_home": 46,
+        "points_classement_away": 35,
+        "nom_classement_home": "Bahia",
+        "nom_classement_away": "Internacional",
+        "country_fr": "Brazil - Serie A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.572,
+            "lambda_away": 1.183,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 46.31,
+            "X": 24.88,
+            "V2": 28.8
+          },
+          "double_chance": {
+            "1X": 71.19,
+            "12": 75.11,
+            "X2": 53.69
+          },
+          "over_under": {
+            "plus_de_0.5": 93.7,
+            "moins_de_0.5": 6.3,
+            "plus_de_1.5": 75.76,
+            "moins_de_1.5": 24.24,
+            "plus_de_2.5": 51.66,
+            "moins_de_2.5": 48.34,
+            "plus_de_3.5": 29.64,
+            "moins_de_3.5": 70.36,
+            "plus_de_4.5": 14.34,
+            "moins_de_4.5": 85.66,
+            "plus_de_5.5": 6.1,
+            "moins_de_5.5": 93.9
+          },
+          "btts": {
+            "oui": 54.41,
+            "non": 45.59
+          },
+          "resultat_total": {
+            "V1et+0.5": 46.31,
+            "1Xet+0.5": 64.89,
+            "V2et+0.5": 28.8,
+            "V1et+1.5": 36.18,
+            "1Xet+1.5": 54.76,
+            "V2et+1.5": 21.0,
+            "V1et+2.5": 28.46,
+            "1Xet+2.5": 35.17,
+            "V2et+2.5": 16.48,
+            "V1et+3.5": 15.19,
+            "1Xet+3.5": 21.9,
+            "V2et+3.5": 7.74,
+            "V1et+4.5": 8.7,
+            "1Xet+4.5": 9.9,
+            "V2et+4.5": 4.44,
+            "V1et+5.5": 3.45,
+            "1Xet+5.5": 4.66,
+            "V2et+5.5": 1.44
+          },
+          "scores_probables": {
+            "1-1": 11.87,
+            "1-0": 10.12,
+            "2-1": 9.1,
+            "0-1": 7.8,
+            "2-0": 7.72,
+            "1-2": 6.92,
+            "0-0": 6.3,
+            "2-2": 5.51,
+            "3-1": 4.78,
+            "0-2": 4.52
+          },
+          "buts_moyens_simules": {
+            "home": 1.57,
+            "away": 1.18,
+            "total": 2.74
+          }
+        },
+        "analyse_ia": "- **PRÉDICTION PRINCIPALE** : Moins de 2.5 buts  \n- **CONFIANCE** : 78%  \n- **SCORES PROBABLES** : 1‑0 ou 2‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Bahia (domicile)** : moyenne 1,60 but marqué / 1,20 encaissé, mais à domicile les chiffres sont nettement meilleurs : 12 buts marqués et seulement **2 encaissés** sur leurs 5 derniers matchs à domicile (0,4 but concédé par match). Leur défense est donc très solide à domicile.  \n- **Internacional (extérieur)** : moyenne 1,30 but marqué / 1,70 encaissé, mais à l’extérieur ils n’ont inscrit que **4 buts** et ont concédé **10** (2,0 buts encaissés par match). Leur défense à l’extérieur est très fragile.\n\n**2. Impact du facteur domicile/extérieur**  \nLe facteur domicile favorise fortement Bahia : ils affichent une série à domicile de W‑W‑W‑L‑W, tandis qu’Internacional cumule une série à l’extérieur de L‑D‑L‑L. Le déséquilibre défensif (2 encaissés à domicile vs 10 encaissés à l’extérieur) indique que Bahia devrait limiter les tentatives adverses.\n\n**3. Forme récente et tendances (stats détaillées)**  \n- **Bahia** : 4‑0 vs Grêmio (10 tirs cadrés, 11 corners), 1‑0 vs Flamengo (3 tirs cadrés, 3 corners), 1‑0 vs Palmeiras (5 tirs cadrés, 1 corner). Même lorsqu’ils ne marquent qu’un but, ils restent très compacts défensivement (moins de 2 tirs cadrés subis).  \n- **Internacional** : 2‑0 vs Sport (5 tirs cadrés, 3 corners), mais à l’extérieur ils ont souvent concédé : 2‑3 vs Grêmio (6 tirs cadrés subis), 2‑1 vs Cruzeiro (3 tirs cadrés subis), 0‑2 vs Flamengo (2 tirs cadrés subis). Leurs matchs à l’extérieur montrent une tendance à concéder plusieurs buts tout en peinant à marquer.\n\n**4. Contexte du championnat**  \nBahia occupe la 6ᵉ place (46 pts) à seulement 5 points du leader, alors qu’Internacional est 14ᵉ (35 pts). Bahia lutte pour les places européennes et a besoin de points à domicile, tandis qu’Internacional se bat contre la relégation et montre des performances irrégulières à l’extérieur.\n\n**5. Confrontations directes**  \n- 2024 : Internacional 2‑1 Bahia (match à l’extérieur d’Internacional) – victoire isolée.  \n- 2024 : Bahia 1‑1 Internacional – match très serré, mais Bahia a gardé sa solidité défensive à domicile.  \nCes deux rencontres ne montrent pas de tendance à de nombreux buts (total 5 buts en 2 matchs, moyenne 2,5).  \n\n**6. Évaluation des cotes**  \n- Over 2.5 = 2.12 (impliquant une probabilité d’environ 47 %).  \n- Under 2.5 = 1.75 (probabilité d’environ 57 %).  \nLes cotes soutiennent l’idée d’un match à faible score.\n\n**7. Analyse approfondie des statistiques détaillées**  \n- **Possession** : Bahia domine souvent (≈55‑60 %) même lorsqu’ils gagnent 1‑0, ce qui leur permet de contrôler le jeu et de réduire les occasions adverses.  \n- **Tirs cadrés** : Bahia ne subit en moyenne que 1‑2 tirs cadrés à domicile, alors qu’Internacional en enregistre 5‑7 à l’extérieur.  \n- **Corners** : Bahia crée plus de corners à domicile (moyenne 5‑6) mais cela ne se traduit pas toujours en buts supplémentaires, confirmant une approche prudente et défensive.  \n\n**8. Synthèse**  \nTous les indicateurs (défense à domicile de Bahia, faiblesse offensive d’Internacional à l’extérieur, historique de matchs à faible score) convergent vers un total de buts inférieur à 2,5. La victoire de Bahia est la plus probable, mais le facteur clé pour la prédiction demandée est le nombre total de buts.\n\n**Conclusion** : Le match devrait se terminer avec **moins de 2,5 buts**, très probablement **1‑0** ou **2‑0** en faveur de Bahia.",
+        "confiance_pourcentage": 78,
+        "prediction_principale": "Moins de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 2‑0"
+      }
+    ]
+  }
+}
