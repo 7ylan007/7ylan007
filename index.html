@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prédictions Sportives - 7ylan007</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="manifest" href="manifest.json">
     <style>
         * {
             margin: 0;
@@ -29,7 +30,7 @@
         }
 
         /* Header */
-        .app-header {
+        header.app-header {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -763,13 +764,13 @@
 </head>
 <body>
     <div class="container">
-        <!-- App Header -->
-        <div class="app-header">
+        <!-- App Header (sémantique) -->
+        <header class="app-header" role="banner">
             <div class="app-title">7ylan007</div>
             <div class="app-logo">
                 PRÉDICTIONS<br>SPORTIVES
             </div>
-        </div>
+        </header>
 
         <!-- Loading State -->
         <div class="loading-container" id="loadingContainer">
@@ -1461,6 +1462,17 @@
                 document.getElementById('loadingContainer').style.display = 'none';
                 document.getElementById('errorContainer').style.display = 'flex';
                 document.getElementById('errorText').textContent = `Erreur de chargement des données pour aujourd'hui (${getTodayDate()}). Vérifiez que le fichier existe sur GitHub.`;
+            }
+
+            // Enregistrer le service worker si supporté
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(reg => {
+                        console.log('Service worker enregistré:', reg);
+                    })
+                    .catch(err => {
+                        console.warn('Échec de l\'enregistrement du service worker:', err);
+                    });
             }
         }
 
