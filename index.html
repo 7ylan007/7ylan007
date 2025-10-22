@@ -1,1 +1,1471 @@
-a
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédictions Sportives - 7ylan007</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(180deg, #0a1647 0%, #1a2b7a 50%, #0a1647 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(180deg, #0d1b5e 0%, #0a1445 100%);
+        }
+
+        /* Header */
+        .app-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            margin: 20px 20px 30px 20px;
+        }
+
+        .app-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.3;
+            padding: 10px;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4), inset 0 2px 10px rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(96, 165, 250, 0.4);
+        }
+
+        .app-title {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        /* Loading */
+        .loading-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(59, 130, 246, 0.2);
+            border-top: 4px solid #3b82f6;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+        }
+
+        /* Error */
+        .error-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .error-icon {
+            font-size: 64px;
+        }
+
+        .error-text {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Match Cards */
+        .matches-container {
+            flex: 1;
+            padding: 0 20px;
+            overflow-y: auto;
+            padding-bottom: 20px;
+        }
+
+        .match-card {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.25) 0%, rgba(29, 78, 216, 0.15) 100%);
+            border-radius: 32px;
+            padding: 30px 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 40px rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .match-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 50px rgba(37, 99, 235, 0.2);
+        }
+
+        .match-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            flex: 1;
+        }
+
+        .team-logo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4), inset 0 2px 10px rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(96, 165, 250, 0.4);
+            overflow: hidden;
+        }
+
+        .team-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .team-name {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .vs-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            margin: 0 20px;
+        }
+
+        .match-date {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            text-align: center;
+            width: 100%;
+        }
+
+        .vs-text {
+            font-size: 48px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            color: white;
+            text-shadow: 0 4px 20px rgba(59, 130, 246, 0.6);
+        }
+
+        .reliability {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.4) 0%, rgba(37, 99, 235, 0.3) 100%);
+            border-radius: 20px;
+            padding: 12px 24px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 16px 8px 20px 8px;
+            background: linear-gradient(180deg, rgba(10, 22, 71, 0.95) 0%, rgba(13, 27, 94, 0.98) 100%);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 12px;
+        }
+
+        .nav-item:hover {
+            background: rgba(59, 130, 246, 0.2);
+        }
+
+        .nav-item.active {
+            background: rgba(59, 130, 246, 0.3);
+        }
+
+        .nav-item span {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        /* Details Page */
+        .details-page {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, #0d1b5e 0%, #0a1445 100%);
+            z-index: 1000;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .details-page.active {
+            display: flex;
+        }
+
+        .details-header {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.3) 0%, rgba(29, 78, 216, 0.2) 100%);
+            padding: 20px;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            z-index: 1002;
+            position: relative;
+        }
+
+        .back-button {
+            background: rgba(59, 130, 246, 0.3);
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            border-radius: 12px;
+            padding: 10px 20px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: rgba(59, 130, 246, 0.4);
+        }
+
+        .details-match-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .details-team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .details-team-logo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+            border: 2px solid rgba(96, 165, 250, 0.4);
+            overflow: hidden;
+        }
+
+        .details-team-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .details-team-name {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .details-vs {
+            font-size: 32px;
+            font-weight: 900;
+            margin: 0 15px;
+            color: white;
+            text-shadow: 0 4px 20px rgba(59, 130, 246, 0.6);
+        }
+
+        /* Tabs */
+        .tabs-container {
+            background: rgba(10, 22, 71, 0.95);
+            padding: 15px 10px 10px 10px;
+            overflow-x: auto;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+            backdrop-filter: blur(10px);
+        }
+
+        .tabs-wrapper {
+            display: flex;
+            gap: 10px;
+            min-width: min-content;
+            padding-bottom: 5px;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            background: rgba(37, 99, 235, 0.2);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tab-button:hover {
+            background: rgba(37, 99, 235, 0.3);
+            color: white;
+        }
+
+        .tab-button.active {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            border-color: rgba(96, 165, 250, 0.5);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Tab Content Container */
+        .tab-contents-wrapper {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            z-index: 1000;
+        }
+
+        /* Tab Content */
+        .tab-content {
+            padding: 20px;
+            display: none;
+            min-height: 100%;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.2) 0%, rgba(29, 78, 216, 0.1) 100%);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .stat-title {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .stat-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
+        }
+
+        .stat-value {
+            font-weight: 700;
+            color: white;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+            border-radius: 10px;
+            transition: width 0.3s ease;
+        }
+
+        .vs-stat {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .vs-stat-team {
+            flex: 1;
+            text-align: center;
+        }
+
+        .vs-stat-value {
+            font-size: 24px;
+            font-weight: 900;
+            color: white;
+        }
+
+        .vs-stat-label {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            margin-top: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .vs-stat-vs {
+            margin: 0 20px;
+            color: rgba(255, 255, 255, 0.4);
+            font-weight: 700;
+        }
+
+        .proba-card {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(5, 150, 105, 0.1) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .proba-label {
+            font-size: 13px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .proba-value {
+            font-size: 48px;
+            font-weight: 900;
+            color: #10b981;
+            text-shadow: 0 4px 20px rgba(16, 185, 129, 0.5);
+        }
+
+        .prediction-card {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(217, 119, 6, 0.1) 100%);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .prediction-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .prediction-result {
+            font-size: 28px;
+            font-weight: 900;
+            color: #f59e0b;
+            text-shadow: 0 4px 20px rgba(245, 158, 11, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .prediction-confidence {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .recent-match {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(29, 78, 216, 0.1) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 16px;
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+
+        .recent-match-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .recent-match-date {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+        }
+
+        .recent-match-teams {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .recent-team {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .recent-score {
+            font-size: 18px;
+            font-weight: 900;
+            color: #3b82f6;
+        }
+
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(29, 78, 216, 0.1) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 16px;
+            margin-bottom: 12px;
+        }
+
+        .ranking-position {
+            font-size: 20px;
+            font-weight: 900;
+            color: #3b82f6;
+            min-width: 30px;
+        }
+
+        .ranking-team {
+            flex: 1;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .ranking-points {
+            font-size: 16px;
+            font-weight: 700;
+            color: #10b981;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(124, 58, 237, 0.1) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 16px;
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+
+        .info-box-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #a78bfa;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .info-box-content {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .form-indicator {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            text-align: center;
+            line-height: 24px;
+            font-weight: 700;
+            font-size: 12px;
+            margin-right: 4px;
+        }
+
+        .form-w {
+            background: #10b981;
+            color: white;
+        }
+
+        .form-d {
+            background: #eab308;
+            color: white;
+        }
+
+        .form-l {
+            background: #ef4444;
+            color: white;
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(180deg, #0a1647 0%, #1a2b7a 50%, #0a1647 100%);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 380px) {
+            .team-logo {
+                width: 75px;
+                height: 75px;
+                font-size: 10px;
+            }
+
+            .vs-container {
+                margin: 0 10px;
+            }
+
+            .match-date {
+                font-size: 10px;
+            }
+
+            .vs-text {
+                font-size: 36px;
+            }
+
+            .team-name {
+                font-size: 16px;
+            }
+
+            .nav-item span {
+                font-size: 9px;
+            }
+
+            .details-team-logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .details-vs {
+                font-size: 24px;
+                margin: 0 10px;
+            }
+
+            .tab-button {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+        }
+
+        /* Hide scrollbar but keep functionality */
+        .tabs-container::-webkit-scrollbar {
+            height: 3px;
+        }
+
+        .tabs-container::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .tabs-container::-webkit-scrollbar-thumb {
+            background: rgba(59, 130, 246, 0.5);
+            border-radius: 10px;
+        }
+
+        .tab-contents-wrapper::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .tab-contents-wrapper::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .tab-contents-wrapper::-webkit-scrollbar-thumb {
+            background: rgba(59, 130, 246, 0.5);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- App Header -->
+        <div class="app-header">
+            <div class="app-title">7ylan007</div>
+            <div class="app-logo">
+                PRÉDICTIONS<br>SPORTIVES
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div class="loading-container" id="loadingContainer">
+            <div class="spinner"></div>
+            <div class="loading-text">Chargement des prédictions...</div>
+        </div>
+
+        <!-- Error State -->
+        <div class="error-container" id="errorContainer" style="display: none;">
+            <div class="error-icon">⚠️</div>
+            <div class="error-text" id="errorText">Erreur de chargement des données</div>
+        </div>
+
+        <!-- Matches Container -->
+        <div class="matches-container" id="matchesContainer" style="display: none;">
+            <!-- Matches will be dynamically inserted here -->
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <div class="nav-item active">
+                <span>PRONOSTIC<br>1X2</span>
+            </div>
+            <div class="nav-item">
+                <span>LIVE</span>
+            </div>
+            <div class="nav-item">
+                <span>PRONOS<br>SCORE EXACT</span>
+            </div>
+            <div class="nav-item">
+                <span>PROFIL</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Details Page -->
+    <div class="details-page" id="detailsPage">
+        <div class="details-header">
+            <button class="back-button" id="backButton">
+                ← Retour
+            </button>
+            <div class="details-match-info">
+                <div class="details-team">
+                    <div class="details-team-logo" id="detailsTeam1Logo">
+                        <img src="" alt="" id="detailsTeam1LogoImg">
+                    </div>
+                    <div class="details-team-name" id="detailsTeam1Name">ÉQUIPE 1</div>
+                </div>
+                <div class="details-vs">VS</div>
+                <div class="details-team">
+                    <div class="details-team-logo" id="detailsTeam2Logo">
+                        <img src="" alt="" id="detailsTeam2LogoImg">
+                    </div>
+                    <div class="details-team-name" id="detailsTeam2Name">ÉQUIPE 2</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs-container">
+            <div class="tabs-wrapper" id="tabsWrapper">
+                <!-- Tabs will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <!-- Tab Contents Wrapper with scrolling -->
+        <div class="tab-contents-wrapper">
+            <div id="tabContentsContainer">
+                <!-- Tab contents will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dark mode support
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // Global variables
+        let matchesData = null;
+        let currentMatchData = null;
+
+        // Get today's date in YYYY-MM-DD format
+        function getTodayDate() {
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const day = String(today.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+
+        // Load data from GitHub
+        async function loadData() {
+            const todayDate = getTodayDate();
+            const url = `https://raw.githubusercontent.com/7ylan007/7ylan007/main/prédiction-${todayDate}-analyse-ia.json`;
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error loading data:', error);
+                throw error;
+            }
+        }
+
+        // Format date
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const options = { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+            return date.toLocaleDateString('fr-FR', options);
+        }
+
+        // Format form
+        function formatForm(form) {
+            if (!form || !Array.isArray(form)) return '';
+            return form.map(result => {
+                const letter = result.toUpperCase();
+                const className = letter === 'W' ? 'form-w' : (letter === 'D' ? 'form-d' : 'form-l');
+                const display = letter === 'W' ? 'V' : (letter === 'D' ? 'N' : 'D');
+                return `<span class="form-indicator ${className}">${display}</span>`;
+            }).join('');
+        }
+
+        // Render matches
+        function renderMatches(data) {
+            const container = document.getElementById('matchesContainer');
+            container.innerHTML = '';
+
+            const matches = data.statistiques_brutes_avec_ia_hors_montecarlo.details;
+
+            matches.forEach(match => {
+                const matchCard = document.createElement('div');
+                matchCard.className = 'match-card';
+                matchCard.dataset.matchId = match.id;
+
+                matchCard.innerHTML = `
+                    <div class="match-row">
+                        <div class="team">
+                            <div class="team-logo">
+                                <img src="${match.logo_home}" alt="${match.HomeTeam}">
+                            </div>
+                            <div class="team-name">${match.HomeTeam}</div>
+                        </div>
+
+                        <div class="vs-container">
+                            <div class="match-date">${formatDate(match.date)}</div>
+                            <div class="vs-text">VS</div>
+                        </div>
+
+                        <div class="team">
+                            <div class="team-logo">
+                                <img src="${match.logo_away}" alt="${match.AwayTeam}">
+                            </div>
+                            <div class="team-name">${match.AwayTeam}</div>
+                        </div>
+                    </div>
+
+                    <div class="reliability">
+                        FIABILITÉ : ${match.confiance_pourcentage}%
+                    </div>
+                `;
+
+                matchCard.addEventListener('click', () => {
+                    openMatchDetails(match);
+                });
+
+                container.appendChild(matchCard);
+            });
+
+            // Show matches container
+            document.getElementById('loadingContainer').style.display = 'none';
+            container.style.display = 'block';
+        }
+
+        // Open match details
+        function openMatchDetails(match) {
+            currentMatchData = match;
+
+            // Update header
+            document.getElementById('detailsTeam1Name').textContent = match.HomeTeam;
+            document.getElementById('detailsTeam2Name').textContent = match.AwayTeam;
+            document.getElementById('detailsTeam1LogoImg').src = match.logo_home;
+            document.getElementById('detailsTeam2LogoImg').src = match.logo_away;
+
+            // Generate tabs
+            const tabs = [];
+
+            tabs.push({ id: 'statistiques', label: 'Statistiques' });
+
+            if (match.Probabilites) {
+                tabs.push({ id: 'probabilites', label: 'Probabilités' });
+            }
+
+            if (match.analyse_ia || match.prediction_principale) {
+                tabs.push({ id: 'prediction', label: 'Prédiction IA' });
+            }
+
+            if (match.last_matches_home && match.last_matches_home.length > 0) {
+                tabs.push({ id: 'recents', label: 'Matchs Récents' });
+            }
+
+            if (match.confrontations_saison_derniere && match.confrontations_saison_derniere.length > 0) {
+                tabs.push({ id: 'h2h', label: 'H2H' });
+            }
+
+            if (match.classement_complet && match.classement_complet.length > 0) {
+                tabs.push({ id: 'classements', label: 'Classements' });
+            }
+
+            // Render tabs
+            const tabsWrapper = document.getElementById('tabsWrapper');
+            tabsWrapper.innerHTML = '';
+
+            tabs.forEach((tab, index) => {
+                const button = document.createElement('button');
+                button.className = `tab-button ${index === 0 ? 'active' : ''}`;
+                button.dataset.tab = tab.id;
+                button.textContent = tab.label;
+                tabsWrapper.appendChild(button);
+            });
+
+            // Render tab contents
+            renderTabContents(match, tabs);
+
+            // Show details page
+            document.getElementById('detailsPage').classList.add('active');
+        }
+
+        // Render tab contents
+        function renderTabContents(match, tabs) {
+            const container = document.getElementById('tabContentsContainer');
+            container.innerHTML = '';
+
+            tabs.forEach((tab, index) => {
+                const content = document.createElement('div');
+                content.className = `tab-content ${index === 0 ? 'active' : ''}`;
+                content.id = `tab-${tab.id}`;
+
+                switch (tab.id) {
+                    case 'statistiques':
+                        content.innerHTML = renderStatistiquesTab(match);
+                        break;
+                    case 'probabilites':
+                        content.innerHTML = renderProbabilitesTab(match);
+                        break;
+                    case 'prediction':
+                        content.innerHTML = renderPredictionTab(match);
+                        break;
+                    case 'recents':
+                        content.innerHTML = renderRecentsTab(match);
+                        break;
+                    case 'h2h':
+                        content.innerHTML = renderH2HTab(match);
+                        break;
+                    case 'classements':
+                        content.innerHTML = renderClassementsTab(match);
+                        break;
+                }
+
+                container.appendChild(content);
+            });
+        }
+
+        // Render Statistiques tab
+        function renderStatistiquesTab(match) {
+            const statsHome = match.stats_home;
+            const statsAway = match.stats_away;
+
+            return `
+                <div class="stat-card">
+                    <div class="stat-title">Statistiques Générales</div>
+
+                    <div class="vs-stat">
+                        <div class="vs-stat-team">
+                            <div class="vs-stat-value">${statsHome.moyenne_marques.toFixed(1)}</div>
+                            <div class="vs-stat-label">Buts marqués</div>
+                        </div>
+                        <div class="vs-stat-vs">VS</div>
+                        <div class="vs-stat-team">
+                            <div class="vs-stat-value">${statsAway.moyenne_marques.toFixed(1)}</div>
+                            <div class="vs-stat-label">Buts marqués</div>
+                        </div>
+                    </div>
+
+                    <div class="vs-stat">
+                        <div class="vs-stat-team">
+                            <div class="vs-stat-value">${statsHome.moyenne_encaisses.toFixed(1)}</div>
+                            <div class="vs-stat-label">Buts encaissés</div>
+                        </div>
+                        <div class="vs-stat-vs">VS</div>
+                        <div class="vs-stat-team">
+                            <div class="vs-stat-value">${statsAway.moyenne_encaisses.toFixed(1)}</div>
+                            <div class="vs-stat-label">Buts encaissés</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-row">
+                        <span class="stat-label">Points sur 6 matchs</span>
+                        <span class="stat-value">${statsHome.total_points_6} - ${statsAway.total_points_6}</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Points sur 10 matchs</span>
+                        <span class="stat-value">${statsHome.total_points_10} - ${statsAway.total_points_10}</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-title">Forme Récente (6 matchs)</div>
+                    <div class="stat-row">
+                        <span class="stat-label">${match.HomeTeam}</span>
+                        <span>${formatForm(statsHome.form_6)}</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">${match.AwayTeam}</span>
+                        <span>${formatForm(statsAway.form_6)}</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-title">Performance Domicile/Extérieur</div>
+                    <div class="stat-row">
+                        <span class="stat-label">${match.HomeTeam} à domicile</span>
+                        <span>${formatForm(statsHome.serie_domicile)}</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Buts marqués/encaissés</span>
+                        <span class="stat-value">${statsHome.buts_dom_marques} / ${statsHome.buts_dom_encaisses}</span>
+                    </div>
+
+                    <div class="stat-row" style="margin-top: 15px;">
+                        <span class="stat-label">${match.AwayTeam} à l'extérieur</span>
+                        <span>${formatForm(statsAway.serie_exterieur)}</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Buts marqués/encaissés</span>
+                        <span class="stat-value">${statsAway.buts_ext_marques} / ${statsAway.buts_ext_encaisses}</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Render Probabilites tab
+        function renderProbabilitesTab(match) {
+            const prob = match.Probabilites;
+            if (!prob) return '<div class="info-box">Aucune probabilité disponible</div>';
+
+            return `
+                <div class="proba-card">
+                    <div class="proba-label">Victoire ${match.HomeTeam}</div>
+                    <div class="proba-value">${prob['1x2'].V1}%</div>
+                </div>
+
+                <div class="proba-card" style="background: linear-gradient(135deg, rgba(234, 179, 8, 0.2) 0%, rgba(202, 138, 4, 0.1) 100%); border-color: rgba(234, 179, 8, 0.3);">
+                    <div class="proba-label">Match Nul</div>
+                    <div class="proba-value" style="color: #eab308; text-shadow: 0 4px 20px rgba(234, 179, 8, 0.5);">${prob['1x2'].X}%</div>
+                </div>
+
+                <div class="proba-card" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(220, 38, 38, 0.1) 100%); border-color: rgba(239, 68, 68, 0.3);">
+                    <div class="proba-label">Victoire ${match.AwayTeam}</div>
+                    <div class="proba-value" style="color: #ef4444; text-shadow: 0 4px 20px rgba(239, 68, 68, 0.5);">${prob['1x2'].V2}%</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-title">Probabilités Over/Under</div>
+                    <div class="stat-row">
+                        <span class="stat-label">Plus de 0.5 buts</span>
+                        <span class="stat-value">${prob.over_under.plus_de_0_5}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${prob.over_under.plus_de_0_5}%"></div>
+                    </div>
+                    <div class="stat-row" style="margin-top: 15px;">
+                        <span class="stat-label">Plus de 1.5 buts</span>
+                        <span class="stat-value">${prob.over_under.plus_de_1_5}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${prob.over_under.plus_de_1_5}%"></div>
+                    </div>
+                    <div class="stat-row" style="margin-top: 15px;">
+                        <span class="stat-label">Plus de 2.5 buts</span>
+                        <span class="stat-value">${prob.over_under.plus_de_2_5}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${prob.over_under.plus_de_2_5}%"></div>
+                    </div>
+                    <div class="stat-row" style="margin-top: 15px;">
+                        <span class="stat-label">Plus de 3.5 buts</span>
+                        <span class="stat-value">${prob.over_under.plus_de_3_5}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${prob.over_under.plus_de_3_5}%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-title">BTTS (Les deux équipes marquent)</div>
+                    <div class="stat-row">
+                        <span class="stat-label">Oui</span>
+                        <span class="stat-value">${prob.btts.oui}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${prob.btts.oui}%"></div>
+                    </div>
+                    <div class="stat-row" style="margin-top: 15px;">
+                        <span class="stat-label">Non</span>
+                        <span class="stat-value">${prob.btts.non}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${prob.btts.non}%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-title">Scores Probables</div>
+                    ${Object.entries(prob.scores_probables).map(([score, percentage]) => `
+                        <div class="stat-row">
+                            <span class="stat-label">${score}</span>
+                            <span class="stat-value">${percentage}%</span>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        // Render Prediction tab
+        function renderPredictionTab(match) {
+            return `
+                <div class="prediction-card">
+                    <div class="prediction-title">Prédiction Principale</div>
+                    <div class="prediction-result">${match.prediction_principale || 'N/A'}</div>
+                    <div class="prediction-confidence">Confiance : ${match.confiance_pourcentage}%</div>
+                </div>
+
+                ${match.scores_probables ? `
+                <div class="prediction-card" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(5, 150, 105, 0.1) 100%); border-color: rgba(16, 185, 129, 0.3);">
+                    <div class="prediction-title">Scores Probables</div>
+                    <div class="prediction-result" style="color: #10b981; text-shadow: 0 4px 20px rgba(16, 185, 129, 0.5);">${match.scores_probables}</div>
+                </div>
+                ` : ''}
+
+                ${match.analyse_ia ? `
+                <div class="info-box">
+                    <div class="info-box-title">🤖 Analyse IA Complète</div>
+                    <div class="info-box-content">${match.analyse_ia}</div>
+                </div>
+                ` : ''}
+            `;
+        }
+
+        // Render Recents tab
+        function renderRecentsTab(match) {
+            const renderMatchList = (matches, teamName) => {
+                return matches.map(m => {
+                    const isHomeTeam = m.home_team === teamName;
+                    const result = m.score ? (
+                        m.score.includes('-') ?
+                            (isHomeTeam ?
+                                (parseInt(m.score.split('-')[0]) > parseInt(m.score.split('-')[1]) ? 'VICTOIRE' :
+                                 parseInt(m.score.split('-')[0]) < parseInt(m.score.split('-')[1]) ? 'DÉFAITE' : 'NUL') :
+                                (parseInt(m.score.split('-')[1]) > parseInt(m.score.split('-')[0]) ? 'VICTOIRE' :
+                                 parseInt(m.score.split('-')[1]) < parseInt(m.score.split('-')[0]) ? 'DÉFAITE' : 'NUL')
+                            ) : 'N/A'
+                    ) : 'N/A';
+                    const resultColor = result === 'VICTOIRE' ? '#10b981' : (result === 'NUL' ? '#eab308' : '#ef4444');
+
+                    return `
+                        <div class="recent-match">
+                            <div class="recent-match-header">
+                                <span class="recent-match-date">${m.date || 'N/A'}</span>
+                                <span style="font-size: 11px; color: ${resultColor}; font-weight: 700;">${result}</span>
+                            </div>
+                            <div class="recent-match-teams">
+                                <span class="recent-team">${m.home_team}</span>
+                                <span class="recent-score">${m.score || 'N/A'}</span>
+                                <span class="recent-team">${m.away_team}</span>
+                            </div>
+                            ${m.stats && Object.keys(m.stats).length > 0 ? `
+                                <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(59, 130, 246, 0.2);">
+                                    ${Object.entries(m.stats).map(([key, value]) => `
+                                        <div class="stat-row" style="font-size: 12px; margin-bottom: 5px;">
+                                            <span class="stat-label">${key}</span>
+                                            <span class="stat-value">${Array.isArray(value) ? value.join(' - ') : value}</span>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+                        </div>
+                    `;
+                }).join('');
+            };
+
+            return `
+                <div class="stat-card">
+                    <div class="stat-title">${match.HomeTeam} - Derniers Matchs</div>
+                    ${renderMatchList(match.last_matches_home || [], match.HomeTeam)}
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-title">${match.AwayTeam} - Derniers Matchs</div>
+                    ${renderMatchList(match.last_matches_away || [], match.AwayTeam)}
+                </div>
+            `;
+        }
+
+        // Render H2H tab
+        function renderH2HTab(match) {
+            const h2hMatches = match.confrontations_saison_derniere || [];
+
+            // Calculate H2H stats
+            let homeWins = 0;
+            let awayWins = 0;
+            let draws = 0;
+
+            h2hMatches.forEach(m => {
+                if (m.score && m.score.includes('-')) {
+                    const scores = m.score.split('-').map(s => parseInt(s.trim()));
+                    const isHomeFirst = m.team1 === match.HomeTeam;
+
+                    if (scores[0] > scores[1]) {
+                        if (isHomeFirst) homeWins++;
+                        else awayWins++;
+                    } else if (scores[0] < scores[1]) {
+                        if (isHomeFirst) awayWins++;
+                        else homeWins++;
+                    } else {
+                        draws++;
+                    }
+                }
+            });
+
+            return `
+                <div class="stat-card">
+                    <div class="stat-title">Historique des Confrontations</div>
+
+                    <div class="vs-stat">
+                        <div class="vs-stat-team">
+                            <div class="vs-stat-value">${homeWins}</div>
+                            <div class="vs-stat-label">${match.HomeTeam}</div>
+                        </div>
+                        <div class="vs-stat-vs">-</div>
+                        <div class="vs-stat-team">
+                            <div class="vs-stat-value">${draws}</div>
+                            <div class="vs-stat-label">Nuls</div>
+                        </div>
+                        <div class="vs-stat-vs">-</div>
+                        <div class="vs-stat-team">
+                            <div class="vs-stat-value">${awayWins}</div>
+                            <div class="vs-stat-label">${match.AwayTeam}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-title">Dernières Confrontations</div>
+                    ${h2hMatches.map(m => {
+                        const winner = m.score && m.score.includes('-') ?
+                            (parseInt(m.score.split('-')[0]) > parseInt(m.score.split('-')[1]) ? m.team1 :
+                             parseInt(m.score.split('-')[0]) < parseInt(m.score.split('-')[1]) ? m.team2 : 'NUL') : 'N/A';
+                        const winnerColor = winner === match.HomeTeam ? '#10b981' : (winner === match.AwayTeam ? '#ef4444' : '#eab308');
+
+                        return `
+                            <div class="recent-match">
+                                <div class="recent-match-header">
+                                    <span class="recent-match-date">${m.date || 'N/A'}</span>
+                                    <span style="font-size: 11px; color: ${winnerColor}; font-weight: 700;">${winner}</span>
+                                </div>
+                                <div class="recent-match-teams">
+                                    <span class="recent-team">${m.team1}</span>
+                                    <span class="recent-score">${m.score || 'N/A'}</span>
+                                    <span class="recent-team">${m.team2}</span>
+                                </div>
+                                ${m.stats && Object.keys(m.stats).length > 0 ? `
+                                    <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(59, 130, 246, 0.2);">
+                                        ${Object.entries(m.stats).map(([key, value]) => `
+                                            <div class="stat-row" style="font-size: 12px; margin-bottom: 5px;">
+                                                <span class="stat-label">${key}</span>
+                                                <span class="stat-value">${Array.isArray(value) ? value.join(' - ') : value}</span>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+        }
+
+        // Render Classements tab
+        function renderClassementsTab(match) {
+            const classement = match.classement_complet || [];
+
+            return `
+                <div class="stat-card">
+                    <div class="stat-title">Classement ${match.league}</div>
+                    ${classement.map(team => {
+                        const isHomeTeam = team.team === match.HomeTeam;
+                        const isAwayTeam = team.team === match.AwayTeam;
+                        const highlight = isHomeTeam || isAwayTeam;
+
+                        return `
+                            <div class="ranking-item" style="${highlight ? 'border: 2px solid #3b82f6; background: linear-gradient(135deg, rgba(37, 99, 235, 0.3) 0%, rgba(29, 78, 216, 0.2) 100%);' : ''}">
+                                <div class="ranking-position">${team.position}</div>
+                                <div class="ranking-team">${team.team}${isHomeTeam ? ' 🏠' : ''}${isAwayTeam ? ' ✈️' : ''}</div>
+                                <div class="ranking-points">${team.points} pts</div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-title">Comparaison</div>
+                    <div class="stat-row">
+                        <span class="stat-label">Position ${match.HomeTeam}</span>
+                        <span class="stat-value">${match.classement_home}ᵉ</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Points ${match.HomeTeam}</span>
+                        <span class="stat-value">${match.points_classement_home} pts</span>
+                    </div>
+                    <div class="stat-row" style="margin-top: 15px;">
+                        <span class="stat-label">Position ${match.AwayTeam}</span>
+                        <span class="stat-value">${match.classement_away}ᵉ</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Points ${match.AwayTeam}</span>
+                        <span class="stat-value">${match.points_classement_away} pts</span>
+                    </div>
+                    <div class="stat-row" style="margin-top: 15px;">
+                        <span class="stat-label">Différence de position</span>
+                        <span class="stat-value">${Math.abs(match.classement_home - match.classement_away)} places</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Différence de points</span>
+                        <span class="stat-value">${Math.abs(match.points_classement_home - match.points_classement_away)} points</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Navigation
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                navItems.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Back button
+        document.getElementById('backButton').addEventListener('click', function() {
+            document.getElementById('detailsPage').classList.remove('active');
+        });
+
+        // Tab switching
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('tab-button')) {
+                const tabName = e.target.dataset.tab;
+
+                // Remove active class from all tabs and contents
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+                // Add active class to clicked tab and corresponding content
+                e.target.classList.add('active');
+                document.getElementById('tab-' + tabName).classList.add('active');
+            }
+        });
+
+        // Initialize app
+        async function init() {
+            try {
+                const data = await loadData();
+                matchesData = data;
+                renderMatches(data);
+            } catch (error) {
+                document.getElementById('loadingContainer').style.display = 'none';
+                document.getElementById('errorContainer').style.display = 'flex';
+                document.getElementById('errorText').textContent = `Erreur de chargement des données pour aujourd'hui (${getTodayDate()}). Vérifiez que le fichier existe sur GitHub.`;
+            }
+        }
+
+        // Start the app
+        init();
+    </script>
+</body>
+</html>
