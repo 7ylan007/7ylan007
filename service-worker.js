@@ -1,4 +1,4 @@
-const CACHE_NAME = 7ylan007-cache-v1';
+const CACHE_NAME = '7ylan007-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',
