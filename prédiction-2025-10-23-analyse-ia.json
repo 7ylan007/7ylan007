@@ -1,0 +1,835 @@
+{
+  "metadata": {
+    "date_generation": "2025-10-23 03:27:37",
+    "date_matchs": "2025-10-23",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 1,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICIATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Al Riyadh",
+        "AwayTeam": "Al Kholood",
+        "date": "23 octobre 2025 à 14:55:00 UTC",
+        "league": "Saudi-Arabia - Pro League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.1666666666666667,
+          "moyenne_encaisses": 2.5,
+          "form_6": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 6,
+          "total_points": 6,
+          "serie_domicile": [
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 11,
+          "total_marques": 7,
+          "total_encaisses": 15
+        },
+        "stats_away": {
+          "moyenne_marques": 2.0,
+          "moyenne_encaisses": 1.3333333333333333,
+          "form_6": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "L",
+            "L"
+          ],
+          "total_points_6": 12,
+          "total_points_10": 12,
+          "total_points": 12,
+          "serie_exterieur": [
+            "W",
+            "W",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 6,
+          "total_marques": 12,
+          "total_encaisses": 8
+        },
+        "last_matches_home": [
+          {
+            "game_id": "755946",
+            "date": "Sun, Oct 19",
+            "home_team": "Al Khaleej",
+            "away_team": "Al Riyadh",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.1%",
+                "43.9%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "8"
+              ],
+              "Shot Attempts": [
+                "17",
+                "18"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "12"
+              ],
+              "Saves": [
+                "7",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755946"
+          },
+          {
+            "game_id": "755937",
+            "date": "Sat, Sep 27",
+            "home_team": "Al Riyadh",
+            "away_team": "Neom SC",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.8%",
+                "55.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "10",
+                "14"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "7"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755937"
+          },
+          {
+            "game_id": "736498",
+            "date": "Wed, Sep 24",
+            "home_team": "Al Jubail",
+            "away_team": "Al Riyadh",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.4%",
+                "52.6%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "6",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "0",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736498"
+          },
+          {
+            "game_id": "755930",
+            "date": "Sat, Sep 20",
+            "home_team": "Al Nassr",
+            "away_team": "Al Riyadh",
+            "score": "5 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.4%",
+                "38.6%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "2"
+              ],
+              "Shot Attempts": [
+                "19",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "16",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755930"
+          },
+          {
+            "game_id": "755919",
+            "date": "Sun, Sep 14",
+            "home_team": "Al Riyadh",
+            "away_team": "Al Najma",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "35.7%",
+                "64.3%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "7",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "3"
+              ],
+              "Saves": [
+                "0",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755919"
+          },
+          {
+            "game_id": "755907",
+            "date": "Fri, Aug 29",
+            "home_team": "Al Hilal",
+            "away_team": "Al Riyadh",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.4%",
+                "37.6%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "2"
+              ],
+              "Shot Attempts": [
+                "15",
+                "2"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755907"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "755940",
+            "date": "Fri, Oct 17",
+            "home_team": "Al Kholood",
+            "away_team": "Al Najma",
+            "score": "5 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46%",
+                "54%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "4"
+              ],
+              "Shot Attempts": [
+                "11",
+                "14"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755940"
+          },
+          {
+            "game_id": "755932",
+            "date": "Thu, Sep 25",
+            "home_team": "Al Shabab",
+            "away_team": "Al Kholood",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.9%",
+                "43.1%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "5"
+              ],
+              "Shot Attempts": [
+                "17",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755932"
+          },
+          {
+            "game_id": "736488",
+            "date": "Mon, Sep 22",
+            "home_team": "Al Bukayriyah",
+            "away_team": "Al Kholood",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.9%",
+                "55.1%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "6"
+              ],
+              "Shot Attempts": [
+                "9",
+                "15"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "9"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736488"
+          },
+          {
+            "game_id": "755923",
+            "date": "Thu, Sep 18",
+            "home_team": "Al Kholood",
+            "away_team": "Damac",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.6%",
+                "55.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "10",
+                "13"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755923"
+          },
+          {
+            "game_id": "755921",
+            "date": "Sun, Sep 14",
+            "home_team": "Al Nassr",
+            "away_team": "Al Kholood",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "68.7%",
+                "31.3%"
+              ],
+              "Shots on Goal": [
+                "12",
+                "1"
+              ],
+              "Shot Attempts": [
+                "29",
+                "5"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "10",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755921"
+          },
+          {
+            "game_id": "755906",
+            "date": "Thu, Aug 28",
+            "home_team": "Al Ettifaq",
+            "away_team": "Al Kholood",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52%",
+                "48%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "8",
+                "10"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755906"
+          }
+        ],
+        "classement": {
+          "Al Riyadh": {
+            "position": 14,
+            "points": 3
+          },
+          "Al Kholood": {
+            "position": 7,
+            "points": 9
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Al Nassr",
+            "points": 15
+          },
+          {
+            "position": 2,
+            "team": "Al Qadsiah",
+            "points": 13
+          },
+          {
+            "position": 3,
+            "team": "Al Taawoun",
+            "points": 12
+          },
+          {
+            "position": 4,
+            "team": "Al Hilal",
+            "points": 11
+          },
+          {
+            "position": 5,
+            "team": "Al Ittihad",
+            "points": 10
+          },
+          {
+            "position": 6,
+            "team": "Al Khaleej",
+            "points": 9
+          },
+          {
+            "position": 7,
+            "team": "Al Kholood",
+            "points": 9
+          },
+          {
+            "position": 8,
+            "team": "Al Ahli",
+            "points": 9
+          },
+          {
+            "position": 9,
+            "team": "Neom SC",
+            "points": 9
+          },
+          {
+            "position": 10,
+            "team": "Al Fayha",
+            "points": 8
+          },
+          {
+            "position": 11,
+            "team": "Al Ettifaq",
+            "points": 7
+          },
+          {
+            "position": 12,
+            "team": "Al Hazem",
+            "points": 5
+          },
+          {
+            "position": 13,
+            "team": "Al Shabab",
+            "points": 5
+          },
+          {
+            "position": 14,
+            "team": "Al Riyadh",
+            "points": 3
+          },
+          {
+            "position": 15,
+            "team": "Al Fateh",
+            "points": 1
+          },
+          {
+            "position": 16,
+            "team": "Damac",
+            "points": 1
+          },
+          {
+            "position": 17,
+            "team": "Al Okhdood",
+            "points": 0
+          },
+          {
+            "position": 18,
+            "team": "Al Najma",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "715937",
+            "date": "Thursday, August 29, 2024",
+            "team1": "Al Riyadh",
+            "score": "3 - 1",
+            "team2": "Al Kholood",
+            "title": "Al Riyadh VS Al Kholood",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/715937/al-kholood-al-riyadh",
+            "source": "Pro League",
+            "stats": {
+              "Possession": [
+                "45.5%",
+                "54.5%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "11",
+                "12"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "7"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            }
+          },
+          {
+            "gameId": "716086",
+            "date": "Saturday, February 8, 2025",
+            "team1": "Al Kholood",
+            "score": "3 - 2",
+            "team2": "Al Riyadh",
+            "title": "Al Kholood VS Al Riyadh",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/716086/al-riyadh-al-kholood",
+            "source": "Pro League",
+            "stats": {
+              "Possession": [
+                "52.7%",
+                "47.3%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "7"
+              ],
+              "Shot Attempts": [
+                "13",
+                "17"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "7"
+              ],
+              "Saves": [
+                "5",
+                "4"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/10511.png",
+        "logo_away": "https://media.api-sports.io/football/teams/10509.png",
+        "classement_home": 14,
+        "classement_away": 7,
+        "points_classement_home": 3,
+        "points_classement_away": 9,
+        "nom_classement_home": "Al Riyadh",
+        "nom_classement_away": "Al Kholood",
+        "country_fr": "Saudi-Arabia - Pro League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.627,
+            "lambda_away": 1.683,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 37.62,
+            "X": 22.41,
+            "V2": 39.97
+          },
+          "double_chance": {
+            "1X": 60.03,
+            "12": 77.59,
+            "X2": 62.38
+          },
+          "over_under": {
+            "plus_de_0.5": 96.55,
+            "moins_de_0.5": 3.45,
+            "plus_de_1.5": 84.45,
+            "moins_de_1.5": 15.55,
+            "plus_de_2.5": 64.54,
+            "moins_de_2.5": 35.46,
+            "plus_de_3.5": 42.52,
+            "moins_de_3.5": 57.48,
+            "plus_de_4.5": 24.55,
+            "moins_de_4.5": 75.45,
+            "plus_de_5.5": 12.42,
+            "moins_de_5.5": 87.58
+          },
+          "btts": {
+            "oui": 65.58,
+            "non": 34.42
+          },
+          "resultat_total": {
+            "V1et+0.5": 37.62,
+            "1Xet+0.5": 56.58,
+            "V2et+0.5": 39.97,
+            "V1et+1.5": 31.64,
+            "1Xet+1.5": 50.6,
+            "V2et+1.5": 33.85,
+            "V1et+2.5": 26.79,
+            "1Xet+2.5": 35.98,
+            "V2et+2.5": 28.56,
+            "V1et+3.5": 16.1,
+            "1Xet+3.5": 25.3,
+            "V2et+3.5": 17.22,
+            "V1et+4.5": 10.54,
+            "1Xet+4.5": 13.13,
+            "V2et+4.5": 11.42,
+            "V1et+5.5": 4.76,
+            "1Xet+5.5": 7.34,
+            "V2et+5.5": 5.07
+          },
+          "scores_probables": {
+            "1-1": 9.76,
+            "1-2": 8.52,
+            "2-1": 8.12,
+            "2-2": 6.6,
+            "0-1": 6.12,
+            "1-0": 5.98,
+            "0-2": 5.29,
+            "2-0": 4.85,
+            "1-3": 4.61,
+            "3-1": 4.49
+          },
+          "buts_moyens_simules": {
+            "home": 1.64,
+            "away": 1.69,
+            "total": 3.33
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE :** Plus de 2.5 buts  \n**CONFIANCE :** 73%  \n**SCORES PROBABLES :** 2‑1 ou 3‑2  \n\n**JUSTIFICATION :**  \n\n**1. Analyse comparative**  \n- **Al Riyadh** (14ᵉ, 3 pts) : moyenne 1,17 buts marqués / 2,50 buts encaissés. Leur défense est très perméable (plus de 2 buts concédés en moyenne) tandis que l’attaque reste modeste mais capable de marquer (5 buts en 6 derniers matchs).  \n- **Al Kholood** (7ᵉ, 9 pts) : moyenne 2,00 buts marqués / 1,33 buts encaissés. L’équipe possède une attaque efficace et une défense raisonnablement solide.\n\n**2. Impact du facteur domicile/extérieur**  \n- À domicile, Al Riyadh a inscrit 4 buts et encaissé 4 buts (environ 0,8 marqué / 0,8 encaissé par match).  \n- À l’extérieur, Al Kholood a marqué 5 buts et concédé 6 buts (≈ 0,83 marqué / 1,00 encaissé par match).  \nLeur différence de performance à domicile/extérieur n’est pas suffisante pour neutraliser la supériorité offensive d’Al Kholood.\n\n**3. Forme récente & tendances**  \n- **Al Riyadh** : L L W L W L – 5 buts marqués, 9 buts encaissés sur les 6 derniers matchs. Les matchs où ils ont perdu (4‑1, 2‑3, 1‑5) montrent qu’ils laissent souvent le champ ouvert.  \n- **Al Kholood** : W W W W L L – 12 buts marqués, 5 buts encaissés sur les 6 derniers matchs. Même dans leurs deux défaites, ils n’ont concédé que 2 buts au maximum.\n\n**4. Statistiques détaillées des matchs récents**  \n- **Al Riyadh** : lorsqu’ils ont dominé la possession (ex. 61 % vs Al Nassr) ils ont été très vulnérables aux tirs (10 cadrés) et aux corners (16). Leur défense cède souvent des buts sur des tirs cadrés modestes (ex. 8 cadrés contre 8 de l’adversaire contre Al Khaleej).  \n- **Al Kholood** : ils créent régulièrement des occasions (ex. 9 cadrés contre Al Najma) et convertissent un bon pourcentage. Même avec moins de possession (ex. 44‑55 % contre Al Bukayriyah) ils marquent 2 buts grâce à une grande efficacité de tir.\n\n**5. Contexte du championnat**  \n- Al Kholood se situe à mi‑tableau (7ᵉ) avec 9 pts, alors qu’Al Riyadh est relégué (14ᵉ, 3 pts). La motivation de l’équipe en difficulté est généralement moindre, tandis que Al Kholood cherche à consolider sa place dans le haut du tableau.\n\n**6. Confrontations directes**  \n- 3‑1 victoire d’Al Riyadh à domicile (2024)  \n- 3‑2 victoire d’Al Kholood à l’extérieur (février 2025)  \nLes deux rencontres ont produit **plus de 2,5 buts** et les deux équipes ont marqué, confirmant la tendance à un match ouvert.\n\n**7. Synthèse**  \n- Les deux équipes marquent régulièrement (1,17 + 2,00 ≈ 3,2 buts attendus).  \n- La défense d’Al Riyadh est la plus faible du championnat (2,5 buts encaissés).  \n- Les confrontations directes récentes ont toutes dépassé les 2,5 buts.  \n\nAinsi, le scénario le plus probable est un match avec **plus de 2,5 buts**, souvent avec les deux équipes qui trouvent le filet (BTTS oui). Les scores les plus fréquents dans ce type de rencontre sont **2‑1** (victoire d’Al Kholood) ou **3‑2** (match très ouvert).",
+        "confiance_pourcentage": null,
+        "prediction_principale": "** Plus de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "** 2‑1 ou 3‑2"
+      }
+    ]
+  }
+}
