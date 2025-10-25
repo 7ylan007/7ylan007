@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prédictions Sportives - 7ylan007</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="manifest" href="manifest.json">
     <style>
-        /* --- Styles (identiques à votre original) --- */
         * { margin:0; padding:0; box-sizing:border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -16,6 +14,7 @@
         }
         .container { max-width:480px; margin:0 auto; min-height:100vh; display:flex; flex-direction:column; background: linear-gradient(180deg, #0d1b5e 0%, #0a1445 100%); }
         header.app-header { display:flex; align-items:center; justify-content:center; gap:20px; padding:20px; margin:20px 20px 30px 20px; }
+        header.app-header.hide-on-live { display:flex; }
         .app-logo { width:80px; height:80px; border-radius:50%; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:600; text-align:center; line-height:1.3; padding:10px; box-shadow:0 4px 20px rgba(59,130,246,0.4), inset 0 2px 10px rgba(255,255,255,0.1); border:2px solid rgba(96,165,250,0.4); }
         .app-title { font-size:28px; font-weight:700; letter-spacing:2px; }
         .loading-container { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; padding:40px; }
@@ -45,7 +44,7 @@
         .details-page { position:fixed; top:0; left:0; right:0; bottom:0; background: linear-gradient(180deg, #0d1b5e 0%, #0a1445 100%); z-index:1000; display:none; flex-direction:column; overflow:hidden; }
         .details-page.active { display:flex; }
         .details-header { background: linear-gradient(135deg, rgba(37,99,235,0.3) 0%, rgba(29,78,216,0.2) 100%); padding:20px; border-bottom:1px solid rgba(59,130,246,0.2); z-index:1002; position:relative; }
-        .back-button { background: rgba(59,130,246,0.3); border:1px solid rgba(96,165,250,0.3); border-radius:12px; padding:10px 20px; color:white; font-size:14px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:8px; margin-bottom:20px; transition:all 0.3s ease; }
+        .back-button { background: rgba(59,130,246,0.3); border:1px solid rgba(96,165,250,0.3); border-radius:12px; padding:10px 20px; color:white; font-size:14px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:8px; margin-bottom:20px; transition:all 0.3s ease; border:none; }
         .back-button:hover { background: rgba(59,130,246,0.4); }
         .details-match-info { display:flex; align-items:center; justify-content:space-between; margin-top:10px; }
         .details-team { display:flex; flex-direction:column; align-items:center; gap:10px; flex:1; }
@@ -98,6 +97,45 @@
         .form-w { background:#10b981; color:white; }
         .form-d { background:#eab308; color:white; }
         .form-l { background:#ef4444; color:white; }
+
+        /* Styles pour la page Live - MODIFIÉS pour permettre le scroll */
+        .live-container {
+            flex:1;
+            padding:0;
+            overflow-y: auto !important;
+            overflow-x: hidden;
+            display:flex;
+            flex-direction:column;
+            min-height:0;
+            -webkit-overflow-scrolling: touch;
+        }
+        .live-iframe-wrapper {
+            width:100%;
+            position:relative;
+            min-height:1200px;
+            height:auto;
+        }
+        .live-iframe-wrapper iframe {
+            width:100% !important;
+            height:1200px !important;
+            min-height:1200px;
+            border:none;
+            display:block;
+        }
+
+        .scores-container { flex:1; padding:0 20px 20px 20px; overflow-y:auto; }
+        .score-card { background: linear-gradient(135deg, rgba(37,99,235,0.25) 0%, rgba(29,78,216,0.15) 100%); border-radius:24px; padding:20px; margin-bottom:20px; box-shadow:0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1); border:1px solid rgba(59,130,246,0.2); }
+        .score-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; }
+        .score-teams { display:flex; justify-content:space-between; align-items:center; gap:15px; }
+        .score-team { flex:1; text-align:center; }
+        .score-team-name { font-size:16px; font-weight:700; text-transform:uppercase; margin-bottom:8px; }
+        .score-team-logo { width:60px; height:60px; margin:0 auto; border-radius:50%; background:white; display:flex; align-items:center; justify-content:center; overflow:hidden; box-shadow:0 4px 15px rgba(59,130,246,0.3); }
+        .score-team-logo img { width:100%; height:100%; object-fit:contain; }
+        .score-vs { font-size:24px; font-weight:900; color:rgba(255,255,255,0.7); }
+        .score-result { text-align:center; margin-top:15px; padding-top:15px; border-top:1px solid rgba(59,130,246,0.2); }
+        .score-prediction { font-size:28px; font-weight:900; color:#10b981; margin-bottom:5px; }
+        .score-probability { font-size:12px; color:rgba(255,255,255,0.6); text-transform:uppercase; letter-spacing:0.5px; }
+
         @media (prefers-color-scheme: dark) {
             body { background: linear-gradient(180deg, #0a1647 0%, #1a2b7a 50%, #0a1647 100%); }
         }
@@ -111,6 +149,9 @@
             .details-team-logo { width:60px; height:60px; }
             .details-vs { font-size:24px; margin:0 10px; }
             .tab-button { padding:8px 16px; font-size:12px; }
+            .score-team-name { font-size:14px; }
+            .score-team-logo { width:50px; height:50px; }
+            .score-prediction { font-size:24px; }
         }
         .tabs-container::-webkit-scrollbar { height:3px; }
         .tabs-container::-webkit-scrollbar-track { background:rgba(0,0,0,0.2); border-radius:10px; }
@@ -118,14 +159,20 @@
         .tab-contents-wrapper::-webkit-scrollbar { width:6px; }
         .tab-contents-wrapper::-webkit-scrollbar-track { background:rgba(0,0,0,0.2); }
         .tab-contents-wrapper::-webkit-scrollbar-thumb { background:rgba(59,130,246,0.5); border-radius:10px; }
-        /* Simple notification */
+        .scores-container::-webkit-scrollbar { width:6px; }
+        .scores-container::-webkit-scrollbar-track { background:rgba(0,0,0,0.2); }
+        .scores-container::-webkit-scrollbar-thumb { background:rgba(59,130,246,0.5); border-radius:10px; }
+        .live-container::-webkit-scrollbar { width:6px; }
+        .live-container::-webkit-scrollbar-track { background:rgba(0,0,0,0.2); }
+        .live-container::-webkit-scrollbar-thumb { background:rgba(59,130,246,0.5); border-radius:10px; }
+
         .notification { position:fixed; bottom:90px; left:50%; transform:translateX(-50%) translateY(100px); opacity:0; background: rgba(0,0,0,0.85); color:white; padding:12px 20px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.4); z-index:2000; transition: all 0.3s ease; pointer-events:none; }
         .notification.show { transform:translateX(-50%) translateY(0); opacity:1; pointer-events:auto; }
     </style>
 </head>
 <body>
     <div class="container">
-        <header class="app-header" role="banner">
+        <header class="app-header hide-on-live" id="appHeader" role="banner">
             <div class="app-title">7ylan007</div>
             <div class="app-logo">PRÉDICTIONS<br>SPORTIVES</div>
         </header>
@@ -142,11 +189,22 @@
 
         <div class="matches-container" id="matchesContainer" style="display:none;"></div>
 
+        <div class="live-container" id="liveContainer" style="display:none;">
+            <div class="live-iframe-wrapper">
+                <iframe src="https://www.scorebat.com/embed/livescore/?token=MjQ3MTI4XzE3NjEzOTc2NTdfNDAzNWJmOWNhNmJkMTA3MWE3M2U0MzNlYjMyOTczZjQ5OWI5M2ViMw=="
+                        allowfullscreen
+                        allow="autoplay; fullscreen"
+                        class="_scorebatEmbeddedPlayer_"></iframe>
+            </div>
+        </div>
+
+        <div class="scores-container" id="scoresContainer" style="display:none;"></div>
+
         <div class="bottom-nav">
-            <div class="nav-item active"><span>PRONOSTIC<br>1X2</span></div>
-            <div class="nav-item"><span>LIVE</span></div>
-            <div class="nav-item"><span>PRONOS<br>SCORE EXACT</span></div>
-            <div class="nav-item"><span>PROFIL</span></div>
+            <div class="nav-item active" data-page="pronostic"><span>PRONOSTIC<br>1X2</span></div>
+            <div class="nav-item" data-page="live"><span>LIVE</span></div>
+            <div class="nav-item" data-page="scores"><span>PRONOS<br>SCORE EXACT</span></div>
+            <div class="nav-item" data-page="profil"><span>PROFIL</span></div>
         </div>
     </div>
 
@@ -182,17 +240,6 @@
     <div class="notification" id="notification" role="status" aria-live="polite"></div>
 
     <script>
-    // Protection basique contre sélection/copier (optionnel)
-    ['selectstart','contextmenu','dragstart','copy','cut','paste'].forEach(evt=>{
-        document.addEventListener(evt, e=>{
-            // autoriser quand un champ de saisie est ciblé
-            const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : '';
-            if (tag === 'input' || tag === 'textarea') return;
-            // on laisse copier/paste pour debug si besoin ; ici on ne bloque pas pour éviter nuisance
-        });
-    });
-
-    // Notification helper
     function showNotification(msg, timeout=3000) {
         const n = document.getElementById('notification');
         n.textContent = msg;
@@ -200,98 +247,14 @@
         setTimeout(()=> n.classList.remove('show'), timeout);
     }
 
-    // PWA install prompt handling
-    let deferredInstallPrompt = null;
-    window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredInstallPrompt = e;
-        // vous pouvez afficher un bouton d'installation si vous voulez
-        console.log('beforeinstallprompt captured');
-    });
-    window.addEventListener('appinstalled', () => {
-        deferredInstallPrompt = null;
-        showNotification('Application installée', 2500);
-    });
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://www.scorebat.com/embed/embed.js?v=arrv';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'scorebat-jssdk'));
 
-    // Service worker dynamic registration: we generate the SW script as blob (comme 4.html)
-    const SW_VERSION = '1.0.0';
-    const CACHE_NAME = `7ylan007-v${SW_VERSION}`;
-    const urlsToCache = [
-        '/',
-        'index.html',
-        'manifest.json',
-        'https://cdn.tailwindcss.com'
-        // Ajoutez d'autres assets si besoin
-    ];
-
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            const swCode = `
-                const CACHE_NAME = '${CACHE_NAME}';
-                const urlsToCache = ${JSON.stringify(urlsToCache)};
-
-                self.addEventListener('install', event => {
-                    self.skipWaiting();
-                    event.waitUntil(
-                        caches.open(CACHE_NAME).then(cache => cache.addAll(urlsToCache).catch(()=>{}))
-                    );
-                });
-
-                self.addEventListener('activate', event => {
-                    event.waitUntil(
-                        caches.keys().then(keys =>
-                            Promise.all(keys.map(k => {
-                                if (k !== CACHE_NAME) return caches.delete(k);
-                            }))
-                        )
-                    );
-                    return self.clients.claim();
-                });
-
-                self.addEventListener('fetch', event => {
-                    const req = event.request;
-                    // Navigation requests --> try network first (fresh content), fallback to cache
-                    if (req.mode === 'navigate') {
-                        event.respondWith(
-                            fetch(req).then(res => {
-                                const copy = res.clone();
-                                caches.open(CACHE_NAME).then(cache => cache.put(req, copy));
-                                return res;
-                            }).catch(()=> caches.match(req).then(r => r || caches.match('/')))
-                        );
-                        return;
-                    }
-
-                    // For other requests prefer cache first
-                    event.respondWith(
-                        caches.match(req).then(cached => {
-                            if (cached) return cached;
-                            return fetch(req).then(res => {
-                                // cache images & json for offline
-                                const resClone = res.clone();
-                                if (req.destination === 'image' || req.url.endsWith('.json') || req.url.endsWith('.png') || req.url.endsWith('.jpg')) {
-                                    caches.open(CACHE_NAME).then(cache => cache.put(req, resClone));
-                                }
-                                return res;
-                            }).catch(() => {
-                                // fallback response could be created here for images
-                                return new Response('', { status: 504, statusText: 'offline' });
-                            });
-                        })
-                    );
-                });
-            `;
-            const blob = new Blob([swCode], { type: 'application/javascript' });
-            const swUrl = URL.createObjectURL(blob);
-            navigator.serviceWorker.register(swUrl).then(reg => {
-                console.log('Service Worker enregistré dynamique:', reg);
-            }).catch(err => {
-                console.warn('Erreur enregistrement SW dynamique:', err);
-            });
-        });
-    }
-
-    // Utilitaires
     function getTodayDate() {
         const d = new Date();
         const y = d.getFullYear();
@@ -301,7 +264,6 @@
     }
 
     function formatDate(dateString) {
-        // si format ISO -> Date
         const date = new Date(dateString);
         if (isNaN(date.getTime())) return dateString || '';
         const opt = { day:'numeric', month:'long', year:'numeric', hour:'2-digit', minute:'2-digit' };
@@ -318,7 +280,6 @@
         }).join('');
     }
 
-    // Robust fetch with timeout and retries
     async function fetchWithTimeout(url, options = {}, timeout = 8000) {
         const controller = new AbortController();
         const id = setTimeout(() => controller.abort(), timeout);
@@ -332,6 +293,8 @@
         }
     }
 
+    let globalMatchData = null;
+
     async function loadData() {
         const todayDate = getTodayDate();
         const url = `https://raw.githubusercontent.com/7ylan007/7ylan007/main/prédiction-${todayDate}-analyse-ia.json`;
@@ -342,23 +305,22 @@
                 const res = await fetchWithTimeout(url, {}, 8000);
                 if (!res.ok) throw new Error('HTTP ' + res.status);
                 const data = await res.json();
+                globalMatchData = data;
                 return data;
             } catch (err) {
                 attempt++;
-                console.warn('Fetch attempt', attempt, 'failed:', err);
+                console.log('Fetch attempt', attempt, 'failed:', err);
                 if (attempt > maxRetries) throw err;
-                await new Promise(r => setTimeout(r, 1000 * attempt)); // backoff
+                await new Promise(r => setTimeout(r, 1000 * attempt));
             }
         }
         throw new Error('Échec de récupération');
     }
 
-    // Rendu des matches
     function renderMatches(data) {
         const container = document.getElementById('matchesContainer');
         container.innerHTML = '';
 
-        // Sécurité: vérifier structure
         const details = (data && data.statistiques_brutes_avec_ia_hors_montecarlo && data.statistiques_brutes_avec_ia_hors_montecarlo.details) || (data && data.statistiques_brutes_avec_ia && data.statistiques_brutes_avec_ia.details) || [];
         if (!Array.isArray(details) || details.length === 0) {
             document.getElementById('loadingContainer').style.display = 'none';
@@ -375,7 +337,6 @@
             const logoHome = match.logo_home || '';
             const logoAway = match.logo_away || '';
 
-            // fallback pour date
             const dateFormatted = formatDate(match.date || match.Date || '');
 
             matchCard.innerHTML = `
@@ -407,7 +368,73 @@
         container.style.display = 'block';
     }
 
-    // echappement simple pour text injection
+    function renderScores(data) {
+        const container = document.getElementById('scoresContainer');
+        container.innerHTML = '';
+
+        const details = (data && data.statistiques_brutes_avec_ia_hors_montecarlo && data.statistiques_brutes_avec_ia_hors_montecarlo.details) || (data && data.statistiques_brutes_avec_ia && data.statistiques_brutes_avec_ia.details) || [];
+        if (!Array.isArray(details) || details.length === 0) {
+            container.innerHTML = '<div class="info-box" style="margin:20px;"><div class="info-box-title">Aucun score disponible</div></div>';
+            return;
+        }
+
+        const allScores = [];
+        details.forEach(match => {
+            const prob = match.Probabilites || match.Probabilites || null;
+            if (prob && prob.scores_probables) {
+                Object.entries(prob.scores_probables).forEach(([score, percentage]) => {
+                    allScores.push({
+                        match: match,
+                        score: score,
+                        percentage: percentage
+                    });
+                });
+            }
+        });
+
+        allScores.sort((a, b) => b.percentage - a.percentage);
+        const top5 = allScores.slice(0, 5);
+
+        if (top5.length === 0) {
+            container.innerHTML = '<div class="info-box" style="margin:20px;"><div class="info-box-title">Aucun score probable disponible</div></div>';
+            return;
+        }
+
+        top5.forEach((item, index) => {
+            const match = item.match;
+            const scoreCard = document.createElement('div');
+            scoreCard.className = 'score-card';
+
+            const logoHome = match.logo_home || '';
+            const logoAway = match.logo_away || '';
+
+            scoreCard.innerHTML = `
+                <div class="score-header">
+                    <span style="font-size:12px; color:rgba(255,255,255,0.6);">#${index + 1} PLUS PROBABLE</span>
+                    <span style="font-size:12px; color:rgba(255,255,255,0.6);">${formatDate(match.date || match.Date || '')}</span>
+                </div>
+                <div class="score-teams">
+                    <div class="score-team">
+                        <div class="score-team-logo">${logoHome ? `<img src="${logoHome}" alt="${escapeHtml(match.HomeTeam||'')}" onerror="this.style.display='none'">` : ''}</div>
+                        <div class="score-team-name">${escapeHtml(match.HomeTeam||'')}</div>
+                    </div>
+                    <div class="score-vs">VS</div>
+                    <div class="score-team">
+                        <div class="score-team-logo">${logoAway ? `<img src="${logoAway}" alt="${escapeHtml(match.AwayTeam||'')}" onerror="this.style.display='none'">` : ''}</div>
+                        <div class="score-team-name">${escapeHtml(match.AwayTeam||'')}</div>
+                    </div>
+                </div>
+                <div class="score-result">
+                    <div class="score-prediction">${escapeHtml(item.score)}</div>
+                    <div class="score-probability">Probabilité : ${item.percentage}%</div>
+                </div>
+            `;
+
+            scoreCard.addEventListener('click', () => openMatchDetails(match));
+            container.appendChild(scoreCard);
+        });
+    }
+
     function escapeHtml(str) {
         if (!str) return '';
         return String(str)
@@ -418,15 +445,12 @@
             .replace(/'/g, "&#039;");
     }
 
-    // Ouvrir détail
     function openMatchDetails(match) {
-        // Mise à jour header
         document.getElementById('detailsTeam1Name').textContent = match.HomeTeam || 'ÉQUIPE 1';
         document.getElementById('detailsTeam2Name').textContent = match.AwayTeam || 'ÉQUIPE 2';
         document.getElementById('detailsTeam1LogoImg').src = match.logo_home || '';
         document.getElementById('detailsTeam2LogoImg').src = match.logo_away || '';
 
-        // Tabs dynamiques
         const tabs = [];
         tabs.push({ id: 'statistiques', label: 'Statistiques' });
         if (match.Probabilites) tabs.push({ id: 'probabilites', label: 'Probabilités' });
@@ -448,7 +472,6 @@
         renderTabContents(match, tabs);
         document.getElementById('detailsPage').classList.add('active');
 
-        // Scroll to top of details
         document.querySelector('.tab-contents-wrapper').scrollTop = 0;
     }
 
@@ -459,7 +482,6 @@
             const div = document.createElement('div');
             div.className = `tab-content ${idx===0 ? 'active':''}`;
             div.id = 'tab-' + tab.id;
-            // Remplir contenu selon tab.id
             switch (tab.id) {
                 case 'statistiques': div.innerHTML = renderStatistiquesTab(match); break;
                 case 'probabilites': div.innerHTML = renderProbabilitesTab(match); break;
@@ -471,10 +493,8 @@
             }
             container.appendChild(div);
         });
-        // Assurer la liaison des boutons (délégué plus bas)
     }
 
-    // Rendu des différents panels (réutilise vos fonctions mais avec protections)
     function renderStatistiquesTab(match) {
         const statsHome = match.stats_home || {};
         const statsAway = match.stats_away || {};
@@ -529,7 +549,6 @@
     function renderProbabilitesTab(match) {
         const prob = match.Probabilites || match.Probabilites || null;
         if (!prob) return '<div class="info-box">Aucune probabilité disponible</div>';
-        // Défensif: accès aux chemins possibles
         const oneX2 = (prob['1x2']||prob['1X2']||prob['1x2']||{V1:0,X:0,V2:0});
         const ou = prob.over_under || {plus_de_0_5:0, plus_de_1_5:0, plus_de_2_5:0, plus_de_3_5:0};
         const btts = prob.btts || {oui:0, non:0};
@@ -655,7 +674,6 @@
         `;
     }
 
-    // Handler pour switching des tabs (délégué global)
     document.addEventListener('click', function(e) {
         if (e.target.classList && e.target.classList.contains('tab-button')) {
             const tabName = e.target.dataset.tab;
@@ -664,7 +682,6 @@
             e.target.classList.add('active');
             const content = document.getElementById('tab-' + tabName);
             if (content) content.classList.add('active');
-            // scroll top optionally
             document.querySelector('.tab-contents-wrapper').scrollTop = 0;
         }
     });
@@ -673,30 +690,59 @@
         document.getElementById('detailsPage').classList.remove('active');
     });
 
-    // Init
     async function init() {
         try {
             const data = await loadData();
             renderMatches(data);
+            renderScores(data);
         } catch (err) {
-            console.error('Erreur chargement:', err);
+            console.log('Erreur chargement:', err);
             document.getElementById('loadingContainer').style.display = 'none';
             document.getElementById('errorContainer').style.display = 'flex';
             document.getElementById('errorText').textContent = `Erreur de chargement des données pour aujourd'hui (${getTodayDate()}). Vérifiez que le fichier existe sur GitHub.`;
         }
     }
 
-    // navigation bottom active visual
+    function showPage(pageName) {
+        const appHeader = document.getElementById('appHeader');
+
+        document.getElementById('matchesContainer').style.display = 'none';
+        document.getElementById('liveContainer').style.display = 'none';
+        document.getElementById('scoresContainer').style.display = 'none';
+        document.getElementById('loadingContainer').style.display = 'none';
+        document.getElementById('errorContainer').style.display = 'none';
+
+        switch(pageName) {
+            case 'pronostic':
+                appHeader.style.display = 'flex';
+                document.getElementById('matchesContainer').style.display = 'block';
+                break;
+            case 'live':
+                // Masquer le header sur la page Live
+                appHeader.style.display = 'none';
+                document.getElementById('liveContainer').style.display = 'flex';
+                break;
+            case 'scores':
+                appHeader.style.display = 'flex';
+                document.getElementById('scoresContainer').style.display = 'block';
+                break;
+            case 'profil':
+                appHeader.style.display = 'flex';
+                showNotification('Fonction Profil non disponible dans la démo');
+                document.getElementById('matchesContainer').style.display = 'block';
+                break;
+        }
+    }
+
     document.querySelectorAll('.nav-item').forEach(item => {
         item.addEventListener('click', function() {
+            const page = this.dataset.page;
             document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
             this.classList.add('active');
-            // comportement additionnel si besoin
-            showNotification('Fonction non disponible dans la démo');
+            showPage(page);
         });
     });
 
-    // start
     init();
     </script>
 </body>
