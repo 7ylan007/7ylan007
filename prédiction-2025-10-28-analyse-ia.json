@@ -1,0 +1,2204 @@
+{
+  "metadata": {
+    "date_generation": "2025-10-28 03:34:47",
+    "date_matchs": "2025-10-28",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 2,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICIATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 2,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Lecce",
+        "AwayTeam": "Napoli",
+        "date": "28 octobre 2025 à 17:30:00 UTC",
+        "league": "Italy - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "Winamax (FR)",
+          "h2h": {
+            "Lecce": 6.5,
+            "Napoli": 1.45,
+            "Draw": 3.85
+          },
+          "totals": {}
+        },
+        "stats_home": {
+          "moyenne_marques": 0.9,
+          "moyenne_encaisses": 1.6,
+          "form_6": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "L",
+            "L",
+            "L",
+            "L",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 9,
+          "total_points": 5,
+          "serie_domicile": [
+            "D",
+            "D",
+            "L",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 10,
+          "total_marques": 9,
+          "total_encaisses": 16
+        },
+        "stats_away": {
+          "moyenne_marques": 1.7,
+          "moyenne_encaisses": 1.7,
+          "form_6": [
+            "W",
+            "L",
+            "L",
+            "W",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "L",
+            "W",
+            "W",
+            "L"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 18,
+          "total_points": 9,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "L",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 11,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 12,
+          "total_marques": 17,
+          "total_encaisses": 17
+        },
+        "last_matches_home": [
+          {
+            "game_id": "736856",
+            "date": "Sat, Oct 25",
+            "home_team": "Udinese",
+            "away_team": "Lecce",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.1%",
+                "55.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "8",
+                "13"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "9"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736856"
+          },
+          {
+            "game_id": "736845",
+            "date": "Sat, Oct 18",
+            "home_team": "Lecce",
+            "away_team": "Sassuolo",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.5%",
+                "48.5%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "2"
+              ],
+              "Shot Attempts": [
+                "11",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736845"
+          },
+          {
+            "game_id": "736843",
+            "date": "Sat, Oct 4",
+            "home_team": "Parma",
+            "away_team": "Lecce",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.9%",
+                "37.1%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "3"
+              ],
+              "Shot Attempts": [
+                "10",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "9"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736843"
+          },
+          {
+            "game_id": "736828",
+            "date": "Sun, Sep 28",
+            "home_team": "Lecce",
+            "away_team": "Bologna",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "33.2%",
+                "66.8%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "12",
+                "14"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "9"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736828"
+          },
+          {
+            "game_id": "756567",
+            "date": "Tue, Sep 23",
+            "home_team": "AC Milan",
+            "away_team": "Lecce",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "76.8%",
+                "23.2%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "1"
+              ],
+              "Shot Attempts": [
+                "24",
+                "2"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "12",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/756567"
+          },
+          {
+            "game_id": "736820",
+            "date": "Fri, Sep 19",
+            "home_team": "Lecce",
+            "away_team": "Cagliari",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.7%",
+                "48.3%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "6"
+              ],
+              "Shot Attempts": [
+                "11",
+                "15"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "7"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736820"
+          },
+          {
+            "game_id": "736812",
+            "date": "Sun, Sep 14",
+            "home_team": "Atalanta",
+            "away_team": "Lecce",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.5%",
+                "43.5%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "12"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "8",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736812"
+          },
+          {
+            "game_id": "736803",
+            "date": "Fri, Aug 29",
+            "home_team": "Lecce",
+            "away_team": "AC Milan",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45%",
+                "55%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "6"
+              ],
+              "Shot Attempts": [
+                "7",
+                "14"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736803"
+          },
+          {
+            "game_id": "736790",
+            "date": "Sat, Aug 23",
+            "home_team": "Genoa",
+            "away_team": "Lecce",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.7%",
+                "41.3%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "0"
+              ],
+              "Shot Attempts": [
+                "5",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "7"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736790"
+          },
+          {
+            "game_id": "744103",
+            "date": "Fri, Aug 15",
+            "home_team": "Lecce",
+            "away_team": "Juve Stabia",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/744103"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "736860",
+            "date": "Sat, Oct 25",
+            "home_team": "Napoli",
+            "away_team": "Internazionale",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.3%",
+                "56.7%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "7",
+                "15"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "1",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736860"
+          },
+          {
+            "game_id": "757691",
+            "date": "Tue, Oct 21",
+            "home_team": "PSV Eindhoven",
+            "away_team": "Napoli",
+            "score": "6 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.6%",
+                "41.4%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "2"
+              ],
+              "Shot Attempts": [
+                "19",
+                "10"
+              ],
+              "Yellow Cards": [
+                "4",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "8"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757691"
+          },
+          {
+            "game_id": "736849",
+            "date": "Sat, Oct 18",
+            "home_team": "Torino",
+            "away_team": "Napoli",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "31.3%",
+                "68.7%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "5"
+              ],
+              "Shot Attempts": [
+                "12",
+                "22"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "11"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736849"
+          },
+          {
+            "game_id": "736839",
+            "date": "Sun, Oct 5",
+            "home_team": "Napoli",
+            "away_team": "Genoa",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "69%",
+                "31%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "1"
+              ],
+              "Shot Attempts": [
+                "12",
+                "6"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "5"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736839"
+          },
+          {
+            "game_id": "757685",
+            "date": "Wed, Oct 1",
+            "home_team": "Napoli",
+            "away_team": "Sporting CP",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.1%",
+                "48.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "12",
+                "8"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757685"
+          },
+          {
+            "game_id": "736833",
+            "date": "Sun, Sep 28",
+            "home_team": "AC Milan",
+            "away_team": "Napoli",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "36.5%",
+                "63.5%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "7"
+              ],
+              "Shot Attempts": [
+                "6",
+                "19"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "1",
+                "7"
+              ],
+              "Saves": [
+                "6",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736833"
+          },
+          {
+            "game_id": "736821",
+            "date": "Mon, Sep 22",
+            "home_team": "Napoli",
+            "away_team": "Pisa",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "63.5%",
+                "36.5%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "6"
+              ],
+              "Shot Attempts": [
+                "18",
+                "15"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736821"
+          },
+          {
+            "game_id": "757667",
+            "date": "Thu, Sep 18",
+            "home_team": "Manchester City",
+            "away_team": "Napoli",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "73.8%",
+                "26.2%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "1"
+              ],
+              "Shot Attempts": [
+                "23",
+                "1"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "9",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757667"
+          },
+          {
+            "game_id": "736809",
+            "date": "Sat, Sep 13",
+            "home_team": "Fiorentina",
+            "away_team": "Napoli",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.6%",
+                "47.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "9"
+              ],
+              "Shot Attempts": [
+                "19",
+                "14"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "8",
+                "5"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736809"
+          },
+          {
+            "game_id": "736797",
+            "date": "Sat, Aug 30",
+            "home_team": "Napoli",
+            "away_team": "Cagliari",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "67.3%",
+                "32.7%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "1"
+              ],
+              "Shot Attempts": [
+                "20",
+                "10"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "13",
+                "0"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736797"
+          }
+        ],
+        "classement": {
+          "Lecce": {
+            "position": 16,
+            "points": 6
+          },
+          "Napoli": {
+            "position": 1,
+            "points": 18
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Napoli",
+            "points": 18
+          },
+          {
+            "position": 2,
+            "team": "AS Roma",
+            "points": 18
+          },
+          {
+            "position": 3,
+            "team": "AC Milan",
+            "points": 17
+          },
+          {
+            "position": 4,
+            "team": "Internazionale",
+            "points": 15
+          },
+          {
+            "position": 5,
+            "team": "Bologna",
+            "points": 14
+          },
+          {
+            "position": 6,
+            "team": "Como",
+            "points": 13
+          },
+          {
+            "position": 7,
+            "team": "Atalanta",
+            "points": 12
+          },
+          {
+            "position": 8,
+            "team": "Juventus",
+            "points": 12
+          },
+          {
+            "position": 9,
+            "team": "Udinese",
+            "points": 12
+          },
+          {
+            "position": 10,
+            "team": "Lazio",
+            "points": 11
+          },
+          {
+            "position": 11,
+            "team": "Cremonese",
+            "points": 11
+          },
+          {
+            "position": 12,
+            "team": "Torino",
+            "points": 11
+          },
+          {
+            "position": 13,
+            "team": "Sassuolo",
+            "points": 10
+          },
+          {
+            "position": 14,
+            "team": "Cagliari",
+            "points": 9
+          },
+          {
+            "position": 15,
+            "team": "Parma",
+            "points": 7
+          },
+          {
+            "position": 16,
+            "team": "Lecce",
+            "points": 6
+          },
+          {
+            "position": 17,
+            "team": "Hellas Verona",
+            "points": 5
+          },
+          {
+            "position": 18,
+            "team": "Fiorentina",
+            "points": 4
+          },
+          {
+            "position": 19,
+            "team": "Pisa",
+            "points": 4
+          },
+          {
+            "position": 20,
+            "team": "Genoa",
+            "points": 3
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "712199",
+            "date": "Saturday, October 26, 2024",
+            "team1": "Napoli",
+            "score": "1 - 0",
+            "team2": "Lecce",
+            "title": "Napoli VS Lecce",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/712199/lecce-napoli",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "64.8%",
+                "35.2%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "2"
+              ],
+              "Shot Attempts": [
+                "24",
+                "11"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "16",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "7"
+              ]
+            }
+          },
+          {
+            "gameId": "712456",
+            "date": "Saturday, May 3, 2025",
+            "team1": "Lecce",
+            "score": "0 - 1",
+            "team2": "Napoli",
+            "title": "Lecce VS Napoli",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/712456/napoli-lecce",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "45%",
+                "55%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "2"
+              ],
+              "Shot Attempts": [
+                "9",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/867.png",
+        "logo_away": "https://media.api-sports.io/football/teams/492.png",
+        "classement_home": 16,
+        "classement_away": 1,
+        "points_classement_home": 6,
+        "points_classement_away": 18,
+        "nom_classement_home": "Lecce",
+        "nom_classement_away": "Napoli",
+        "country_fr": "Italy - Serie A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.274,
+            "lambda_away": 1.278,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 36.28,
+            "X": 26.49,
+            "V2": 37.23
+          },
+          "double_chance": {
+            "1X": 62.77,
+            "12": 73.51,
+            "X2": 63.72
+          },
+          "over_under": {
+            "plus_de_0.5": 92.07,
+            "moins_de_0.5": 7.92,
+            "plus_de_1.5": 72.36,
+            "moins_de_1.5": 27.64,
+            "plus_de_2.5": 47.02,
+            "moins_de_2.5": 52.99,
+            "plus_de_3.5": 25.42,
+            "moins_de_3.5": 74.58,
+            "plus_de_4.5": 11.42,
+            "moins_de_4.5": 88.58,
+            "plus_de_5.5": 4.49,
+            "moins_de_5.5": 95.51
+          },
+          "btts": {
+            "oui": 52.06,
+            "non": 47.94
+          },
+          "resultat_total": {
+            "V1et+0.5": 36.28,
+            "1Xet+0.5": 54.84,
+            "V2et+0.5": 37.23,
+            "V1et+1.5": 26.67,
+            "1Xet+1.5": 45.24,
+            "V2et+1.5": 27.12,
+            "V1et+2.5": 20.24,
+            "1Xet+2.5": 26.38,
+            "V2et+2.5": 20.64,
+            "V1et+3.5": 9.68,
+            "1Xet+3.5": 15.81,
+            "V2et+3.5": 9.62,
+            "V1et+4.5": 5.09,
+            "1Xet+4.5": 6.14,
+            "V2et+4.5": 5.28,
+            "V1et+5.5": 1.76,
+            "1Xet+5.5": 2.8,
+            "V2et+5.5": 1.68
+          },
+          "scores_probables": {
+            "1-1": 12.44,
+            "0-1": 10.1,
+            "1-0": 9.61,
+            "1-2": 8.23,
+            "2-1": 8.13,
+            "0-0": 7.92,
+            "0-2": 6.48,
+            "2-0": 6.42,
+            "2-2": 5.08,
+            "3-1": 3.81
+          },
+          "buts_moyens_simules": {
+            "home": 1.26,
+            "away": 1.29,
+            "total": 2.55
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (Napoli)  \n**CONFIANCE** : 78%  \n**SCORES PROBABLES** : 0‑2 ou 1‑2  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Lecce** : 16ᵉ avec 6 points, moyenne de buts marqués très basse (0,90) et moyenne de buts encaissés élevée (1,60). En 5 matchs à domicile, ils n’ont inscrit que 5 buts tout en en concédant 6. Leur défense montre de grandes faiblesses (corners fréquents, possession souvent inférieure).  \n- **Napoli** : 1ᵉ avec 18 points, moyenne de buts marqués de 1,70 (l’une des meilleures du championnat) et même moyenne de buts encaissés (1,70). En déplacement, ils ont déjà inscrit 6 buts mais en ont aussi concédé 12, ce qui indique une capacité à marquer même contre des défenses fragiles.\n\n**2. Impact du facteur domicile/extérieur**  \n- Lecce n’a que 1 victoire à domicile sur ses 5 derniers matchs (séquence D‑D‑L‑L‑W) et a souvent été dominé en possession (ex. 33 % contre Bologna).  \n- Napoli, malgré une série à l’extérieur (L‑L‑L‑L‑W), possède une qualité technique supérieure et a déjà battu Lecce à domicile (1‑0) et à l’extérieur (1‑0) la saison précédente.\n\n**3. Forme récente et tendances (statistiques détaillées)**  \n- **Lecce** : Dernier match à domicile 2‑2 contre Bologna (4 tirs cadrés, 5 corners). Avant cela, 0‑2 contre AC Milan (10 tirs cadrés contre 1) et 1‑2 contre Cagliari (5‑6 tirs cadrés). Leurs tentatives de tirs sont souvent supérieures à celles de leurs adversaires, mais la conversion reste très faible (0,9 but/match).  \n- **Napoli** : Victoire 3‑1 contre Inter (7 tirs cadrés, 1 corner) ; défaite 6‑2 contre PSV (8 tirs cadrés, 4 corners) ; victoire 2‑1 contre Genoa (5 tirs cadrés, 7 corners). Même en défaite, ils restent très productifs offensivement (≥2 buts). Leur capacité à créer des occasions (moyenne 7‑8 tirs cadrés à l’extérieur) dépasse largement celle de Lecce.\n\n**4. Contexte du championnat**  \n- Napoli mène le classement, il a tout à gagner en consolidant son avance. Lecce lutte contre la relégation, il n’a aucune marge de manœuvre et doit chercher le point, mais la différence de qualité est trop importante pour espérer un retournement.\n\n**5. Confrontations directes**  \n- Deux dernières rencontres (saison 2024‑2025) : Napoli 1‑0 Lecce (à domicile) et Lecce 0‑1 Napoli (à domicile). Les deux matchs se sont soldés par une victoire napolitaine à une seule différence de but, avec très peu d’occasions pour Lecce (9 tirs au total sur les deux matchs).  \n\n**6. Analyse des cotes**  \n- Cote Napoli 1.45 indique une forte probabilité de victoire selon le marché. La cote du draw (3.85) et de Lecce (6.5) montre que le risque de surprise est jugé faible.\n\n**7. Analyse approfondie des statistiques détaillées**  \n- **Possession** : Lecce ne dépasse jamais 55 % en moyenne, tandis que Napoli garde souvent la majorité du ballon (>55 %).  \n- **Tirs cadrés** : Lecce moyenne 2‑3 tirs cadrés à domicile, Napoli moyenne 5‑7 à l’extérieur.  \n- **Corners** : Lecce concède en moyenne 5‑7 corners par match à domicile, Napoli en crée 6‑8 à l’extérieur, signe d’une pression offensive constante.  \n- **Cartons** : Aucun facteur disciplinaire majeur n’influence le résultat.\n\n**8. Synthèse**  \nToutes les données convergent vers une victoire de Napoli, très probablement avec deux buts d’écart. Le match devrait contenir au moins deux buts (probabilité >55 %) mais le total de buts dépasse rarement 2,5 en raison de la capacité limitée de Lecce à marquer. Le BTTS est peu probable (environ 30 % de chances) étant donné les deux dernières confrontations directes (0‑1, 0‑1).  \n\n**Conclusion** : Le pari le plus sûr est la victoire de Napoli, avec un score le plus fréquent de 0‑2 ou 1‑2.",
+        "confiance_pourcentage": 78,
+        "prediction_principale": "Victoire extérieur (Napoli)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑2 ou 1‑2"
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Atalanta",
+        "AwayTeam": "AC Milan",
+        "date": "28 octobre 2025 à 19:45:00 UTC",
+        "league": "Italy - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "W",
+            "D"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 15,
+          "total_points": 8,
+          "serie_domicile": [
+            "D",
+            "D",
+            "D",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 7,
+          "total_marques": 13,
+          "total_encaisses": 10
+        },
+        "stats_away": {
+          "moyenne_marques": 1.8,
+          "moyenne_encaisses": 0.6,
+          "form_6": [
+            "D",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "total_points_6": 14,
+          "total_points_10": 23,
+          "total_points": 14,
+          "serie_exterieur": [
+            "D",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 13,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 0,
+          "total_marques": 18,
+          "total_encaisses": 6
+        },
+        "last_matches_home": [
+          {
+            "game_id": "736854",
+            "date": "Sat, Oct 25",
+            "home_team": "Cremonese",
+            "away_team": "Atalanta",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "34.6%",
+                "65.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "6"
+              ],
+              "Shot Attempts": [
+                "9",
+                "20"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "10"
+              ],
+              "Saves": [
+                "5",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736854"
+          },
+          {
+            "game_id": "757700",
+            "date": "Wed, Oct 22",
+            "home_team": "Atalanta",
+            "away_team": "Slavia Prague",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.8%",
+                "44.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "22",
+                "16"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757700"
+          },
+          {
+            "game_id": "736850",
+            "date": "Sun, Oct 19",
+            "home_team": "Atalanta",
+            "away_team": "Lazio",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.2%",
+                "41.8%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "1"
+              ],
+              "Shot Attempts": [
+                "16",
+                "4"
+              ],
+              "Yellow Cards": [
+                "4",
+                "0"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736850"
+          },
+          {
+            "game_id": "736834",
+            "date": "Sat, Oct 4",
+            "home_team": "Atalanta",
+            "away_team": "Como",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.5%",
+                "49.5%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "16",
+                "12"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "8",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736834"
+          },
+          {
+            "game_id": "757672",
+            "date": "Tue, Sep 30",
+            "home_team": "Atalanta",
+            "away_team": "Club Brugge",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.2%",
+                "51.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "20",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757672"
+          },
+          {
+            "game_id": "736824",
+            "date": "Sat, Sep 27",
+            "home_team": "Juventus",
+            "away_team": "Atalanta",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "67%",
+                "33%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "2"
+              ],
+              "Shot Attempts": [
+                "24",
+                "12"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "15",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "9"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736824"
+          },
+          {
+            "game_id": "736822",
+            "date": "Sun, Sep 21",
+            "home_team": "Torino",
+            "away_team": "Atalanta",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "38.8%",
+                "61.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "5"
+              ],
+              "Shot Attempts": [
+                "11",
+                "9"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "1",
+                "0"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736822"
+          },
+          {
+            "game_id": "757661",
+            "date": "Wed, Sep 17",
+            "home_team": "Paris Saint-Germain",
+            "away_team": "Atalanta",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "66.9%",
+                "33.1%"
+              ],
+              "Shots on Goal": [
+                "13",
+                "2"
+              ],
+              "Shot Attempts": [
+                "22",
+                "7"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "9"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757661"
+          },
+          {
+            "game_id": "736812",
+            "date": "Sun, Sep 14",
+            "home_team": "Atalanta",
+            "away_team": "Lecce",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.5%",
+                "43.5%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "12"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "8",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736812"
+          },
+          {
+            "game_id": "736796",
+            "date": "Sat, Aug 30",
+            "home_team": "Parma",
+            "away_team": "Atalanta",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46.2%",
+                "53.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "7",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736796"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "736861",
+            "date": "Fri, Oct 24",
+            "home_team": "AC Milan",
+            "away_team": "Pisa",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "67.8%",
+                "32.2%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "20",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "0",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736861"
+          },
+          {
+            "game_id": "736846",
+            "date": "Sun, Oct 19",
+            "home_team": "AC Milan",
+            "away_team": "Fiorentina",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.4%",
+                "43.6%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "14",
+                "5"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "1",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736846"
+          },
+          {
+            "game_id": "736841",
+            "date": "Sun, Oct 5",
+            "home_team": "Juventus",
+            "away_team": "AC Milan",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.2%",
+                "48.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "12",
+                "13"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "0"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736841"
+          },
+          {
+            "game_id": "736833",
+            "date": "Sun, Sep 28",
+            "home_team": "AC Milan",
+            "away_team": "Napoli",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "36.5%",
+                "63.5%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "7"
+              ],
+              "Shot Attempts": [
+                "6",
+                "19"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "1",
+                "7"
+              ],
+              "Saves": [
+                "6",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736833"
+          },
+          {
+            "game_id": "756567",
+            "date": "Tue, Sep 23",
+            "home_team": "AC Milan",
+            "away_team": "Lecce",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "76.8%",
+                "23.2%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "1"
+              ],
+              "Shot Attempts": [
+                "24",
+                "2"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "12",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/756567"
+          },
+          {
+            "game_id": "736818",
+            "date": "Sat, Sep 20",
+            "home_team": "Udinese",
+            "away_team": "AC Milan",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "39.6%",
+                "60.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "6"
+              ],
+              "Shot Attempts": [
+                "10",
+                "13"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "1",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736818"
+          },
+          {
+            "game_id": "736806",
+            "date": "Sun, Sep 14",
+            "home_team": "AC Milan",
+            "away_team": "Bologna",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "39.2%",
+                "60.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "0"
+              ],
+              "Shot Attempts": [
+                "14",
+                "5"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736806"
+          },
+          {
+            "game_id": "736803",
+            "date": "Fri, Aug 29",
+            "home_team": "Lecce",
+            "away_team": "AC Milan",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45%",
+                "55%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "6"
+              ],
+              "Shot Attempts": [
+                "7",
+                "14"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736803"
+          },
+          {
+            "game_id": "736793",
+            "date": "Sat, Aug 23",
+            "home_team": "AC Milan",
+            "away_team": "Cremonese",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "63.8%",
+                "36.2%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "24",
+                "4"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "9",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736793"
+          },
+          {
+            "game_id": "744112",
+            "date": "Sun, Aug 17",
+            "home_team": "AC Milan",
+            "away_team": "Bari",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/744112"
+          }
+        ],
+        "classement": {
+          "Atalanta": {
+            "position": 7,
+            "points": 12
+          },
+          "AC Milan": {
+            "position": 3,
+            "points": 17
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Napoli",
+            "points": 18
+          },
+          {
+            "position": 2,
+            "team": "AS Roma",
+            "points": 18
+          },
+          {
+            "position": 3,
+            "team": "AC Milan",
+            "points": 17
+          },
+          {
+            "position": 4,
+            "team": "Internazionale",
+            "points": 15
+          },
+          {
+            "position": 5,
+            "team": "Bologna",
+            "points": 14
+          },
+          {
+            "position": 6,
+            "team": "Como",
+            "points": 13
+          },
+          {
+            "position": 7,
+            "team": "Atalanta",
+            "points": 12
+          },
+          {
+            "position": 8,
+            "team": "Juventus",
+            "points": 12
+          },
+          {
+            "position": 9,
+            "team": "Udinese",
+            "points": 12
+          },
+          {
+            "position": 10,
+            "team": "Lazio",
+            "points": 11
+          },
+          {
+            "position": 11,
+            "team": "Cremonese",
+            "points": 11
+          },
+          {
+            "position": 12,
+            "team": "Torino",
+            "points": 11
+          },
+          {
+            "position": 13,
+            "team": "Sassuolo",
+            "points": 10
+          },
+          {
+            "position": 14,
+            "team": "Cagliari",
+            "points": 9
+          },
+          {
+            "position": 15,
+            "team": "Parma",
+            "points": 7
+          },
+          {
+            "position": 16,
+            "team": "Lecce",
+            "points": 6
+          },
+          {
+            "position": 17,
+            "team": "Hellas Verona",
+            "points": 5
+          },
+          {
+            "position": 18,
+            "team": "Fiorentina",
+            "points": 4
+          },
+          {
+            "position": 19,
+            "team": "Pisa",
+            "points": 4
+          },
+          {
+            "position": 20,
+            "team": "Genoa",
+            "points": 3
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "712254",
+            "date": "Friday, December 6, 2024",
+            "team1": "Atalanta",
+            "score": "2 - 1",
+            "team2": "AC Milan",
+            "title": "Atalanta VS AC Milan",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/712254/ac-milan-atalanta",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "51.6%",
+                "48.4%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "2"
+              ],
+              "Shot Attempts": [
+                "17",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "7",
+                "0"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            }
+          },
+          {
+            "gameId": "712437",
+            "date": "Sunday, April 20, 2025",
+            "team1": "AC Milan",
+            "score": "0 - 1",
+            "team2": "Atalanta",
+            "title": "AC Milan VS Atalanta",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/712437/atalanta-ac-milan",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "47.8%",
+                "52.2%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "2"
+              ],
+              "Shot Attempts": [
+                "12",
+                "11"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "7",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/499.png",
+        "logo_away": "https://media.api-sports.io/football/teams/489.png",
+        "classement_home": 7,
+        "classement_away": 3,
+        "points_classement_home": 12,
+        "points_classement_away": 17,
+        "nom_classement_home": "Atalanta",
+        "nom_classement_away": "AC Milan",
+        "country_fr": "Italy - Serie A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.2,
+            "lambda_away": 1.246,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 35.31,
+            "X": 27.74,
+            "V2": 36.96
+          },
+          "double_chance": {
+            "1X": 63.04,
+            "12": 72.26,
+            "X2": 64.69
+          },
+          "over_under": {
+            "plus_de_0.5": 91.04,
+            "moins_de_0.5": 8.96,
+            "plus_de_1.5": 69.74,
+            "moins_de_1.5": 30.26,
+            "plus_de_2.5": 44.2,
+            "moins_de_2.5": 55.81,
+            "plus_de_3.5": 22.99,
+            "moins_de_3.5": 77.01,
+            "plus_de_4.5": 10.1,
+            "moins_de_4.5": 89.9,
+            "plus_de_5.5": 3.8,
+            "moins_de_5.5": 96.2
+          },
+          "btts": {
+            "oui": 49.7,
+            "non": 50.3
+          },
+          "resultat_total": {
+            "V1et+0.5": 35.31,
+            "1Xet+0.5": 54.09,
+            "V2et+0.5": 36.96,
+            "V1et+1.5": 24.74,
+            "1Xet+1.5": 43.52,
+            "V2et+1.5": 26.22,
+            "V1et+2.5": 18.82,
+            "1Xet+2.5": 24.51,
+            "V2et+2.5": 19.68,
+            "V1et+3.5": 8.52,
+            "1Xet+3.5": 14.21,
+            "V2et+3.5": 8.78,
+            "V1et+4.5": 4.57,
+            "1Xet+4.5": 5.42,
+            "V2et+4.5": 4.68,
+            "V1et+5.5": 1.4,
+            "1Xet+5.5": 2.26,
+            "V2et+5.5": 1.54
+          },
+          "scores_probables": {
+            "1-1": 13.09,
+            "0-1": 10.74,
+            "1-0": 10.57,
+            "0-0": 8.96,
+            "1-2": 8.16,
+            "2-1": 7.66,
+            "0-2": 6.53,
+            "2-0": 5.92,
+            "2-2": 4.83,
+            "1-3": 3.19
+          },
+          "buts_moyens_simules": {
+            "home": 1.2,
+            "away": 1.24,
+            "total": 2.44
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (AC Milan)  \n**CONFIANCE** : 62 %  \n**SCORES PROBABLES** : 0‑2 ou 1‑2  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Atalanta (domicile)** : moyenne 1,30 buts marqués et 1,00 but encaissé. En 5 derniers matchs à domicile, ils n’ont inscrit que **7 buts** et n’en ont encaissé que **3**. Leur attaque est donc peu prolifique, mais la défense reste solide.  \n- **AC Milan (extérieur)** : moyenne 1,80 buts marqués et 0,60 but encaissé. En 9 derniers déplacements, ils ont marqué **22 buts** (2,44 par match) tout en ne concédant que **4 buts** (0,44 par match). L’attaque est très efficace et la défense est l’une des meilleures du championnat.\n\n**2. Impact du facteur domicile/extérieur**  \n- Atalanta bénéficie d’un bon bilan défensif à domicile (3 buts encaissés en 5 matchs).  \n- Milan montre une défense quasi‑imperméable à l’extérieur (0 but encaissé sur ses 3 derniers déplacements).  \n\n**3. Forme récente & tendances détaillées**  \n- **Atalanta** : 6 derniers matchs = D D D D W D (8 pts). Les 5 derniers à domicile : D‑D‑D‑W‑W, avec seulement **2 marquages** (1‑1, 2‑1). La possession moyenne est souvent inférieure à 55 % et le nombre de tirs cadrés est limité (ex. 5‑6 contre Cremonese).  \n- **Milan** : 6 derniers matchs = D W D W W W (14 pts). Les 3 derniers à l’extérieur : D‑W‑W, avec **5 buts marqués** et **0 but encaissé**. Ils dominent la possession (ex. 67,8 % contre Pisa) et créent de nombreux tirs cadrés (7 contre 2).  \n\n**4. Contexte du championnat**  \n- Milan occupe la 3ᵉ place (17 pts) et lutte pour les places européennes.  \n- Atalanta est 7ᵉ (12 pts) et n’a pas encore assuré de place en Europe. La motivation de Milan est donc supérieure, tandis qu’Atalanta ne peut pas se permettre de perdre de points.\n\n**5. Confrontations directes récentes**  \n- Saison précédente : victoire 2‑1 d’Atalanta à domicile.  \n- Cette saison : victoire 1‑0 de Milan à l’extérieur.  \n- Statistiques H2H : Milan a généralement plus de tirs cadrés (8 vs 2) et domine le jeu de passes.  \n\n**6. Analyse des statistiques détaillées**  \n- **Possession** : Milan dépasse régulièrement 60 % en déplacement, alors qu’Atalanta peine à dépasser 55 % à domicile.  \n- **Tirs cadrés** : Milan enregistre en moyenne 5‑6 tirs cadrés contre 1‑2 d’Atalanta (ex. 7‑2 contre Pisa).  \n- **Corners** : Milan crée plus de corners, signe d’une pression offensive constante.  \n- **Sauvetages** : Le gardien d’Atalanta a dû faire 5‑6 arrêts dans le dernier match contre Cremonese, tandis que le gardien milanais a réalisé 0‑1 arrêt, preuve d’une défense protectrice.\n\n**7. Synthèse**  \n- L’attaque d’Atalanta est la plus grande faiblesse (faible production de buts à domicile).  \n- La défense de Milan est la plus solide du championnat, surtout à l’extérieur.  \n- Les tendances montrent que Milan marque au moins 2 buts dans la majorité de ses déplacements, alors qu’Atalanta a du mal à dépasser 1 but à domicile.  \n\n**Conclusion** : Le scénario le plus probable est une victoire de Milan, souvent par 2‑0 ou 2‑1, avec une défense qui garde la ligne et une attaque qui trouve le filet à plusieurs reprises.  \n\n---  \n\n**PRÉDICTION** : Victoire extérieur (AC Milan) – confiance 62 % – scores les plus probables 0‑2 ou 1‑2.",
+        "confiance_pourcentage": 62,
+        "prediction_principale": "Victoire extérieur (AC Milan)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑2 ou 1‑2"
+      }
+    ]
+  }
+}
