@@ -3098,6 +3098,11 @@ def get_today_matches_filtered():
         response = requests.get(url, headers=api_headers, params=params)
         response.raise_for_status()
         data = response.json()
+        print("🐛 DEBUG - Statut HTTP:", response.status_code)
+        print("🐛 DEBUG - Clés du JSON:", list(data.keys()))
+        print("🐛 DEBUG - results/errors:", data.get("results"), "|", data.get("errors"))
+        print("🐛 DEBUG - Nombre de matchs bruts:", len(data.get("response", [])))
+        print("🐛 DEBUG - Paramètres:", params)
         print(f"\n📅 Matchs du jour ({today}) :\n")
         for match in data.get("response", []):
             league_id = match['league']['id']
