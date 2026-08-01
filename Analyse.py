@@ -3273,7 +3273,7 @@ def fetch_espn_team_events(team_id, limit=10):
             "date": date_fmt,
             "home_team": home_name,
             "away_team": away_name,
-            "score": f"{home_score} - {away_score}",
+            "score": f"{int(home_score)} - {int(away_score)}",
             "status": "FT" if "final" in status_desc.lower() or status_desc.lower() == "full time" else status_desc,
             "competition": competition_name,
             "stats": {},  # Les stats détaillées (possession, tirs...) nécessiteraient un appel supplémentaire à /summary?event={game_id}
