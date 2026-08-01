@@ -3195,180 +3195,181 @@ def get_form_points(recent_form):
     total = sum(points_map.get(r, 0) for r in recent_form)
     return total
 
+import re as _re_module  # (déjà importé "re" dans Analyse.py, garder l'import existant en haut du fichier)
+
+def extract_team_id_from_url(url):
+    """
+    Extrait l'ID d'équipe ESPN depuis l'URL stockée dans teams_urls.
+    Ex: https://www.espn.com/football/team/results/_/id/103/ac-milan -> "103"
+    """
+    if not url:
+        return None
+    match = _re_module.search(r"/id/(\d+)/", url)
+    return match.group(1) if match else None
+
+
+def fetch_espn_team_events(team_id, limit=10):
+    """
+    Récupère les derniers matchs terminés (résultats) d'une équipe via l'API JSON
+    interne d'ESPN, en remplacement du scraping HTML devenu obsolète.
+    Retourne une liste d'objets match au même format que l'ancien scraping.
+    """
+    url = f"https://site.web.api.espn.com/apis/site/v2/sports/soccer/all/teams/{team_id}/schedule"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                      "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
+    }
+    try:
+        response = requests.get(url, headers=headers, timeout=15)
+        response.raise_for_status()
+        data = response.json()
+    except Exception as e:
+        print(f"❌ Erreur API ESPN JSON pour team_id={team_id} : {e}")
+        return []
+
+    events = data.get("events", [])
+    results = []
+
+    # On garde uniquement les matchs terminés, triés du plus récent au plus ancien
+    completed = [
+        ev for ev in events
+        if ev.get("competitions", [{}])[0].get("status", {}).get("type", {}).get("completed") is True
+    ]
+    completed.sort(key=lambda ev: ev.get("date", ""), reverse=True)
+
+    for ev in completed[:limit]:
+        comp = ev.get("competitions", [{}])[0]
+        competitors = comp.get("competitors", [])
+        if len(competitors) < 2:
+            continue
+
+        home = next((c for c in competitors if c.get("homeAway") == "home"), competitors[0])
+        away = next((c for c in competitors if c.get("homeAway") == "away"), competitors[1])
+
+        home_name = home.get("team", {}).get("displayName", "N/A")
+        away_name = away.get("team", {}).get("displayName", "N/A")
+        home_score = home.get("score")
+        away_score = away.get("score")
+
+        if home_score is None or away_score is None:
+            continue
+
+        game_id = ev.get("id", "N/A")
+        date_iso = ev.get("date", "")
+        try:
+            date_fmt = datetime.strptime(date_iso, "%Y-%m-%dT%H:%MZ").strftime("%a, %b %d")
+        except Exception:
+            date_fmt = date_iso
+
+        competition_name = comp.get("league", {}).get("name", "") if "league" in comp else ev.get("league", {}).get("name", "")
+        status_desc = comp.get("status", {}).get("type", {}).get("description", "FT")
+
+        match_obj = {
+            "game_id": str(game_id),
+            "date": date_fmt,
+            "home_team": home_name,
+            "away_team": away_name,
+            "score": f"{home_score} - {away_score}",
+            "status": "FT" if "final" in status_desc.lower() or status_desc.lower() == "full time" else status_desc,
+            "competition": competition_name,
+            "stats": {},  # Les stats détaillées (possession, tirs...) nécessiteraient un appel supplémentaire à /summary?event={game_id}
+            "url": f"https://www.espn.com/soccer/match/_/gameId/{game_id}"
+        }
+        results.append(match_obj)
+
+    return results
+
+
 def scrape_team_data(team_name, action):
+    """
+    VERSION CORRIGÉE : utilise l'API JSON ESPN au lieu du scraping HTML
+    (ESPN a migré son affichage vers du rendu JavaScript, cassant l'ancien
+    scraping BeautifulSoup basé sur les classes CSS Table__TR, matchTeams, etc.)
+    """
     espn_team_name = get_espn_name(team_name)
     url = teams_urls.get(espn_team_name, {}).get(action)
-    if not url:
-        print(f"URL non trouvée pour {espn_team_name} et action {action}.")
+    team_id = extract_team_id_from_url(url)
+
+    if not team_id:
+        print(f"URL/ID non trouvé pour {espn_team_name} et action {action}.")
         FAILED_TEAMS.add(team_name)
         return []
-    try:
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, 'html.parser')
-        matches = soup.find_all('tr', class_='Table__TR')
-        
-        # ✅ NOUVELLE STRUCTURE - Objet au lieu de liste
-        valid_results = []
-        form_6 = []
-        form_10 = []
-        buts_dom_marques = 0
-        buts_dom_encaisses = 0
-        buts_ext_marques = 0
-        buts_ext_encaisses = 0
 
-        # 🏗️ Initialisation des séries domicile/extérieur
-        serie_domicile = []
-        serie_exterieur = []
+    valid_results = fetch_espn_team_events(team_id, limit=10)
 
-        for match in matches:
-            # Date
-            date_tag = match.find('div', class_='matchTeams')
-            date_text = date_tag.text.strip() if date_tag else "N/A"
+    if not valid_results:
+        print(f"Aucun match trouvé pour {espn_team_name} (team_id={team_id}).")
+        FAILED_TEAMS.add(team_name)
+        return []
 
-            # Équipes
-            teams = match.find_all('a', class_='AnchorLink Table__Team')
-            team1 = teams[0].text.strip() if len(teams) > 0 else "N/A"
-            team2 = teams[1].text.strip() if len(teams) > 1 else "N/A"
+    # --- Le reste de la logique (formes, buts dom/ext, etc.) reste identique ---
+    form_6 = []
+    form_10 = []
+    buts_dom_marques = buts_dom_encaisses = buts_ext_marques = buts_ext_encaisses = 0
+    serie_domicile = []
+    serie_exterieur = []
 
-            # Compétition
-            comp_tags = match.find_all('a', class_='AnchorLink')
-            competition = comp_tags[1].text.strip() if len(comp_tags) > 1 else "N/A"
+    for match_obj in valid_results:
+        team1 = match_obj["home_team"]
+        team2 = match_obj["away_team"]
+        score = match_obj["score"]
 
-            # Score + Game ID (via l'URL du match)
-            score_tag = match.find('a', href=lambda x: x and "gameId" in x)
-            score = score_tag.text.strip() if score_tag else "N/A"
-            game_id = "N/A"
-            if score_tag and score_tag.get('href') and "gameId" in score_tag['href']:
-                try:
-                    game_id = score_tag['href'].split("gameId/")[1].split("/")[0]
-                except:
-                    game_id = "N/A"
+        result = get_match_result_for_team(espn_team_name, score, team1, team2)
+        if result:
+            form_10.append(result)
+            if len(form_6) < 6:
+                form_6.append(result)
 
-            # Statut (FT, Postponed…) - essayer plusieurs sélecteurs
-            status = "N/A"
-            status_tag = match.find('span', {"data-testid": "result"})
-            if not status_tag:
-                # Fallback - chercher dans les derniers liens
-                last_links = match.find_all('a', class_='AnchorLink')
-                if last_links:
-                    status = last_links[-1].text.strip()
+            mapped_team1 = team_name_mapping.get(team1, team1)
+            mapped_espn_name = team_name_mapping.get(espn_team_name, espn_team_name)
+            is_home = (mapped_team1 == mapped_espn_name)
+            if is_home:
+                serie_domicile.append(result)
             else:
-                status = status_tag.text.strip()
+                serie_exterieur.append(result)
 
-            # Si toutes les infos clés sont présentes, créer l'objet match
-            if all(val != "N/A" for val in [date_text, team1, team2, score]):
-                match_obj = {
-                    "game_id": game_id,
-                    "date": date_text,
-                    "home_team": team1,
-                    "away_team": team2,
-                    "score": score,
-                    "status": status,
-                    "competition": competition
-                }
+        buts_m, buts_e, domicile = extract_goals(espn_team_name, score, team1, team2)
+        if buts_m is not None and buts_e is not None:
+            if domicile:
+                buts_dom_marques += buts_m
+                buts_dom_encaisses += buts_e
+            else:
+                buts_ext_marques += buts_m
+                buts_ext_encaisses += buts_e
 
-                # ✅ NOUVEAU : Enrichir avec les statistiques détaillées si game_id disponible
-                if game_id != "N/A":
-                    print(f"🔍 Récupération des stats détaillées pour le match {game_id}...")
-                    match_stats = get_match_stats(game_id)
-                    match_obj["stats"] = match_stats
-                    match_obj["url"] = f"https://africa.espn.com/football/match/_/gameId/{game_id}"
-                else:
-                    match_obj["stats"] = {}
-                    match_obj["url"] = "N/A"
+    nb_matchs = len(valid_results)
+    total_marques = buts_dom_marques + buts_ext_marques
+    total_encaisses = buts_dom_encaisses + buts_ext_encaisses
 
-                valid_results.append(match_obj)
-                
-                # Calculer les formes et stats avec la nouvelle structure
-                result = get_match_result_for_team(espn_team_name, score, team1, team2)
-                if result:
-                    form_10.append(result)
-                    if len(form_6) < 6:
-                        form_6.append(result)
+    print(f"\n🗓️ {action.capitalize()} pour {espn_team_name} (via API JSON ESPN) :")
+    for match_obj in valid_results:
+        print(f"ID: {match_obj['game_id']} | {match_obj['date']} | {match_obj['home_team']} vs {match_obj['away_team']} : {match_obj['score']} [{match_obj['competition']}] ({match_obj['status']})")
 
-                    # 🔄 Ajout dans la bonne série - utiliser le mapping
-                    mapped_team1 = team_name_mapping.get(team1, team1)
-                    mapped_espn_name = team_name_mapping.get(espn_team_name, espn_team_name)
-                    is_home = (mapped_team1 == mapped_espn_name)
-                    if is_home:
-                        serie_domicile.append(result)
-                    else:
-                        serie_exterieur.append(result)
+    total_points_6 = get_form_points(form_6)
+    total_points_10 = get_form_points(form_10[:10])
 
-                buts_m, buts_e, domicile = extract_goals(espn_team_name, score, team1, team2)
-                if buts_m is not None and buts_e is not None:
-                    if domicile:
-                        buts_dom_marques += buts_m
-                        buts_dom_encaisses += buts_e
-                    else:
-                        buts_ext_marques += buts_m
-                        buts_ext_encaisses += buts_e
-            
-            if len(valid_results) >= 10:
-                break
-        
-        nb_matchs = len(valid_results)
-        if nb_matchs == 0:
-            print("Aucun match trouvé.")
-            FAILED_TEAMS.add(team_name)
-            return []
-        
-        total_marques = buts_dom_marques + buts_ext_marques
-        total_encaisses = buts_dom_encaisses + buts_ext_encaisses
-        
-        print(f"\n🗓️ {action.capitalize()} pour {espn_team_name} :")
-        for match_obj in valid_results:
-            print(f"ID: {match_obj['game_id']} | {match_obj['date']} | {match_obj['home_team']} vs {match_obj['away_team']} : {match_obj['score']} [{match_obj['competition']}] ({match_obj['status']})")
-            # ✅ Afficher les stats si disponibles
-            if match_obj.get('stats'):
-                print(f"  📊 Stats: {len(match_obj['stats'])} statistiques récupérées")
-                for stat_name, (val1, val2) in list(match_obj['stats'].items())[:3]:  # Afficher les 3 premières
-                    print(f"    - {stat_name}: {val1} - {val2}")
-                if len(match_obj['stats']) > 3:
-                    print(f"    - ... et {len(match_obj['stats']) - 3} autres stats")
-        
-        total_points_6 = get_form_points(form_6)
-        total_points_10 = get_form_points(form_10[:10])  # sécurité si <10
-        
-        print(f"\n📊 Forme courte (6 derniers matchs) : {' '.join(form_6)} (Total points : {total_points_6})")
-        print(f"📊 Forme longue (10 derniers matchs) : {' '.join(form_10[:10])} (Total points : {total_points_10})")
-        print(f"⚽ Buts marqués à domicile : {buts_dom_marques}")
-        print(f"⚽ Buts encaissés à domicile : {buts_dom_encaisses}")
-        print(f"⚽ Buts marqués à l'extérieur : {buts_ext_marques}")
-        print(f"⚽ Buts encaissés à l'extérieur : {buts_ext_encaisses}")
-        print(f"⚽ Total buts marqués : {total_marques}")
-        print(f"🛡️ Total buts encaissés : {total_encaisses}")
-        print(f"\n📈 Moyenne buts marqués par match : {total_marques / nb_matchs:.2f}")
-        print(f"📉 Moyenne buts encaissés par match : {total_encaisses / nb_matchs:.2f}")
+    print(f"\n📊 Forme courte (6 derniers matchs) : {' '.join(form_6)} (Total points : {total_points_6})")
+    print(f"📊 Forme longue (10 derniers matchs) : {' '.join(form_10[:10])} (Total points : {total_points_10})")
 
-        # 💡 Affichage des séries
-        print(f"🏠 Série domicile : {'-'.join(serie_domicile)}")
-        print(f"✈️ Série extérieur : {'-'.join(serie_exterieur)}")
-
-        return {
-            "matches": valid_results,  # ✅ Maintenant c'est une liste d'objets avec nouvelle structure + STATS DÉTAILLÉES
-            "moyenne_marques": total_marques / nb_matchs,
-            "moyenne_encaisses": total_encaisses / nb_matchs,
-            "form_6": form_6,
-            "form_10": form_10[:10],
-            "recent_form": form_6,  # compatibilité avec l'ancien code
-            "serie_domicile": serie_domicile,
-            "serie_exterieur": serie_exterieur,
-            "buts_dom_marques": buts_dom_marques,
-            "buts_dom_encaisses": buts_dom_encaisses,
-            "buts_ext_marques": buts_ext_marques,
-            "buts_ext_encaisses": buts_ext_encaisses,
-            "total_marques": total_marques,
-            "total_encaisses": total_encaisses,
-            "total_points_6": total_points_6,
-            "total_points_10": total_points_10,
-            "total_points": total_points_6  # compatibilité avec l'ancien code
-        }
-    except Exception as e:
-        print(f"Erreur scraping {espn_team_name} ({action}) : {e}")
-        FAILED_TEAMS.add(team_name)
-        return []
+    return {
+        "matches": valid_results,
+        "moyenne_marques": total_marques / nb_matchs if nb_matchs else 0,
+        "moyenne_encaisses": total_encaisses / nb_matchs if nb_matchs else 0,
+        "form_6": form_6,
+        "form_10": form_10[:10],
+        "recent_form": form_6,
+        "serie_domicile": serie_domicile,
+        "serie_exterieur": serie_exterieur,
+        "buts_dom_marques": buts_dom_marques,
+        "buts_dom_encaisses": buts_dom_encaisses,
+        "buts_ext_marques": buts_ext_marques,
+        "buts_ext_encaisses": buts_ext_encaisses,
+        "total_marques": total_marques,
+        "total_encaisses": total_encaisses,
+        "total_points_6": total_points_6,
+        "total_points_10": total_points_10,
+        "total_points": total_points_6
+    }
 
 def compare_teams_basic_stats(
     t1, t2, name1, name2, match_date="N/A", match_time="N/A",
