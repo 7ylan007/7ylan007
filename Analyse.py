@@ -3248,9 +3248,13 @@ def fetch_espn_team_events(team_id, limit=10):
 
         home_name = home.get("team", {}).get("displayName", "N/A")
         away_name = away.get("team", {}).get("displayName", "N/A")
-        home_score = home.get("score")
-        away_score = away.get("score")
+        def _extract_score(raw):
+            if isinstance(raw, dict):
+                return raw.get("value")
+            return raw
 
+        home_score = _extract_score(home.get("score"))
+        away_score = _extract_score(away.get("score"))
         if home_score is None or away_score is None:
             continue
 
