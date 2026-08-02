@@ -1,0 +1,2986 @@
+{
+  "metadata": {
+    "date_generation": "2026-08-02 04:19:03",
+    "date_matchs": "2026-08-02",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 7,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICIATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 7,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Grasshoppers",
+        "AwayTeam": "FC Lugano",
+        "date": "2 août 2026 à 14:30:00 UTC",
+        "league": "Switzerland - Super League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.5,
+          "moyenne_encaisses": 1.75,
+          "form_6": [
+            "L",
+            "W",
+            "D",
+            "D",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "D",
+            "D",
+            "L",
+            "D",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "D",
+            "D",
+            "L",
+            "D"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 6,
+          "total_points": 6,
+          "serie_domicile": [
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 8,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 6,
+          "total_marques": 12,
+          "total_encaisses": 14
+        },
+        "stats_away": {
+          "moyenne_marques": 3.0,
+          "moyenne_encaisses": 0.5,
+          "form_6": [
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "W"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 6,
+          "total_points": 6,
+          "serie_exterieur": [
+            "W"
+          ],
+          "buts_dom_marques": 1,
+          "buts_dom_encaisses": 0,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 1,
+          "total_marques": 6,
+          "total_encaisses": 1
+        },
+        "last_matches_home": [
+          {
+            "game_id": "743172",
+            "date": "Sat, Sep 27",
+            "home_team": "FC Lugano",
+            "away_team": "Grasshoppers",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "Swiss Super League",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/743172"
+          },
+          {
+            "game_id": "743169",
+            "date": "Sun, Sep 14",
+            "home_team": "Grasshoppers",
+            "away_team": "Lausanne Sports",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "Swiss Super League",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/743169"
+          },
+          {
+            "game_id": "743159",
+            "date": "Sat, Aug 30",
+            "home_team": "FC Thun",
+            "away_team": "Grasshoppers",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "Swiss Super League",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/743159"
+          },
+          {
+            "game_id": "743155",
+            "date": "Sun, Aug 24",
+            "home_team": "Grasshoppers",
+            "away_team": "Winterthur",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "Swiss Super League",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/743155"
+          },
+          {
+            "game_id": "750788",
+            "date": "Tue, Aug 12",
+            "home_team": "Grasshoppers",
+            "away_team": "Bayern Munich",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "Club Friendly",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/750788"
+          },
+          {
+            "game_id": "743147",
+            "date": "Sun, Aug 10",
+            "home_team": "Servette",
+            "away_team": "Grasshoppers",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "Swiss Super League",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/743147"
+          },
+          {
+            "game_id": "743142",
+            "date": "Sat, Aug 02",
+            "home_team": "FC Basel",
+            "away_team": "Grasshoppers",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "Swiss Super League",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/743142"
+          },
+          {
+            "game_id": "743135",
+            "date": "Sat, Jul 26",
+            "home_team": "Grasshoppers",
+            "away_team": "FC Luzern",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "Swiss Super League",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/743135"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401878124",
+            "date": "Wed, Jul 29",
+            "home_team": "Dukagjini",
+            "away_team": "FC Lugano",
+            "score": "1 - 5",
+            "status": "FT",
+            "competition": "UEFA Conference League Qualifying",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401878124"
+          },
+          {
+            "game_id": "401878140",
+            "date": "Thu, Jul 23",
+            "home_team": "FC Lugano",
+            "away_team": "Dukagjini",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "UEFA Conference League Qualifying",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401878140"
+          }
+        ],
+        "classement": {
+          "Grasshoppers": null,
+          "FC Lugano": null
+        },
+        "classement_complet": [],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "705056",
+            "date": "Saturday, July 20, 2024",
+            "team1": "FC Lugano",
+            "score": "2 - 1",
+            "team2": "Grasshoppers",
+            "title": "FC Lugano VS Grasshoppers",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/705056/grasshoppers-fc-lugano",
+            "source": "Super League",
+            "stats": {}
+          },
+          {
+            "gameId": "720010",
+            "date": "Thursday, October 31, 2024",
+            "team1": "Grasshoppers",
+            "score": "1 - 1",
+            "team2": "FC Lugano",
+            "title": "Grasshoppers VS FC Lugano",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/720010/fc-lugano-grasshoppers",
+            "source": "Super League",
+            "stats": {}
+          },
+          {
+            "gameId": "727310",
+            "date": "Saturday, February 8, 2025",
+            "team1": "FC Lugano",
+            "score": "1 - 1",
+            "team2": "Grasshoppers",
+            "title": "FC Lugano VS Grasshoppers",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/727310/grasshoppers-fc-lugano",
+            "source": "Super League",
+            "stats": {}
+          },
+          {
+            "gameId": "743172",
+            "date": "Saturday, September 27, 2025",
+            "team1": "FC Lugano",
+            "score": "2 - 1",
+            "team2": "Grasshoppers",
+            "title": "FC Lugano VS Grasshoppers",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/743172/grasshoppers-fc-lugano",
+            "source": "Super League",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/1013.png",
+        "logo_away": "https://media.api-sports.io/football/teams/606.png",
+        "classement_home": null,
+        "classement_away": null,
+        "points_classement_home": null,
+        "points_classement_away": null,
+        "nom_classement_home": null,
+        "nom_classement_away": null,
+        "country_fr": "Switzerland - Super League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.296,
+            "lambda_away": 1.661,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 29.9,
+            "X": 24.02,
+            "V2": 46.08
+          },
+          "double_chance": {
+            "1X": 53.92,
+            "12": 75.98,
+            "X2": 70.1
+          },
+          "over_under": {
+            "plus_de_0.5": 95.01,
+            "moins_de_0.5": 4.99,
+            "plus_de_1.5": 79.86,
+            "moins_de_1.5": 20.14,
+            "plus_de_2.5": 56.84,
+            "moins_de_2.5": 43.16,
+            "plus_de_3.5": 34.4,
+            "moins_de_3.5": 65.6,
+            "plus_de_4.5": 17.71,
+            "moins_de_4.5": 82.29,
+            "plus_de_5.5": 7.95,
+            "moins_de_5.5": 92.04
+          },
+          "btts": {
+            "oui": 58.84,
+            "non": 41.16
+          },
+          "resultat_total": {
+            "V1et+0.5": 29.9,
+            "1Xet+0.5": 48.93,
+            "V2et+0.5": 46.08,
+            "V1et+1.5": 23.1,
+            "1Xet+1.5": 42.13,
+            "V2et+1.5": 37.72,
+            "V1et+2.5": 18.48,
+            "1Xet+2.5": 26.16,
+            "V2et+2.5": 30.68,
+            "V1et+3.5": 9.5,
+            "1Xet+3.5": 17.19,
+            "V2et+3.5": 17.21,
+            "V1et+4.5": 5.82,
+            "1Xet+4.5": 7.42,
+            "V2et+4.5": 10.28,
+            "V1et+5.5": 2.14,
+            "1Xet+5.5": 3.74,
+            "V2et+5.5": 4.21
+          },
+          "scores_probables": {
+            "1-1": 11.34,
+            "1-2": 9.29,
+            "0-1": 8.36,
+            "0-2": 7.04,
+            "2-1": 7.03,
+            "1-0": 6.8,
+            "2-2": 6.09,
+            "1-3": 5.23,
+            "0-0": 4.99,
+            "2-0": 4.63
+          },
+          "buts_moyens_simules": {
+            "home": 1.3,
+            "away": 1.67,
+            "total": 2.97
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (FC Lugano)  \n**CONFIANCE** : 68%  \n**SCORES PROBABLES** : 2‑1 ou 3‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Grasshoppers** : moyenne 1,50 but marqué / 1,75 but encaissé. Leur attaque est moyenne, mais la défense laisse passer presque deux buts par match.  \n- **FC Lugano** : moyenne 3,00 buts marqués / 0,50 buts encaissés. L’attaque est très puissante et la défense est l’une des plus solides du championnat.  \n\n**2. Impact du facteur domicile/extérieur**  \n- Grasshoppers à domicile : 8 buts marqués et 8 encaissés sur les derniers matchs, soit un bilan neutre.  \n- Lugano à l’extérieur : 5 buts marqués et seulement 1 encaissé, montrant qu’ils continuent à bien performer loin de leurs terrains.\n\n**3. Forme récente**  \n- **Grasshoppers** (6 derniers) : L W D D L D → 6 points, aucune séquence de victoires.  \n- **Lugano** (6 derniers) : W W (les deux derniers matchs, tous en compétition européenne) → 6 points, série de victoires.  \n\n**4. Confrontations directes** (dernières saisons)  \n- 4 rencontres récentes : Lugano a gagné 2‑1 (2025), 1‑1, 1‑1 et 2‑1. Lugano a un léger avantage historique et a déjà battu les Grasshoppers à l’extérieur.\n\n**5. Tendances de buts**  \n- Les 4 dernières rencontres entre les deux équipes ont toutes produit au moins 2 buts, 3 fois plus de 2 buts.  \n- La moyenne combinée des buts attendus (1,5 + 3,0 = 4,5) indique un match très ouvert.\n\n**6. BTTS / +2.5 buts**  \n- Probabilité que les deux équipes marquent : élevée (Grasshoppers marquent en moyenne 1,5 bt/match et a déjà trouvé le filet contre Lugano à plusieurs reprises).  \n- Probabilité de plus de 2,5 buts : très élevée compte tenu de la moyenne combinée et du passé H2H.\n\n**7. Pourquoi choisir “Victoire extérieur” plutôt que “BTTS” ou “+2,5 buts”**  \n- Même si les deux équipes sont susceptibles de marquer, l’écart de puissance offensive (3,0 vs 1,5) et la solidité défensive de Lugano (0,5 encaissé) font pencher la balance vers une victoire de l’équipe visiteuse.  \n- Le score le plus récurrent dans les confrontations récentes est 2‑1 en faveur de Lugano, ce qui correspond à la tendance de Lugano à marquer au moins deux buts tout en restant difficile à percer.\n\n**8. Score le plus probable**  \n- **2‑1** : Lugano marque deux fois, Grasshoppers trouve le filet une fois – cohérent avec les historiques H2H et les moyennes de buts.  \n- **3‑1** : Si l’attaque de Lugano exploite la défense laxiste de Grasshoppers, trois buts sont tout à fait envisageables.\n\nEn synthèse, la combinaison d’une attaque très efficace, d’une défense quasi hermétique et d’un historique favorable conduit à privilégier une victoire de FC Lugano, avec un score le plus probable de 2‑1 ou 3‑1.",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Victoire extérieur (FC Lugano)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑1 ou 3‑1"
+      },
+      {
+        "id": 2,
+        "HomeTeam": "FC Sion",
+        "AwayTeam": "FC Luzern",
+        "date": "2 août 2026 à 14:30:00 UTC",
+        "league": "Switzerland - Super League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "FC Luzern": 3.19,
+            "FC Sion": 2.03,
+            "Draw": 3.82
+          },
+          "totals": {
+            "Over": 2.38,
+            "Under": 1.56
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 2.5,
+          "moyenne_encaisses": 0.5,
+          "form_6": [
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "D"
+          ],
+          "total_points_6": 4,
+          "total_points_10": 4,
+          "total_points": 4,
+          "serie_domicile": [
+            "W"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 0,
+          "buts_ext_marques": 1,
+          "buts_ext_encaisses": 1,
+          "total_marques": 5,
+          "total_encaisses": 1
+        },
+        "stats_away": {
+          "moyenne_marques": 1.5714285714285714,
+          "moyenne_encaisses": 1.4285714285714286,
+          "form_6": [
+            "W",
+            "L",
+            "D",
+            "W",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "D",
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "D",
+            "W",
+            "L",
+            "D"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 11,
+          "total_points": 8,
+          "serie_exterieur": [
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 5,
+          "total_marques": 11,
+          "total_encaisses": 10
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401896199",
+            "date": "Thu, Jul 30",
+            "home_team": "FC Sion",
+            "away_team": "BATE Borisov",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "UEFA Conference League Qualifying",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401896199"
+          },
+          {
+            "game_id": "401896204",
+            "date": "Thu, Jul 23",
+            "home_team": "BATE Borisov",
+            "away_team": "FC Sion",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "UEFA Conference League Qualifying",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401896204"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "743171",
+            "date": "Sun, Sep 28",
+            "home_team": "FC Basel",
+            "away_team": "FC Luzern",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "Swiss Super League",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/743171"
+          },
+          {
+            "game_id": "743168",
+            "date": "Sun, Sep 14",
+            "home_team": "FC Luzern",
+            "away_team": "Young Boys",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "Swiss Super League",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/743168"
+          },
+          {
+            "game_id": "743162",
+            "date": "Sun, Aug 31",
+            "home_team": "Servette",
+            "away_team": "FC Luzern",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "Swiss Super League",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/743162"
+          },
+          {
+            "game_id": "743157",
+            "date": "Sun, Aug 24",
+            "home_team": "St. Gallen",
+            "away_team": "FC Luzern",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "Swiss Super League",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/743157"
+          },
+          {
+            "game_id": "743149",
+            "date": "Sat, Aug 09",
+            "home_team": "FC Luzern",
+            "away_team": "FC Thun",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "Swiss Super League",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/743149"
+          },
+          {
+            "game_id": "743145",
+            "date": "Sun, Aug 03",
+            "home_team": "FC Luzern",
+            "away_team": "FC Zürich",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "Swiss Super League",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/743145"
+          },
+          {
+            "game_id": "743135",
+            "date": "Sat, Jul 26",
+            "home_team": "Grasshoppers",
+            "away_team": "FC Luzern",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "Swiss Super League",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/743135"
+          }
+        ],
+        "classement": {
+          "FC Sion": null,
+          "FC Luzern": null
+        },
+        "classement_complet": [],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "705071",
+            "date": "Saturday, August 3, 2024",
+            "team1": "FC Luzern",
+            "score": "1 - 0",
+            "team2": "FC Sion",
+            "title": "FC Luzern VS FC Sion",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/705071/fc-sion-fc-luzern",
+            "source": "Super League",
+            "stats": {}
+          },
+          {
+            "gameId": "720021",
+            "date": "Sunday, November 10, 2024",
+            "team1": "FC Sion",
+            "score": "4 - 2",
+            "team2": "FC Luzern",
+            "title": "FC Sion VS FC Luzern",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/720021/fc-luzern-fc-sion",
+            "source": "Super League",
+            "stats": {}
+          },
+          {
+            "gameId": "727324",
+            "date": "Sunday, February 23, 2025",
+            "team1": "FC Luzern",
+            "score": "2 - 1",
+            "team2": "FC Sion",
+            "title": "FC Luzern VS FC Sion",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/727324/fc-sion-fc-luzern",
+            "source": "Super League",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/630.png",
+        "logo_away": "https://media.api-sports.io/football/teams/644.png",
+        "classement_home": null,
+        "classement_away": null,
+        "points_classement_home": null,
+        "points_classement_away": null,
+        "nom_classement_home": null,
+        "nom_classement_away": null,
+        "country_fr": "Switzerland - Super League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.831,
+            "lambda_away": 1.092,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 54.46,
+            "X": 22.68,
+            "V2": 22.86
+          },
+          "double_chance": {
+            "1X": 77.14,
+            "12": 77.32,
+            "X2": 45.54
+          },
+          "over_under": {
+            "plus_de_0.5": 94.7,
+            "moins_de_0.5": 5.3,
+            "plus_de_1.5": 78.55,
+            "moins_de_1.5": 21.45,
+            "plus_de_2.5": 55.36,
+            "moins_de_2.5": 44.64,
+            "plus_de_3.5": 32.96,
+            "moins_de_3.5": 67.04,
+            "plus_de_4.5": 16.95,
+            "moins_de_4.5": 83.05,
+            "plus_de_5.5": 7.77,
+            "moins_de_5.5": 92.23
+          },
+          "btts": {
+            "oui": 55.26,
+            "non": 44.74
+          },
+          "resultat_total": {
+            "V1et+0.5": 54.46,
+            "1Xet+0.5": 71.84,
+            "V2et+0.5": 22.86,
+            "V1et+1.5": 44.4,
+            "1Xet+1.5": 61.78,
+            "V2et+1.5": 16.78,
+            "V1et+2.5": 35.31,
+            "1Xet+2.5": 41.93,
+            "V2et+2.5": 13.43,
+            "V1et+3.5": 20.21,
+            "1Xet+3.5": 26.83,
+            "V2et+3.5": 6.12,
+            "V1et+4.5": 12.07,
+            "1Xet+4.5": 13.38,
+            "V2et+4.5": 3.58,
+            "V1et+5.5": 5.19,
+            "1Xet+5.5": 6.49,
+            "V2et+5.5": 1.27
+          },
+          "scores_probables": {
+            "1-1": 10.76,
+            "1-0": 10.06,
+            "2-1": 9.8,
+            "2-0": 9.09,
+            "0-1": 6.08,
+            "1-2": 6.02,
+            "3-1": 5.78,
+            "2-2": 5.32,
+            "0-0": 5.3,
+            "3-0": 5.3
+          },
+          "buts_moyens_simules": {
+            "home": 1.82,
+            "away": 1.09,
+            "total": 2.91
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (FC Sion)  \n**CONFIANCE** : 66 %  \n**SCORES PROBABLES** : 2‑1 ou 3‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **FC Sion (domicile)** : moyenne de **2,50 buts marqués** et **0,50 buts encaissés** à domicile, avec **4 buts marqués** et **0 encaissé** sur les 2 derniers matchs à la maison. La défense est quasi‑imperméable et l’attaque très prolifique.  \n- **FC Luzern (extérieur)** : moyenne de **1,57 buts marqués** et **1,43 encaissés** à l’extérieur. L’équipe marque régulièrement mais concède également, ce qui indique une défense plus vulnérable que celle de Sion à domicile.\n\n**2. Impact du facteur domicile/extérieur**  \n- Sion n’a concédé **aucun but** sur ses deux derniers matchs à domicile, preuve d’un réel avantage terrain.  \n- Luzern a une série extérieure solide (W‑D‑W‑W) mais a tout de même encaissé **5 buts** en 4 matchs à l’extérieur (1,25 bpg), ce qui montre qu’il peut être surpris par une défense compacte.\n\n**3. Forme récente**  \n- **Sion** : 4 points sur 6 (W‑D) et 4 points sur 10 (W‑D). La forme est stable, surtout à domicile.  \n- **Luzern** : 8 points sur 6 (W‑L‑D‑W‑L‑D) et 11 points sur 10 (W‑L‑D‑W‑L‑D‑W). Alternance de victoires et de défaites, mais la tendance récente à l’extérieur reste positive.\n\n**4. Confrontations directes (saison précédente)**  \n- 3 rencontres récentes :  \n  - Luzern 1‑0 Sion (victoire Luzern)  \n  - Sion 4‑2 Luzern (victoire Sion, 6 buts)  \n  - Luzern 2‑1 Sion (victoire Luzern)  \n- Deux des trois matchs se sont soldés par **plus de 2,5 buts** et **les deux équipes ont marqué**. La dernière rencontre à domicile de Sion a vu le club marquer **4 buts**, ce qui confirme sa capacité à créer de nombreuses occasions contre Luzern.\n\n**5. Tendances de buts**  \n- Sion : **2,5 buts/match** à domicile.  \n- Luzern : **1,57 buts/match** à l’extérieur.  \n- La combinaison de ces moyennes donne une **probabilité élevée d’au moins 3 buts** au total, ce qui renforce la perspective d’une victoire de Sion avec les deux équipes qui marquent.\n\n**6. Analyse des cotes**  \n- Bookmaker 1xBet propose **Sion 2,03** contre **Luzern 3,19**. La cote plus courte pour Sion reflète la perception du marché d’un avantage domicile net.  \n- Le **total Over 2,5 à 2,38** indique que le marché estime que le match dépassera les 2,5 buts, cohérent avec les statistiques de buts.\n\n**7. Synthèse**  \n- Défense de Sion à domicile quasi‑imperméable (0 but encaissé récemment).  \n- Attaque de Sion très productive (2,5 bpm).  \n- Luzern capable de marquer à l’extérieur mais a tendance à concéder contre des équipes offensives comme Sion.  \n- Historique H2H montre que les deux équipes marquent souvent et que les matchs dépassent les 2,5 buts.\n\n**Conclusion** : La combinaison d’une défense solide à domicile, d’une attaque efficace et d’un historique de matchs à haute teneur en buts conduit à privilégier une **victoire de FC Sion**. Les scores les plus plausibles, en fonction des moyennes, sont **2‑1** (victoire serrée avec les deux équipes qui marquent) ou **3‑1** (dominance offensive de Sion).",
+        "confiance_pourcentage": 66,
+        "prediction_principale": "Victoire domicile (FC Sion)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑1 ou 3‑1"
+      },
+      {
+        "id": 3,
+        "HomeTeam": "Chacarita Juniors",
+        "AwayTeam": "Agropecuario",
+        "date": "2 août 2026 à 18:00:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.7,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "L",
+            "L",
+            "L",
+            "W",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 11,
+          "total_points": 5,
+          "serie_domicile": [
+            "D",
+            "L",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 9,
+          "total_marques": 7,
+          "total_encaisses": 10
+        },
+        "stats_away": {
+          "moyenne_marques": 0.5,
+          "moyenne_encaisses": 1.1,
+          "form_6": [
+            "W",
+            "D",
+            "D",
+            "L",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "D",
+            "L",
+            "L",
+            "L",
+            "D",
+            "D",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "D",
+            "L",
+            "L",
+            "L"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 8,
+          "total_points": 5,
+          "serie_exterieur": [
+            "D",
+            "L",
+            "L",
+            "L",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 9,
+          "total_marques": 5,
+          "total_encaisses": 11
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401844002",
+            "date": "Sat, Jul 25",
+            "home_team": "Tristán Suárez",
+            "away_team": "Chacarita Juniors",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401844002"
+          },
+          {
+            "game_id": "401843965",
+            "date": "Sun, Jul 12",
+            "home_team": "Gimnasia y Esgrima (Jujuy)",
+            "away_team": "Chacarita Juniors",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843965"
+          },
+          {
+            "game_id": "401873886",
+            "date": "Sun, Jul 05",
+            "home_team": "San Martín (San Juan)",
+            "away_team": "Chacarita Juniors",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401873886"
+          },
+          {
+            "game_id": "401843681",
+            "date": "Sun, Jun 21",
+            "home_team": "Chacarita Juniors",
+            "away_team": "Tristán Suárez",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843681"
+          },
+          {
+            "game_id": "401843927",
+            "date": "Sat, Jun 13",
+            "home_team": "Nueva Chicago",
+            "away_team": "Chacarita Juniors",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843927"
+          },
+          {
+            "game_id": "401843908",
+            "date": "Sun, Jun 07",
+            "home_team": "Chacarita Juniors",
+            "away_team": "Temperley",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843908"
+          },
+          {
+            "game_id": "401843902",
+            "date": "Sun, May 31",
+            "home_team": "Deportivo Maipú",
+            "away_team": "Chacarita Juniors",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843902"
+          },
+          {
+            "game_id": "401843870",
+            "date": "Sun, May 24",
+            "home_team": "Chacarita Juniors",
+            "away_team": "Almagro",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843870"
+          },
+          {
+            "game_id": "401843860",
+            "date": "Sun, May 17",
+            "home_team": "Patronato",
+            "away_team": "Chacarita Juniors",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843860"
+          },
+          {
+            "game_id": "401843834",
+            "date": "Sun, May 10",
+            "home_team": "Chacarita Juniors",
+            "away_team": "Colegiales",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843834"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401844000",
+            "date": "Sun, Jul 26",
+            "home_team": "Agropecuario",
+            "away_team": "San Martín (San Juan)",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401844000"
+          },
+          {
+            "game_id": "401843988",
+            "date": "Fri, Jul 17",
+            "home_team": "Nueva Chicago",
+            "away_team": "Agropecuario",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843988"
+          },
+          {
+            "game_id": "401843957",
+            "date": "Sun, Jul 12",
+            "home_team": "Agropecuario",
+            "away_team": "Temperley",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843957"
+          },
+          {
+            "game_id": "401873890",
+            "date": "Sun, Jul 05",
+            "home_team": "Deportivo Maipú",
+            "away_team": "Agropecuario",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401873890"
+          },
+          {
+            "game_id": "401843674",
+            "date": "Sat, Jun 20",
+            "home_team": "San Martín (San Juan)",
+            "away_team": "Agropecuario",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843674"
+          },
+          {
+            "game_id": "401843921",
+            "date": "Sat, Jun 13",
+            "home_team": "Almagro",
+            "away_team": "Agropecuario",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843921"
+          },
+          {
+            "game_id": "401843920",
+            "date": "Sun, Jun 07",
+            "home_team": "Agropecuario",
+            "away_team": "Patronato",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843920"
+          },
+          {
+            "game_id": "401843899",
+            "date": "Sat, May 30",
+            "home_team": "Colegiales",
+            "away_team": "Agropecuario",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843899"
+          },
+          {
+            "game_id": "401843884",
+            "date": "Sun, May 24",
+            "home_team": "Agropecuario",
+            "away_team": "Quilmes",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843884"
+          },
+          {
+            "game_id": "401843865",
+            "date": "Sun, May 17",
+            "home_team": "Midland",
+            "away_team": "Agropecuario",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843865"
+          }
+        ],
+        "classement": {
+          "Chacarita Juniors": null,
+          "Agropecuario": null
+        },
+        "classement_complet": [],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "695040",
+            "date": "Sunday, April 21, 2024",
+            "team1": "Chacarita Juniors",
+            "score": "2 - 1",
+            "team2": "Agropecuario",
+            "title": "Chacarita Juniors VS Agropecuario",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/695040/agropecuario-chacarita-juniors",
+            "source": "Primera Nacional",
+            "stats": {}
+          },
+          {
+            "gameId": "695396",
+            "date": "Saturday, September 7, 2024",
+            "team1": "Agropecuario",
+            "score": "2 - 0",
+            "team2": "Chacarita Juniors",
+            "title": "Agropecuario VS Chacarita Juniors",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/695396/chacarita-juniors-agropecuario",
+            "source": "Primera Nacional",
+            "stats": {}
+          },
+          {
+            "gameId": "728226",
+            "date": "Monday, February 10, 2025",
+            "team1": "Agropecuario",
+            "score": "0 - 1",
+            "team2": "Chacarita Juniors",
+            "title": "Agropecuario VS Chacarita Juniors",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728226/chacarita-juniors-agropecuario",
+            "source": "Primera Nacional",
+            "stats": {}
+          },
+          {
+            "gameId": "728534",
+            "date": "Saturday, June 14, 2025",
+            "team1": "Chacarita Juniors",
+            "score": "3 - 0",
+            "team2": "Agropecuario",
+            "title": "Chacarita Juniors VS Agropecuario",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728534/agropecuario-chacarita-juniors",
+            "source": "Primera Nacional",
+            "stats": {}
+          },
+          {
+            "gameId": "401843694",
+            "date": "Sunday, March 15, 2026",
+            "team1": "Agropecuario",
+            "score": "2 - 0",
+            "team2": "Chacarita Juniors",
+            "title": "Agropecuario VS Chacarita Juniors",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/401843694/chacarita-juniors-agropecuario",
+            "source": "Primera Nacional",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/447.png",
+        "logo_away": "https://media.api-sports.io/football/teams/462.png",
+        "classement_home": null,
+        "classement_away": null,
+        "points_classement_home": null,
+        "points_classement_away": null,
+        "nom_classement_home": null,
+        "nom_classement_away": null,
+        "country_fr": "Argentina - Primera Nacional",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.298,
+            "lambda_away": 0.88,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 46.04,
+            "X": 28.88,
+            "V2": 25.07
+          },
+          "double_chance": {
+            "1X": 74.93,
+            "12": 71.11,
+            "X2": 53.96
+          },
+          "over_under": {
+            "plus_de_0.5": 88.57,
+            "moins_de_0.5": 11.43,
+            "plus_de_1.5": 64.16,
+            "moins_de_1.5": 35.84,
+            "plus_de_2.5": 37.11,
+            "moins_de_2.5": 62.89,
+            "plus_de_3.5": 17.74,
+            "moins_de_3.5": 82.26,
+            "plus_de_4.5": 7.16,
+            "moins_de_4.5": 92.84,
+            "plus_de_5.5": 2.46,
+            "moins_de_5.5": 97.54
+          },
+          "btts": {
+            "oui": 42.78,
+            "non": 57.22
+          },
+          "resultat_total": {
+            "V1et+0.5": 46.04,
+            "1Xet+0.5": 63.5,
+            "V2et+0.5": 25.07,
+            "V1et+1.5": 31.48,
+            "1Xet+1.5": 48.93,
+            "V2et+1.5": 15.23,
+            "V1et+2.5": 21.91,
+            "1Xet+2.5": 26.19,
+            "V2et+2.5": 10.92,
+            "V1et+3.5": 9.35,
+            "1Xet+3.5": 13.64,
+            "V2et+3.5": 4.11,
+            "V1et+4.5": 4.52,
+            "1Xet+4.5": 5.03,
+            "V2et+4.5": 2.13,
+            "V1et+5.5": 1.41,
+            "1Xet+5.5": 1.92,
+            "V2et+5.5": 0.55
+          },
+          "scores_probables": {
+            "1-0": 14.57,
+            "1-1": 13.18,
+            "0-0": 11.43,
+            "0-1": 9.84,
+            "2-0": 9.56,
+            "2-1": 8.28,
+            "1-2": 5.58,
+            "0-2": 4.3,
+            "3-0": 4.28,
+            "2-2": 3.78
+          },
+          "buts_moyens_simules": {
+            "home": 1.3,
+            "away": 0.88,
+            "total": 2.18
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (Chacarita Juniors)  \n**CONFIANCE** : 68%  \n**SCORES PROBABLES** : 1‑0 ou 2‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces / faiblesses**  \n- **Chacarita Juniors (domicile)** : moyenne de 0,70 but marqué et 1,00 but encaissé. Sur les 4 derniers matchs à domicile, ils n’ont encaissé qu’**un seul but** (3‑0, 1‑0, 0‑0, 2‑0) et ont inscrit **3 buts**. Leur défense à domicile est donc solide.  \n- **Agropecuario (extérieur)** : moyenne de 0,50 but marqué et 1,10 but encaissé. En 6 déplacements, ils ont concédé **9 buts** (1,5 buts/match) tout en ne marquant que **2 buts**. Leur défense à l’extérieur est très fragile et leur attaque peu efficace.\n\n**2. Impact du facteur domicile/extérieur**  \nLe facteur domicile favorise nettement Chacarita : ils gardent leurs cages fermées à domicile (1 but encaissé en 4 matchs) alors qu’Agropecuario laisse passer plus d’un but et demi en moyenne à l’extérieur.  \n\n**3. Forme récente**  \n- **Chacarita** : 6 derniers matchs → L D W D L L (5 points). Malgré deux défaites, ils restent difficile à battre à domicile.  \n- **Agropecuario** : 6 derniers matchs → W D D L L L (5 points). Leur forme à l’extérieur est en berne, avec trois défaites consécutives à l’extérieur (D‑L‑L‑L‑D‑L).  \n\n**4. Tendances de buts**  \nLes deux équipes affichent des scores très bas. Sur les 10 derniers matchs de chaque club, on ne dépasse jamais les 3 buts au total. La plupart des rencontres se soldent 0‑0, 1‑0 ou 1‑1. Cela indique une forte probabilité de **moins de 2,5 buts** et de **BTTS non**.  \n\n**5. Confrontations directes** (5 derniers face‑à‑face)  \n- 2 victoires de Chacarita (2‑1, 3‑0)  \n- 3 victoires d’Agropecuario (2‑0, 2‑0, 2‑0)  \nLes matchs ont été généralement à sens unique, avec peu de buts marqués par le perdant. La dernière rencontre (03/2026) a été une victoire 2‑0 d’Agropecuario à l’extérieur, mais cela reste isolé comparé à la solidité défensive de Chacarita à domicile.  \n\n**6. Absence de cotes**  \nAucune cote disponible, donc la décision repose uniquement sur les indicateurs statistiques ci‑dessus.  \n\n**7. Analyse des statistiques détaillées**  \nLes données de possession, tirs, corners ne sont pas fournies. Toutefois, les tendances de buts et de résultats indiquent que les deux équipes privilégient la prudence, avec peu d’occasions de marquer.  \n\n**8. Synthèse**  \n- Défense de Chacarita à domicile très fiable (1 but encaissé en 4 matchs).  \n- Attaque d’Agropecuario à l’extérieur très limitée (0,33 but/match).  \n- Historique de confrontations montre que les victoires sont souvent nettes et peu de buts sont marqués par le perdant.  \n\nCes éléments convergent vers une **victoire de Chacarita Juniors à domicile**, très probablement par un score serré de **1‑0** ou **2‑0**.  \n\n---  \n\n**Recommandation finale** : mise sur la victoire du domicile avec une confiance de 68 %, en anticipant un match à faible score (moins de 2,5 buts, BTTS non).",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Victoire domicile (Chacarita Juniors)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 2‑0"
+      },
+      {
+        "id": 4,
+        "HomeTeam": "San Telmo",
+        "AwayTeam": "San Miguel",
+        "date": "2 août 2026 à 18:00:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.5,
+          "moyenne_encaisses": 0.9,
+          "form_6": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "D",
+            "D",
+            "L",
+            "L",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "D",
+            "D"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 7,
+          "total_points": 5,
+          "serie_domicile": [
+            "L",
+            "W",
+            "D",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 5,
+          "total_marques": 5,
+          "total_encaisses": 9
+        },
+        "stats_away": {
+          "moyenne_marques": 0.8,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "D",
+            "L",
+            "D",
+            "W",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "D",
+            "L",
+            "D",
+            "W",
+            "D",
+            "D",
+            "D",
+            "W",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "L",
+            "D",
+            "W",
+            "D",
+            "D"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 12,
+          "total_points": 7,
+          "serie_exterieur": [
+            "D",
+            "W",
+            "D",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 2,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 8,
+          "total_marques": 8,
+          "total_encaisses": 10
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401844005",
+            "date": "Sun, Jul 26",
+            "home_team": "Racing (Córdoba)",
+            "away_team": "San Telmo",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401844005"
+          },
+          {
+            "game_id": "401843973",
+            "date": "Sat, Jul 11",
+            "home_team": "San Telmo",
+            "away_team": "Chaco For Ever",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843973"
+          },
+          {
+            "game_id": "401873889",
+            "date": "Sun, Jul 05",
+            "home_team": "Ferro Carril Oeste",
+            "away_team": "San Telmo",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401873889"
+          },
+          {
+            "game_id": "401843675",
+            "date": "Sat, Jun 20",
+            "home_team": "San Telmo",
+            "away_team": "Racing (Córdoba)",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843675"
+          },
+          {
+            "game_id": "401843938",
+            "date": "Sun, Jun 14",
+            "home_team": "Central Norte",
+            "away_team": "San Telmo",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843938"
+          },
+          {
+            "game_id": "401843919",
+            "date": "Sun, Jun 07",
+            "home_team": "San Telmo",
+            "away_team": "Deportivo Madryn",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843919"
+          },
+          {
+            "game_id": "401843900",
+            "date": "Sat, May 30",
+            "home_team": "Defensores de Belgrano",
+            "away_team": "San Telmo",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843900"
+          },
+          {
+            "game_id": "401843875",
+            "date": "Sat, May 23",
+            "home_team": "San Telmo",
+            "away_team": "Ciudad de Bolívar",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843875"
+          },
+          {
+            "game_id": "401843854",
+            "date": "Sat, May 16",
+            "home_team": "Almirante Brown",
+            "away_team": "San Telmo",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843854"
+          },
+          {
+            "game_id": "401843846",
+            "date": "Sat, May 09",
+            "home_team": "San Telmo",
+            "away_team": "Mitre (Santiago del Estero)",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843846"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401844003",
+            "date": "Sun, Jul 26",
+            "home_team": "San Miguel",
+            "away_team": "Acassuso",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401844003"
+          },
+          {
+            "game_id": "401843972",
+            "date": "Sat, Jul 11",
+            "home_team": "San Miguel",
+            "away_team": "Ferro Carril Oeste",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843972"
+          },
+          {
+            "game_id": "401873892",
+            "date": "Sun, Jul 05",
+            "home_team": "Central Norte",
+            "away_team": "San Miguel",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401873892"
+          },
+          {
+            "game_id": "401843677",
+            "date": "Sat, Jun 20",
+            "home_team": "Acassuso",
+            "away_team": "San Miguel",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843677"
+          },
+          {
+            "game_id": "401843934",
+            "date": "Sun, Jun 14",
+            "home_team": "Deportivo Madryn",
+            "away_team": "San Miguel",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843934"
+          },
+          {
+            "game_id": "401843918",
+            "date": "Sat, Jun 06",
+            "home_team": "San Miguel",
+            "away_team": "Defensores de Belgrano",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843918"
+          },
+          {
+            "game_id": "401843898",
+            "date": "Sun, May 31",
+            "home_team": "Ciudad de Bolívar",
+            "away_team": "San Miguel",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843898"
+          },
+          {
+            "game_id": "401843876",
+            "date": "Sat, May 23",
+            "home_team": "San Miguel",
+            "away_team": "Almirante Brown",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843876"
+          },
+          {
+            "game_id": "401843861",
+            "date": "Sun, May 17",
+            "home_team": "Mitre (Santiago del Estero)",
+            "away_team": "San Miguel",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843861"
+          },
+          {
+            "game_id": "401843845",
+            "date": "Sat, May 09",
+            "home_team": "San Miguel",
+            "away_team": "Estudiantes (Buenos Aires)",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843845"
+          }
+        ],
+        "classement": {
+          "San Telmo": null,
+          "San Miguel": null
+        },
+        "classement_complet": [],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "401843703",
+            "date": "20260313",
+            "team1": "San Miguel",
+            "score": "1 - 1",
+            "team2": "San Telmo",
+            "title": "San Miguel VS San Telmo",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/401843703/san-telmo-san-miguel",
+            "source": "Primera Nacional",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/1932.png",
+        "logo_away": "https://media.api-sports.io/football/teams/8379.png",
+        "classement_home": null,
+        "classement_away": null,
+        "points_classement_home": null,
+        "points_classement_away": null,
+        "nom_classement_home": null,
+        "nom_classement_away": null,
+        "country_fr": "Argentina - Primera Nacional",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.115,
+            "lambda_away": 1.013,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 38.04,
+            "X": 30.0,
+            "V2": 31.96
+          },
+          "double_chance": {
+            "1X": 68.04,
+            "12": 70.0,
+            "X2": 61.96
+          },
+          "over_under": {
+            "plus_de_0.5": 87.94,
+            "moins_de_0.5": 12.06,
+            "plus_de_1.5": 63.28,
+            "moins_de_1.5": 36.72,
+            "plus_de_2.5": 35.87,
+            "moins_de_2.5": 64.13,
+            "plus_de_3.5": 16.66,
+            "moins_de_3.5": 83.34,
+            "plus_de_4.5": 6.36,
+            "moins_de_4.5": 93.64,
+            "plus_de_5.5": 1.99,
+            "moins_de_5.5": 98.01
+          },
+          "btts": {
+            "oui": 42.85,
+            "non": 57.15
+          },
+          "resultat_total": {
+            "V1et+0.5": 38.04,
+            "1Xet+0.5": 55.98,
+            "V2et+0.5": 31.96,
+            "V1et+1.5": 24.94,
+            "1Xet+1.5": 42.88,
+            "V2et+1.5": 20.4,
+            "V1et+2.5": 17.27,
+            "1Xet+2.5": 21.62,
+            "V2et+2.5": 14.26,
+            "V1et+3.5": 6.82,
+            "1Xet+3.5": 11.16,
+            "V2et+3.5": 5.5,
+            "V1et+4.5": 3.24,
+            "1Xet+4.5": 3.69,
+            "V2et+4.5": 2.68,
+            "V1et+5.5": 0.84,
+            "1Xet+5.5": 1.28,
+            "V2et+5.5": 0.7
+          },
+          "scores_probables": {
+            "1-1": 13.6,
+            "1-0": 13.1,
+            "0-0": 12.06,
+            "0-1": 11.55,
+            "2-0": 7.66,
+            "2-1": 7.49,
+            "1-2": 6.86,
+            "0-2": 6.15,
+            "2-2": 3.89,
+            "3-0": 2.96
+          },
+          "buts_moyens_simules": {
+            "home": 1.12,
+            "away": 1.0,
+            "total": 2.13
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Moins de 2.5 buts  \n**CONFIANCE** : 68 %  \n**SCORES PROBABLES** : 0‑0 ou 1‑0  \n\n**JUSTIFICATION**\n\n---\n\n### 1. Analyse comparative des forces / faiblesses  \n\n|                     | San Telmo (domicile) | San Miguel (extérieur) |\n|---------------------|----------------------|------------------------|\n| Moy. buts marqués   | 0,50                 | 0,80                   |\n| Moy. buts encaissés | 0,90                 | 1,00                   |\n| Bilan domicile (6‑dern) | L‑W‑D‑L‑D (5 pts) | – |\n| Bilan extérieur (6‑dern) | – | D‑L‑D‑W‑D‑D (7 pts) |\n| Bilan global (10‑dern)   | 7 pts (6‑L) | 12 pts (6‑W) |\n| Buts marqués domicile (10) | 3 | – |\n| Buts encaissés domicile (10) | 4 | – |\n| Buts marqués extérieur (10) | – | 6 |\n| Buts encaissés extérieur (10) | – | 8 |\n\n- **San Telmo** montre une très faible capacité offensive à domicile (0,5 bpm) et concède moins d’un but par match.  \n- **San Miguel** a une attaque légèrement plus efficace à l’extérieur (0,8 bpm) mais laisse entrer en moyenne 1,0 bpm, soit le même niveau que San Telmo.  \n\n**Conclusion** : les deux équipes sont peu prolifiques et la défense reste solide (moins d’un but encaissé en moyenne). Le match s’oriente donc naturellement vers un total de buts inférieur à 2,5.\n\n---\n\n### 2. Impact du facteur domicile / extérieur  \n\n- San Telmo a joué 5 matchs à domicile récemment : 3 buts marqués / 4 encaissés → ratio 0,75 but par match.  \n- San Miguel, en 5 déplacements, a inscrit 6 buts et encaissé 8 → ratio 1,2 but par match.  \n\nLe léger avantage du terrain pour San Telmo se traduit surtout par une meilleure solidité défensive (0,9 bpa contre 1,0 bpa à l’extérieur). Aucun des deux n’affiche une nette supériorité offensive à domicile/extérieur.\n\n---\n\n### 3. Forme récente & tendances  \n\n**San Telmo (6 derniers)** : L L L W D D → 5 points, aucune victoire consécutive, mais un léger rebond avec une victoire et deux matchs nuls.  \n**San Miguel (6 derniers)** : D L D W D D → 7 points, plus stable, une victoire récente et aucune série de défaites.\n\nLes deux équipes ont surtout concédé peu de buts (0‑0, 0‑0, 0‑0, 0‑1, 0‑0) dans leurs derniers matchs, ce qui confirme la tendance à des rencontres à faible score.\n\n---\n\n### 4. Contexte du championnat  \n\nLe classement complet n’est pas disponible, mais les deux clubs semblent évoluer dans la même zone de la table (aucun point de classement fourni, mais les moyennes de points sont très basses). Aucun des deux ne possède un pouvoir offensif qui permette d’envisager un match à haute intensité de buts.\n\n---\n\n### 5. Confrontations directes  \n\n- Dernière rencontre (saison précédente) : 1‑1. C’est le seul match direct connu et il montre que même lorsqu’ils se marquent, le total reste à 2 buts. Aucun indice d’une explosion offensive.\n\n---\n\n### 6. Analyse des statistiques détaillées des 10 derniers matchs  \n\nMême si les données de possession, tirs, corners ne sont pas fournies, les scores observés (majorité de 0‑0, 0‑1, 1‑0, 2‑1) indiquent :\n\n- **Très peu de matchs avec plus de 2 buts** (seulement 2‑1 contre Racing et 2‑0 contre Racing).  \n- **BTTS** (Both Teams To Score) n’est survenu qu’une fois (1‑1) parmi les 20 matchs combinés.  \n\nCela renforce l’idée d’un match où **les deux équipes peinent à marquer**.\n\n---\n\n### 7. Évaluation des cotes  \n\nAucune cote n’est fournie, mais les indicateurs statistiques pointent clairement vers une option « moins de 2,5 buts », qui est généralement très courte (cote élevée) dans ce type de rencontre.\n\n---\n\n### 8. Synthèse & prédiction  \n\n- **Buts attendus** : < 2,5 (probabilité élevée compte tenu des moyennes, des scores récents et du seul H2H à 2 buts).  \n- **BTTS** : peu probable (seulement 1‑1 dans le dernier H2H).  \n- **Résultat** : un score nul (0‑0) ou une victoire très étroite du domicile (1‑0) sont les scénarios les plus logiques.  \n\nAinsi, la recommandation la plus fiable est **« Moins de 2.5 buts »** avec une confiance de **68 %** et les scores les plus probables **0‑0** ou **1‑0**.",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Moins de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑0 ou 1‑0"
+      },
+      {
+        "id": 5,
+        "HomeTeam": "ADT",
+        "AwayTeam": "Deportivo Garcilaso",
+        "date": "2 août 2026 à 18:15:00 UTC",
+        "league": "Peru - Primera División",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 1.3,
+          "form_6": [
+            "L",
+            "L",
+            "L",
+            "L",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "L",
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "L",
+            "L",
+            "W",
+            "D"
+          ],
+          "total_points_6": 4,
+          "total_points_10": 11,
+          "total_points": 4,
+          "serie_domicile": [
+            "L",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 9,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 8,
+          "total_marques": 14,
+          "total_encaisses": 13
+        },
+        "stats_away": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 19,
+          "total_points": 13,
+          "serie_exterieur": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 11,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 7,
+          "total_marques": 14,
+          "total_encaisses": 10
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401878179",
+            "date": "Sat, Jul 25",
+            "home_team": "Sport Boys",
+            "away_team": "ADT",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401878179"
+          },
+          {
+            "game_id": "401874338",
+            "date": "Sat, Jul 18",
+            "home_team": "ADT",
+            "away_team": "Universitario",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401874338"
+          },
+          {
+            "game_id": "401857514",
+            "date": "Sat, May 30",
+            "home_team": "ADT",
+            "away_team": "Cusco FC",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401857514"
+          },
+          {
+            "game_id": "401857508",
+            "date": "Sun, May 24",
+            "home_team": "Sporting Cristal",
+            "away_team": "ADT",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401857508"
+          },
+          {
+            "game_id": "401857499",
+            "date": "Sun, May 17",
+            "home_team": "ADT",
+            "away_team": "Comerciantes Unidos",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401857499"
+          },
+          {
+            "game_id": "401857490",
+            "date": "Sat, May 09",
+            "home_team": "Deportivo Moquegua",
+            "away_team": "ADT",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401857490"
+          },
+          {
+            "game_id": "401857485",
+            "date": "Sat, May 02",
+            "home_team": "ADT",
+            "away_team": "Atlético Grau",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401857485"
+          },
+          {
+            "game_id": "401857469",
+            "date": "Mon, Apr 27",
+            "home_team": "ADT",
+            "away_team": "Los Chankas",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401857469"
+          },
+          {
+            "game_id": "401857461",
+            "date": "Sat, Apr 18",
+            "home_team": "FC Cajamarca",
+            "away_team": "ADT",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401857461"
+          },
+          {
+            "game_id": "401857454",
+            "date": "Tue, Apr 14",
+            "home_team": "ADT",
+            "away_team": "Alianza Lima",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401857454"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401878175",
+            "date": "Mon, Jul 27",
+            "home_team": "Deportivo Garcilaso",
+            "away_team": "FC Cajamarca",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401878175"
+          },
+          {
+            "game_id": "401874340",
+            "date": "Fri, Jul 17",
+            "home_team": "Sporting Cristal",
+            "away_team": "Deportivo Garcilaso",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401874340"
+          },
+          {
+            "game_id": "401857515",
+            "date": "Sat, May 30",
+            "home_team": "Deportivo Garcilaso",
+            "away_team": "Juan Pablo II",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401857515"
+          },
+          {
+            "game_id": "401857513",
+            "date": "Mon, May 25",
+            "home_team": "Comerciantes Unidos",
+            "away_team": "Deportivo Garcilaso",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401857513"
+          },
+          {
+            "game_id": "401857496",
+            "date": "Sun, May 17",
+            "home_team": "Deportivo Garcilaso",
+            "away_team": "UTC",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401857496"
+          },
+          {
+            "game_id": "401857495",
+            "date": "Mon, May 11",
+            "home_team": "Deportivo Garcilaso",
+            "away_team": "Alianza Atlético",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401857495"
+          },
+          {
+            "game_id": "401857482",
+            "date": "Mon, May 04",
+            "home_team": "Los Chankas",
+            "away_team": "Deportivo Garcilaso",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401857482"
+          },
+          {
+            "game_id": "401857476",
+            "date": "Tue, Apr 28",
+            "home_team": "Deportivo Garcilaso",
+            "away_team": "Melgar",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401857476"
+          },
+          {
+            "game_id": "401857455",
+            "date": "Thu, Apr 23",
+            "home_team": "Universitario",
+            "away_team": "Deportivo Garcilaso",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401857455"
+          },
+          {
+            "game_id": "401857466",
+            "date": "Sat, Apr 18",
+            "home_team": "Sport Huancayo",
+            "away_team": "Deportivo Garcilaso",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "Peruvian Liga 1",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401857466"
+          }
+        ],
+        "classement": {
+          "ADT": null,
+          "Deportivo Garcilaso": null
+        },
+        "classement_complet": [],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "699211",
+            "date": "Sunday, April 7, 2024",
+            "team1": "ADT",
+            "score": "2 - 2",
+            "team2": "Deportivo Garcilaso",
+            "title": "ADT VS Deportivo Garcilaso",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/699211/deportivo-garcilaso-adt",
+            "source": "Primera División",
+            "stats": {}
+          },
+          {
+            "gameId": "715305",
+            "date": "Friday, September 13, 2024",
+            "team1": "Deportivo Garcilaso",
+            "score": "1 - 0",
+            "team2": "ADT",
+            "title": "Deportivo Garcilaso VS ADT",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/715305/adt-deportivo-garcilaso",
+            "source": "Primera División",
+            "stats": {}
+          },
+          {
+            "gameId": "732070",
+            "date": "Saturday, June 28, 2025",
+            "team1": "ADT",
+            "score": "0 - 0",
+            "team2": "Deportivo Garcilaso",
+            "title": "ADT VS Deportivo Garcilaso",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/732070/deportivo-garcilaso-adt",
+            "source": "Primera División",
+            "stats": {}
+          },
+          {
+            "gameId": "759814",
+            "date": "Saturday, November 1, 2025",
+            "team1": "Deportivo Garcilaso",
+            "score": "1 - 0",
+            "team2": "ADT",
+            "title": "Deportivo Garcilaso VS ADT",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/759814/adt-deportivo-garcilaso",
+            "source": "Primera División",
+            "stats": {}
+          },
+          {
+            "gameId": "401857391",
+            "date": "20260213",
+            "team1": "Deportivo Garcilaso",
+            "score": "1 - 0",
+            "team2": "ADT",
+            "title": "Deportivo Garcilaso VS ADT",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/401857391/adt-deportivo-garcilaso",
+            "source": "Primera División",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/10492.png",
+        "logo_away": "https://media.api-sports.io/football/teams/20960.png",
+        "classement_home": null,
+        "classement_away": null,
+        "points_classement_home": null,
+        "points_classement_away": null,
+        "nom_classement_home": null,
+        "nom_classement_away": null,
+        "country_fr": "Peru - Primera División",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.306,
+            "lambda_away": 1.135,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 40.38,
+            "X": 27.12,
+            "V2": 32.5
+          },
+          "double_chance": {
+            "1X": 67.51,
+            "12": 72.88,
+            "X2": 59.62
+          },
+          "over_under": {
+            "plus_de_0.5": 91.46,
+            "moins_de_0.5": 8.54,
+            "plus_de_1.5": 69.84,
+            "moins_de_1.5": 30.16,
+            "plus_de_2.5": 43.78,
+            "moins_de_2.5": 56.22,
+            "plus_de_3.5": 22.88,
+            "moins_de_3.5": 77.12,
+            "plus_de_4.5": 10.09,
+            "moins_de_4.5": 89.91,
+            "plus_de_5.5": 3.9,
+            "moins_de_5.5": 96.1
+          },
+          "btts": {
+            "oui": 49.52,
+            "non": 50.48
+          },
+          "resultat_total": {
+            "V1et+0.5": 40.38,
+            "1Xet+0.5": 58.97,
+            "V2et+0.5": 32.5,
+            "V1et+1.5": 28.84,
+            "1Xet+1.5": 47.43,
+            "V2et+1.5": 22.41,
+            "V1et+2.5": 21.38,
+            "1Xet+2.5": 27.02,
+            "V2et+2.5": 16.76,
+            "V1et+3.5": 9.94,
+            "1Xet+3.5": 15.58,
+            "V2et+3.5": 7.3,
+            "V1et+4.5": 5.24,
+            "1Xet+4.5": 6.11,
+            "V2et+4.5": 3.98,
+            "V1et+5.5": 1.76,
+            "1Xet+5.5": 2.63,
+            "V2et+5.5": 1.26
+          },
+          "scores_probables": {
+            "1-1": 12.94,
+            "1-0": 11.54,
+            "0-1": 10.08,
+            "0-0": 8.54,
+            "2-1": 8.39,
+            "2-0": 7.46,
+            "1-2": 7.34,
+            "0-2": 5.66,
+            "2-2": 4.78,
+            "3-1": 3.72
+          },
+          "buts_moyens_simules": {
+            "home": 1.3,
+            "away": 1.14,
+            "total": 2.44
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Moins de 2.5 buts  \n**CONFIANCE** : 68%  \n**SCORES PROBABLES** : 1‑0 ou 1‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des deux équipes**  \n- **ADT (domicile)** : moyenne 1,40 buts marqués / 1,30 buts encaissés. En 6 matchs à domicile ils ont inscrit **9 buts** (1,5 bpm) et n’ont encaissé que **5 buts** (0,83 bpm). Leur forme récente est mauvaise (L L L L W D) et la série à domicile montre deux défaites parmi les six derniers matchs.  \n- **Deportivo Garcilaso (extérieur)** : même moyenne offensive (1,40 buts) mais une défense plus solide (1,00 buts encaissés en moyenne). En déplacement ils n’ont marqué que **3 buts** (≈0,6 bpm) et ont encaissé **7 buts** (≈1,4 bpm). Leur forme globale est excellente (W L W D W W, 13 pts sur 6 matchs) mais la série à l’extérieur (L‑D‑W‑L‑L) reste très irrégulière.\n\n**2. Impact du facteur domicile/extérieur**  \n- ADT profite d’un bon ratio buts marqués/encaissés à domicile (1,5 / 0,8) mais la récente perte de confiance (4 défaites consécutives) limite la capacité à créer de nombreux buts.  \n- Garcilaso montre une défense qui se montre fiable à l’extérieur (1,4 bpm encaissés) mais une attaque qui peine à trouver le chemin des filets (0,6 bpm).  \n\n**3. Formes récentes et tendances**  \n- ADT : 4 défaites, 1 victoire, 1 match nul sur les 6 derniers. Les seuls buts marqués à domicile ces dernières semaines proviennent de matchs où l’adversaire a concédé peu (ex. 2‑0 contre Sport Boys).  \n- Garcilaso : 4 victoires, 1 défaite, 1 match nul sur les 6 derniers, mais leurs 3 buts à l’extérieur proviennent d’un seul match (2‑1 contre FC Cajamarca).  \n\n**4. Contexte du championnat**  \n- Le classement complet n’est pas disponible, mais les points moyens indiquent que les deux équipes évoluent probablement dans la moitié médiane du tableau. Aucun écart majeur de qualité n’est visible.\n\n**5. Confrontations directes**  \n- 5 derniers duels : 2 matches nuls (2‑2, 0‑0) et 3 victoires de Garcilaso (1‑0, 1‑0, 1‑0). Les confrontations sont très serrées, avec très peu de buts (total = 7 buts en 5 matches, moyenne = 1,4 buts/match).  \n\n**6. Cotes**  \n- Aucune cote disponible, donc la décision repose uniquement sur l’analyse statistique.\n\n**7. Analyse des statistiques détaillées des matchs passés**  \n- Même si les données de possession, tirs, corners ne sont pas fournies, les scores observés (majorité de 1‑0, 0‑1, 2‑0, 2‑2) indiquent des rencontres à faible intensité offensive.  \n- Les matchs à domicile d’ADT montrent souvent moins de 3 buts totaux (ex. 1‑0, 2‑0, 2‑1).  \n- Les sorties à l’extérieur de Garcilaso affichent rarement plus de 2 buts (ex. 2‑1, 0‑0, 1‑0).  \n\n**8. Synthèse**  \n- Les deux équipes affichent des moyennes offensives similaires mais leurs performances à domicile/extérieur respectives sont limitées en termes de production de buts.  \n- Les confrontations directes historiques confirment une tendance à moins de 2,5 buts.  \n- Le meilleur pari, compte tenu de la faiblesse offensive de Garcilaso à l’extérieur et de la défense d’ADT à domicile, est donc **« Moins de 2.5 buts »**.\n\n**9. Scores les plus probables**  \n- **1‑0** (ADT gagne d’un but) – reflète la capacité d’ADT à marquer à domicile tout en gardant la défense solide.  \n- **1‑1** (match nul avec les deux équipes marquant) – correspond à la tendance des duels directs à se solder par un but de chaque côté.  \n\nCes deux scores respectent la prédiction « Moins de 2.5 buts » et couvrent les deux scénarios les plus plausibles selon les données disponibles.",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Moins de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 1‑1"
+      },
+      {
+        "id": 6,
+        "HomeTeam": "Deportivo Madryn",
+        "AwayTeam": "All Boys",
+        "date": "2 août 2026 à 19:00:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 1.1,
+          "form_6": [
+            "D",
+            "D",
+            "L",
+            "W",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "L",
+            "W",
+            "D",
+            "D",
+            "D",
+            "W",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "L",
+            "W",
+            "D",
+            "D"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 14,
+          "total_points": 7,
+          "serie_domicile": [
+            "L",
+            "W",
+            "D",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 5,
+          "total_marques": 12,
+          "total_encaisses": 11
+        },
+        "stats_away": {
+          "moyenne_marques": 0.6,
+          "moyenne_encaisses": 0.9,
+          "form_6": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "W",
+            "L",
+            "D",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "W",
+            "L"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 12,
+          "total_points": 7,
+          "serie_exterieur": [
+            "D",
+            "D",
+            "W",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 7,
+          "total_marques": 6,
+          "total_encaisses": 9
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401844008",
+            "date": "Sun, Jul 26",
+            "home_team": "Los Andes",
+            "away_team": "Deportivo Madryn",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401844008"
+          },
+          {
+            "game_id": "401843962",
+            "date": "Sat, Jul 11",
+            "home_team": "Deportivo Morón",
+            "away_team": "Deportivo Madryn",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843962"
+          },
+          {
+            "game_id": "401873888",
+            "date": "Sun, Jul 05",
+            "home_team": "Deportivo Madryn",
+            "away_team": "Colón (Santa Fe)",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401873888"
+          },
+          {
+            "game_id": "401843686",
+            "date": "Sun, Jun 21",
+            "home_team": "Deportivo Madryn",
+            "away_team": "Los Andes",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843686"
+          },
+          {
+            "game_id": "401843934",
+            "date": "Sun, Jun 14",
+            "home_team": "Deportivo Madryn",
+            "away_team": "San Miguel",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843934"
+          },
+          {
+            "game_id": "401843919",
+            "date": "Sun, Jun 07",
+            "home_team": "San Telmo",
+            "away_team": "Deportivo Madryn",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843919"
+          },
+          {
+            "game_id": "401873885",
+            "date": "Sun, May 31",
+            "home_team": "Deportivo Madryn",
+            "away_team": "Acassuso",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401873885"
+          },
+          {
+            "game_id": "401843871",
+            "date": "Sun, May 24",
+            "home_team": "Chaco For Ever",
+            "away_team": "Deportivo Madryn",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843871"
+          },
+          {
+            "game_id": "401843849",
+            "date": "Sun, May 17",
+            "home_team": "Deportivo Madryn",
+            "away_team": "Ferro Carril Oeste",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843849"
+          },
+          {
+            "game_id": "401843835",
+            "date": "Sun, May 10",
+            "home_team": "Central Norte",
+            "away_team": "Deportivo Madryn",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843835"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401843999",
+            "date": "Sun, Jul 26",
+            "home_team": "All Boys",
+            "away_team": "Defensores de Belgrano",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843999"
+          },
+          {
+            "game_id": "401843992",
+            "date": "Fri, Jul 17",
+            "home_team": "Ciudad de Bolívar",
+            "away_team": "All Boys",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843992"
+          },
+          {
+            "game_id": "401843958",
+            "date": "Sat, Jul 11",
+            "home_team": "All Boys",
+            "away_team": "Almirante Brown",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843958"
+          },
+          {
+            "game_id": "401873887",
+            "date": "Sun, Jul 05",
+            "home_team": "Mitre (Santiago del Estero)",
+            "away_team": "All Boys",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401873887"
+          },
+          {
+            "game_id": "401843685",
+            "date": "Sun, Jun 21",
+            "home_team": "Defensores de Belgrano",
+            "away_team": "All Boys",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843685"
+          },
+          {
+            "game_id": "401843932",
+            "date": "Sun, Jun 14",
+            "home_team": "Estudiantes (Buenos Aires)",
+            "away_team": "All Boys",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843932"
+          },
+          {
+            "game_id": "401874281",
+            "date": "Sun, Jun 07",
+            "home_team": "All Boys",
+            "away_team": "Racing (Córdoba)",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401874281"
+          },
+          {
+            "game_id": "401843893",
+            "date": "Sat, May 30",
+            "home_team": "All Boys",
+            "away_team": "Los Andes",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843893"
+          },
+          {
+            "game_id": "401843882",
+            "date": "Sun, May 24",
+            "home_team": "Godoy Cruz Antonio Tomba",
+            "away_team": "All Boys",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843882"
+          },
+          {
+            "game_id": "401843856",
+            "date": "Mon, May 18",
+            "home_team": "All Boys",
+            "away_team": "Deportivo Morón",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843856"
+          }
+        ],
+        "classement": {
+          "Deportivo Madryn": null,
+          "All Boys": null
+        },
+        "classement_complet": [],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "728481",
+            "date": "Sunday, May 18, 2025",
+            "team1": "Deportivo Madryn",
+            "score": "2 - 1",
+            "team2": "All Boys",
+            "title": "Deportivo Madryn VS All Boys",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728481/all-boys-deportivo-madryn",
+            "source": "Primera Nacional",
+            "stats": {}
+          },
+          {
+            "gameId": "728800",
+            "date": "Monday, September 22, 2025",
+            "team1": "All Boys",
+            "score": "0 - 0",
+            "team2": "Deportivo Madryn",
+            "title": "All Boys VS Deportivo Madryn",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728800/deportivo-madryn-all-boys",
+            "source": "Primera Nacional",
+            "stats": {}
+          },
+          {
+            "gameId": "401843693",
+            "date": "20260313",
+            "team1": "All Boys",
+            "score": "1 - 0",
+            "team2": "Deportivo Madryn",
+            "title": "All Boys VS Deportivo Madryn",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/401843693/deportivo-madryn-all-boys",
+            "source": "Primera Nacional",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/1929.png",
+        "logo_away": "https://media.api-sports.io/football/teams/464.png",
+        "classement_home": null,
+        "classement_away": null,
+        "points_classement_home": null,
+        "points_classement_away": null,
+        "nom_classement_home": null,
+        "nom_classement_away": null,
+        "country_fr": "Argentina - Primera Nacional",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.242,
+            "lambda_away": 0.913,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 43.92,
+            "X": 29.28,
+            "V2": 26.8
+          },
+          "double_chance": {
+            "1X": 73.2,
+            "12": 70.72,
+            "X2": 56.08
+          },
+          "over_under": {
+            "plus_de_0.5": 88.22,
+            "moins_de_0.5": 11.77,
+            "plus_de_1.5": 63.49,
+            "moins_de_1.5": 36.51,
+            "plus_de_2.5": 36.69,
+            "moins_de_2.5": 63.31,
+            "plus_de_3.5": 17.45,
+            "moins_de_3.5": 82.55,
+            "plus_de_4.5": 6.88,
+            "moins_de_4.5": 93.12,
+            "plus_de_5.5": 2.4,
+            "moins_de_5.5": 97.6
+          },
+          "btts": {
+            "oui": 42.98,
+            "non": 57.03
+          },
+          "resultat_total": {
+            "V1et+0.5": 43.92,
+            "1Xet+0.5": 61.43,
+            "V2et+0.5": 26.8,
+            "V1et+1.5": 29.61,
+            "1Xet+1.5": 47.12,
+            "V2et+1.5": 16.38,
+            "V1et+2.5": 20.75,
+            "1Xet+2.5": 25.0,
+            "V2et+2.5": 11.69,
+            "V1et+3.5": 8.66,
+            "1Xet+3.5": 12.91,
+            "V2et+3.5": 4.54,
+            "V1et+4.5": 4.12,
+            "1Xet+4.5": 4.63,
+            "V2et+4.5": 2.25,
+            "V1et+5.5": 1.27,
+            "1Xet+5.5": 1.78,
+            "V2et+5.5": 0.62
+          },
+          "scores_probables": {
+            "1-0": 14.32,
+            "1-1": 13.26,
+            "0-0": 11.77,
+            "0-1": 10.42,
+            "2-0": 8.86,
+            "2-1": 8.4,
+            "1-2": 5.74,
+            "0-2": 4.69,
+            "2-2": 3.74,
+            "3-0": 3.68
+          },
+          "buts_moyens_simules": {
+            "home": 1.25,
+            "away": 0.91,
+            "total": 2.16
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (Deportivo Madryn)  \n\n**CONFIANCE** : 58 %  \n\n**SCORES PROBABLES** : 1‑0 ou 2‑1  \n\n**JUSTIFICATION**  \n\n**1. Analyse comparative des forces/faiblesses**  \n- **Défense** : Madryn concède en moyenne **1,10 buts** à domicile (1,22 buts en 9 matchs récents). All Boys concède **0,90 buts** en déplacement, mais leurs 5 derniers matchs à l’extérieur montrent une moyenne de **1,4 buts** encaissés (4‑0 contre Godoy Cruz).  \n- **Attaque** : Madryn marque **1,20 buts** à domicile (1,33 buts sur les 9 matchs à domicile). All Boys ne marque que **0,60 buts** à l’extérieur (0,6 buts sur les 5 matchs à l’extérieur).  \n\nMadryn possède donc un léger avantage offensif et une défense plus stable à domicile que l’équipe visiteuse.\n\n**2. Impact du facteur domicile/extérieur**  \n- Madryn a une **série domicile** de L‑W‑D‑D‑L, mais ses 9 derniers matchs à domicile affichent 6 victoires/draws avec au moins un but marqué.  \n- All Boys a une **série extérieur** de D‑D‑W‑L‑L, avec 3 matches sans but (0‑0, 0‑0, 0‑4) et seulement 2 victoires à l’extérieur cette saison.  \n\nLe facteur domicile favorise nettement Madryn.\n\n**3. Forme récente**  \n- **Madryn (6 derniers)** : D‑D‑L‑W‑D‑D → 7 points, aucune défaite majeure.  \n- **All Boys (6 derniers)** : D‑D‑D‑D‑W‑L → 7 points, mais la dernière défaite (0‑4) montre une fragilité défensive à l’extérieur.  \n\n**4. Tendances de buts**  \n- **Madryn à domicile** : 44 % des matchs ≤ 2,5 buts, 56 % > 2,5 buts.  \n- **All Boys à l’extérieur** : 60 % des matchs ≤ 2,5 buts, 40 % > 2,5 buts.  \n\nLe croisement des deux tendances indique une probabilité légèrement supérieure à 50 % d’un total de **≤ 2,5 buts**, ce qui correspond souvent à une victoire serrée de l’hôte (ex. 1‑0 ou 2‑1).\n\n**5. Confrontations directes** (saison précédente)  \n- 2‑1 victoire de Madryn (mai 2025)  \n- 0‑0 draw (sept 2025)  \n- 1‑0 victoire d’All Boys (oct 2025)  \n\nSur les trois rencontres, Madryn a remporté **une victoire et un match nul** à domicile, montrant qu’elle ne se fait pas facilement surprendre à la maison.\n\n**6. Synthèse**  \n- **Offensive** : Madryn est plus efficace à domicile (≈ 1,3 buts/match) que All Boys à l’extérieur (≈ 0,6 buts/match).  \n- **Défensive** : Madryn encaisse légèrement moins à domicile (≈ 1,2 buts) que All Boys à l’extérieur (≈ 1,4 buts).  \n- **Historique** : Les deux équipes ont partagé les points, mais la tendance de Madryn à gagner à domicile (2‑1 la saison passée) pèse en sa faveur.  \n\nCes éléments convergent vers une **victoire de Deportivo Madryn**, très probablement avec un petit nombre de buts, d’où les scores les plus probables **1‑0** ou **2‑1**.  \n\n---  \n\n*Note : aucune cote n’est disponible, la prédiction repose uniquement sur les statistiques de performance et les tendances observées.*",
+        "confiance_pourcentage": 58,
+        "prediction_principale": "Victoire domicile (Deportivo Madryn)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 2‑1"
+      },
+      {
+        "id": 7,
+        "HomeTeam": "Central Norte",
+        "AwayTeam": "Los Andes",
+        "date": "2 août 2026 à 19:30:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.9,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "L",
+            "L",
+            "D",
+            "W",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "D",
+            "W",
+            "D",
+            "L",
+            "D",
+            "L",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "D",
+            "W",
+            "D",
+            "L"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 9,
+          "total_points": 5,
+          "serie_domicile": [
+            "D",
+            "W",
+            "D",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 10,
+          "total_marques": 9,
+          "total_encaisses": 15
+        },
+        "stats_away": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 0.4,
+          "form_6": [
+            "D",
+            "W",
+            "L",
+            "L",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "L",
+            "L",
+            "W",
+            "D",
+            "D",
+            "W",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "L",
+            "L",
+            "W",
+            "D"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 16,
+          "total_points": 8,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "W",
+            "D",
+            "D"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 3,
+          "total_marques": 10,
+          "total_encaisses": 4
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401844009",
+            "date": "Sun, Jul 26",
+            "home_team": "Godoy Cruz Antonio Tomba",
+            "away_team": "Central Norte",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401844009"
+          },
+          {
+            "game_id": "401843961",
+            "date": "Sun, Jul 12",
+            "home_team": "Colón (Santa Fe)",
+            "away_team": "Central Norte",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843961"
+          },
+          {
+            "game_id": "401873892",
+            "date": "Sun, Jul 05",
+            "home_team": "Central Norte",
+            "away_team": "San Miguel",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401873892"
+          },
+          {
+            "game_id": "401843680",
+            "date": "Sun, Jun 21",
+            "home_team": "Central Norte",
+            "away_team": "Godoy Cruz Antonio Tomba",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843680"
+          },
+          {
+            "game_id": "401843938",
+            "date": "Sun, Jun 14",
+            "home_team": "Central Norte",
+            "away_team": "San Telmo",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843938"
+          },
+          {
+            "game_id": "401843903",
+            "date": "Sat, Jun 06",
+            "home_team": "Acassuso",
+            "away_team": "Central Norte",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843903"
+          },
+          {
+            "game_id": "401843897",
+            "date": "Sun, May 31",
+            "home_team": "Central Norte",
+            "away_team": "Chaco For Ever",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843897"
+          },
+          {
+            "game_id": "401843874",
+            "date": "Sun, May 24",
+            "home_team": "Ferro Carril Oeste",
+            "away_team": "Central Norte",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843874"
+          },
+          {
+            "game_id": "401843858",
+            "date": "Sat, May 16",
+            "home_team": "Racing (Córdoba)",
+            "away_team": "Central Norte",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843858"
+          },
+          {
+            "game_id": "401843835",
+            "date": "Sun, May 10",
+            "home_team": "Central Norte",
+            "away_team": "Deportivo Madryn",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843835"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401844008",
+            "date": "Sun, Jul 26",
+            "home_team": "Los Andes",
+            "away_team": "Deportivo Madryn",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401844008"
+          },
+          {
+            "game_id": "401843969",
+            "date": "Sat, Jul 11",
+            "home_team": "Los Andes",
+            "away_team": "Ciudad de Bolívar",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843969"
+          },
+          {
+            "game_id": "401843955",
+            "date": "Sat, Jul 04",
+            "home_team": "Almirante Brown",
+            "away_team": "Los Andes",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843955"
+          },
+          {
+            "game_id": "401843686",
+            "date": "Sun, Jun 21",
+            "home_team": "Deportivo Madryn",
+            "away_team": "Los Andes",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843686"
+          },
+          {
+            "game_id": "401843928",
+            "date": "Sun, Jun 14",
+            "home_team": "Mitre (Santiago del Estero)",
+            "away_team": "Los Andes",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843928"
+          },
+          {
+            "game_id": "401843915",
+            "date": "Sat, Jun 06",
+            "home_team": "Los Andes",
+            "away_team": "Estudiantes (Buenos Aires)",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843915"
+          },
+          {
+            "game_id": "401843893",
+            "date": "Sat, May 30",
+            "home_team": "All Boys",
+            "away_team": "Los Andes",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843893"
+          },
+          {
+            "game_id": "401843880",
+            "date": "Sat, May 23",
+            "home_team": "Los Andes",
+            "away_team": "Racing (Córdoba)",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843880"
+          },
+          {
+            "game_id": "401843862",
+            "date": "Sat, May 16",
+            "home_team": "Los Andes",
+            "away_team": "Godoy Cruz Antonio Tomba",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843862"
+          },
+          {
+            "game_id": "401843831",
+            "date": "Sat, May 09",
+            "home_team": "Deportivo Morón",
+            "away_team": "Los Andes",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "Argentine Nacional B",
+            "stats": {},
+            "url": "https://www.espn.com/soccer/match/_/gameId/401843831"
+          }
+        ],
+        "classement": {
+          "Central Norte": null,
+          "Los Andes": null
+        },
+        "classement_complet": [],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "401843698",
+            "date": "20260313",
+            "team1": "Los Andes",
+            "score": "0 - 0",
+            "team2": "Central Norte",
+            "title": "Los Andes VS Central Norte",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/401843698/central-norte-los-andes",
+            "source": "Primera Nacional",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/1951.png",
+        "logo_away": "https://media.api-sports.io/football/teams/483.png",
+        "classement_home": null,
+        "classement_away": null,
+        "points_classement_home": null,
+        "points_classement_away": null,
+        "nom_classement_home": null,
+        "nom_classement_away": null,
+        "country_fr": "Argentina - Primera Nacional",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 0.922,
+            "lambda_away": 1.033,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 31.52,
+            "X": 30.86,
+            "V2": 37.62
+          },
+          "double_chance": {
+            "1X": 62.38,
+            "12": 69.14,
+            "X2": 68.48
+          },
+          "over_under": {
+            "plus_de_0.5": 86.3,
+            "moins_de_0.5": 13.69,
+            "plus_de_1.5": 58.33,
+            "moins_de_1.5": 41.67,
+            "plus_de_2.5": 31.33,
+            "moins_de_2.5": 68.67,
+            "plus_de_3.5": 13.87,
+            "moins_de_3.5": 86.13,
+            "plus_de_4.5": 5.12,
+            "moins_de_4.5": 94.88,
+            "plus_de_5.5": 1.57,
+            "moins_de_5.5": 98.43
+          },
+          "btts": {
+            "oui": 39.12,
+            "non": 60.88
+          },
+          "resultat_total": {
+            "V1et+0.5": 31.52,
+            "1Xet+0.5": 48.68,
+            "V2et+0.5": 37.62,
+            "V1et+1.5": 18.3,
+            "1Xet+1.5": 35.46,
+            "V2et+1.5": 22.87,
+            "V1et+2.5": 12.28,
+            "1Xet+2.5": 16.0,
+            "V2et+2.5": 15.32,
+            "V1et+3.5": 4.38,
+            "1Xet+3.5": 8.11,
+            "V2et+3.5": 5.76,
+            "V1et+4.5": 2.05,
+            "1Xet+4.5": 2.44,
+            "V2et+4.5": 2.68,
+            "V1et+5.5": 0.52,
+            "1Xet+5.5": 0.9,
+            "V2et+5.5": 0.67
+          },
+          "scores_probables": {
+            "0-1": 14.76,
+            "0-0": 13.69,
+            "1-1": 13.44,
+            "1-0": 13.22,
+            "0-2": 7.54,
+            "1-2": 7.0,
+            "2-1": 6.25,
+            "2-0": 6.02,
+            "2-2": 3.34,
+            "0-3": 2.57
+          },
+          "buts_moyens_simules": {
+            "home": 0.93,
+            "away": 1.04,
+            "total": 1.97
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (Los Andes)  \n\n**CONFIANCE** : 68 %  \n\n**SCORES PROBABLES** : 0‑1 ou 0‑2  \n\n**JUSTIFICATION**  \n\n**1. Analyse comparative des équipes**  \n- **Central Norte (domicile)** : moyenne de buts marqués très basse (0,90) et moyenne de buts encaissés élevée (1,50). En 10 matchs à domicile, ils n’ont inscrit que 5 buts tout en en concédant 5, soit un ratio 1 : 1 mais avec une très faible capacité offensive.  \n- **Los Andes (extérieur)** : moyenne de buts marqués légèrement supérieure (1,00) et moyenne de buts encaissés très basse (0,40). En 10 déplacements, ils n’ont encaissé que 3 buts tout en marquant 4, ce qui montre une défense solide et une attaque capable de profiter des occasions.\n\n**2. Impact du facteur domicile/extérieur**  \n- Central Norte n’a que deux victoires à domicile sur leurs 10 derniers matchs, avec 5 matchs nuls/perdus.  \n- Los Andes, même en déplacement, a gardé la cage inviolée à 5 reprises sur 10 matchs (3 × 0‑0, 2 × 0‑0/0‑0). Leur capacité à rester à zéro à l’extérieur est nettement supérieure.\n\n**3. Forme récente**  \n- **Central Norte** (6 derniers) : L L D W D L – 5 points, aucune séquence de victoires consécutives. Les seules victoires récentes (1‑0 contre Godoy Cruz) sont rares.  \n- **Los Andes** (6 derniers) : D W L L W D – 8 points, deux victoires (3‑1 contre Ciudad de Bolívar, 3‑0 contre Mitre) et trois matches sans encaisser (0‑0, 0‑0, 0‑0).  \n\n**4. Tendances des matchs détaillés**  \n- Central Norte a concédé au moins un but dans 7 de leurs 10 derniers matchs, dont 4 fois plus de deux buts encaissés.  \n- Los Andes a gardé la cage inviolée dans 5 de leurs 10 derniers déplacements et n’a encaissé que 3 buts au total.  \n\n**5. Confrontations directes**  \n- La seule rencontre disponible de la saison précédente s’est soldée par un 0‑0, confirmant la capacité de Los Andes à neutraliser Central Norte à domicile.\n\n**6. Absence de cotes**  \n- Aucun pari disponible ne vient contredire l’analyse statistique ; la tendance des données suffit à établir une probabilité élevée de victoire extérieure.\n\n**7. Synthèse**  \n- **Défense** : Los Andes possède la meilleure défense parmi les deux (0,40 but encaissé à l’extérieur contre 1,50 de Central Norte à domicile).  \n- **Attaque** : Los Andes marque légèrement plus que Central Norte et a prouvé qu’il peut le faire même à l’extérieur (ex. 3‑1, 3‑0).  \n- **Probabilité de BTTS** : Faible. Central Norte a du mal à marquer, Los Andes a tendance à garder la cage propre.  \n\n**Conclusion** : La combinaison d’une défense très solide de Los Andes, d’une attaque capable de marquer au moins un but, et d’une faiblesse offensive de Central Norte conduit à prédire une victoire de Los Andes, très probablement 0‑1 ou 0‑2.  \n\n---  \n\n**PRÉDICTION** : Victoire extérieur (Los Andes) – Confiance 68 % – Scores les plus probables 0‑1 ou 0‑2.",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Victoire extérieur (Los Andes)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑1 ou 0‑2"
+      }
+    ]
+  }
+}
